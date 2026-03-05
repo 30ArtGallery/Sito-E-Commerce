@@ -3,98 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>30ArtGallery | Quadri Moderni e Stampe su Tela Online</title>
-    <meta name="description" content="Esplora la collezione 30ArtGallery: quadri moderni, stampe su tela e decorazioni murali di design per un arredamento unico.">
     
+    <!-- SEO METADATI PROFESSIONALI -->
+    <title>30ArtGallery | Vendita Online Stampe su Tela e Quadri Moderni d'Autore</title>
+    <meta name="description" content="Cerchi stampe su tela di alta qualità? 30ArtGallery offre una collezione esclusiva di quadri moderni e decorazioni murali artigianali. Spedizione sicura e materiali premium.">
+    <meta name="keywords" content="stampe su tela, quadri moderni, arredamento pareti, quadri astratti, stampe d'arredo, galleria d'arte online">
+    <link rel="canonical" href="https://30artgallery.github.io">
+
     <style>
         @import url('https://fonts.googleapis.com');
 
         :root {
-            --bg: #ffffff;
-            --text: #1a1a1a;
-            --gold: #b39359; /* Oro opaco Bimago */
-            --light-gray: #f4f4f4;
+            --sabbia-light: #f5f2ed;
+            --sabbia-dark: #d2c5b3;
+            --text: #2c2c2c;
+            --accent: #8e7d6a;
+            --white: #ffffff;
         }
 
-        body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
+        body { font-family: 'Lato', sans-serif; margin: 0; background: var(--white); color: var(--text); line-height: 1.8; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: 1px; }
 
-        /* Barra Superiore (Annuncio) */
-        .top-bar { background: var(--text); color: white; text-align: center; padding: 8px; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; }
+        /* Annuncio Header */
+        .promo-bar { background: var(--sabbia-dark); color: var(--text); text-align: center; padding: 10px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* Header Minimale */
-        header { padding: 30px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; sticky; top: 0; background: white; z-index: 1000; }
-        .logo { font-size: 1.6rem; font-weight: 700; letter-spacing: 4px; text-decoration: none; color: var(--text); }
-        nav a { margin-left: 30px; text-decoration: none; color: var(--text); font-size: 0.85rem; font-weight: 400; text-transform: uppercase; letter-spacing: 1px; }
+        header { padding: 40px 5%; display: flex; justify-content: space-between; align-items: center; background: var(--white); border-bottom: 1px solid var(--sabbia-light); sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 2rem; color: var(--text); text-decoration: none; font-weight: 700; letter-spacing: 5px; }
+        nav a { margin-left: 30px; text-decoration: none; color: var(--text); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
 
-        /* Hero Bimago Style - Immagine a tutta larghezza */
-        .hero { position: relative; height: 70vh; background: url('https://images.unsplash.com') center/cover no-repeat; display: flex; align-items: center; justify-content: center; }
-        .hero-overlay { background: rgba(0,0,0,0.2); position: absolute; inset: 0; }
-        .hero-content { position: relative; text-align: center; color: white; max-width: 800px; padding: 20px; }
-        .hero h1 { font-size: 3rem; font-weight: 300; margin-bottom: 20px; letter-spacing: 5px; }
-        .btn-white { background: white; color: var(--text); padding: 15px 40px; text-decoration: none; font-size: 0.9rem; font-weight: 700; transition: 0.3s; border: 1px solid white; }
-        .btn-white:hover { background: transparent; color: white; }
+        /* Hero Section */
+        .hero { background: var(--sabbia-light); display: flex; align-items: center; padding: 100px 5%; min-height: 60vh; }
+        .hero-text { flex: 1; padding-right: 50px; }
+        .hero-text h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 25px; color: var(--accent); }
+        .hero-image { flex: 1; height: 500px; background: url('https://images.unsplash.com') center/cover no-repeat; border-radius: 2px; box-shadow: 20px 20px 0px var(--sabbia-dark); }
 
-        /* Griglia Collezioni - Pulizia assoluta */
-        .section-title { text-align: center; padding: 60px 0 30px; font-weight: 300; font-size: 1.8rem; letter-spacing: 3px; text-transform: uppercase; }
-        .grid-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; padding: 0 50px 80px; }
-        .grid-item { position: relative; overflow: hidden; height: 500px; cursor: pointer; }
-        .grid-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
-        .grid-item:hover img { transform: scale(1.05); }
-        .grid-label { position: absolute; bottom: 30px; left: 30px; background: white; padding: 12px 25px; font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+        /* Sezione SEO Text (H2) */
+        .seo-section { padding: 80px 10%; text-align: center; background: var(--white); }
+        .seo-section h2 { font-size: 2.2rem; margin-bottom: 30px; }
+        .seo-section p { max-width: 900px; margin: 0 auto; color: #555; font-size: 1.1rem; }
 
-        /* Footer elegante */
-        footer { background: var(--light-gray); padding: 80px 50px; text-align: center; font-size: 0.8rem; border-top: 1px solid #ddd; }
-        .footer-links a { margin: 0 15px; color: #666; text-decoration: none; }
+        /* Griglia Categorie (H3) */
+        .categories { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; padding: 50px 5%; }
+        .category-card { position: relative; height: 450px; overflow: hidden; background: var(--sabbia-light); display: flex; align-items: flex-end; transition: 0.5s; }
+        .category-card img { position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: 1; transition: transform 1s; }
+        .category-card:hover img { transform: scale(1.1); }
+        .category-info { position: relative; z-index: 2; background: rgba(255,255,255,0.9); width: 100%; padding: 30px; text-align: center; }
+        .category-info h3 { margin: 0; font-size: 1.4rem; text-transform: uppercase; }
+
+        /* Footer */
+        footer { background: var(--sabbia-light); padding: 80px 10%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; border-top: 1px solid var(--sabbia-dark); }
+        .footer-col h4 { margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; }
+        .footer-col p, .footer-col a { font-size: 0.85rem; color: #666; text-decoration: none; display: block; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">Spedizione Gratuita su tutti i quadri sopra i 150€</div>
+    <div class="promo-bar">Eccellenza Italiana: Stampe su Tela Artigianali con Spedizione Assicurata</div>
 
     <header>
         <a href="index.html" class="logo">30ARTGALLERY</a>
         <nav>
-            <a href="#astratti">Astratti</a>
-            <a href="#paesaggi">Paesaggi</a>
-            <a href="#minimal">Minimal</a>
-            <a href="contatti.html">Contatti</a>
+            <a href="#collezioni">Collezioni</a>
+            <a href="#perche-noi">Qualità</a>
+            <a href="chi-siamo.html">L'Artista</a>
+            <a href="contatti.html">Supporto</a>
         </nav>
     </header>
 
     <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>NUOVA COLLEZIONE 2026</h1>
-            <p style="letter-spacing: 2px; margin-bottom: 40px;">Eleganza e stile per le tue pareti</p>
-            <a href="#collezioni" class="btn-white">ESPLORA</a>
+        <div class="hero-text">
+            <h1>Le Tue Emozioni, <br>Su Tele d'Autore.</h1>
+            <p>Specialisti nella vendita online di <strong>stampe su tela</strong> di alta gamma. Trasformiamo i tuoi spazi in una galleria d'arte privata con materiali certificati e design esclusivi.</p>
+            <br>
+            <a href="#collezioni" style="background:var(--accent); color:white; padding:18px 40px; text-decoration:none; font-weight:bold; letter-spacing:2px;">SCOPRI IL CATALOGO</a>
+        </div>
+        <div class="hero-image"></div>
+    </section>
+
+    <article class="seo-section" id="perche-noi">
+        <h2>Perché scegliere le nostre Stampe su Tela?</h2>
+        <p>
+            Benvenuti su <strong>30ArtGallery</strong>, la destinazione definitiva per chi desidera arredare con personalità. 
+            Le nostre <strong>stampe su tela</strong> non sono semplici riproduzioni, ma opere curate nei minimi dettagli. 
+            Utilizziamo telai in legno massello levigato e tele in cotone premium che garantiscono colori vibranti e una durata eterna. 
+            Dalla scelta del soggetto alla spedizione, ogni processo è gestito internamente per assicurare la massima qualità artigianale italiana.
+        </p>
+    </article>
+
+    <div class="section-title" style="text-align:center;"><h3>Esplora le Collezioni</h3></div>
+
+    <section class="categories" id="collezioni">
+        <div class="category-card">
+            <img src="https://images.unsplash.com" alt="Quadri Astratti Moderni">
+            <div class="category-info">
+                <h3>Quadri Astratti</h3>
+                <p>Forme e colori per ambienti moderni</p>
+            </div>
+        </div>
+        <div class="category-card">
+            <img src="https://images.unsplash.com" alt="Paesaggi d'Autore">
+            <div class="category-info">
+                <h3>Paesaggi</h3>
+                <p>La natura entra in casa tua</p>
+            </div>
+        </div>
+        <div class="category-card">
+            <img src="https://images.unsplash.com" alt="Stampe Minimali">
+            <div class="category-info">
+                <h3>Minimalismo</h3>
+                <p>Essenzialità ed eleganza pura</p>
+            </div>
         </div>
     </section>
 
-    <div class="section-title" id="collezioni">Scegli il tuo stile</div>
-
-    <div class="grid-container">
-        <!-- Card 1 -->
-        <div class="grid-item">
-            <img src="https://images.unsplash.com" alt="Quadri Astratti">
-            <div class="grid-label">Astratti</div>
-        </div>
-        <!-- Card 2 -->
-        <div class="grid-item">
-            <img src="https://images.unsplash.com" alt="Paesaggi">
-            <div class="grid-label">Paesaggi</div>
-        </div>
-        <!-- Card 3 -->
-        <div class="grid-item">
-            <img src="https://images.unsplash.com" alt="Minimal">
-            <div class="grid-label">Minimal</div>
-        </div>
-    </div>
+    <article class="seo-section" style="background:var(--sabbia-light)">
+        <h2>Arredamento Pareti: Tendenze e Consigli</h2>
+        <p>
+            Ogni ambiente richiede il giusto equilibrio. Che tu stia cercando un pezzo centrale per il tuo soggiorno o una serie di stampe per l'ufficio, 
+            la nostra galleria offre soluzioni su misura. Le <strong>stampe su tela moderne</strong> sono la scelta ideale per chi cerca un impatto estetico 
+            senza il peso delle cornici tradizionali. Scopri come i nostri quadri possono cambiare la percezione della luce e dello spazio nei tuoi interni.
+        </p>
+    </article>
 
     <footer>
-        <div class="footer-links">
-            <a href="#">FAQ</a> | <a href="#">Spedizioni</a> | <a href="#">Termini</a>
+        <div class="footer-col">
+            <h4>30ArtGallery</h4>
+            <p>Laboratorio artigianale specializzato in decorazioni murali d'eccellenza.</p>
         </div>
-        <p style="margin-top: 30px; color: #999;">&copy; 2026 30ArtGallery. Realizzato con precisione artigianale.</p>
+        <div class="footer-col">
+            <h4>Collezioni</h4>
+            <a href="#">Quadri Astratti</a>
+            <a href="#">Paesaggi su Tela</a>
+            <a href="#">Arte Contemporanea</a>
+        </div>
+        <div class="footer-col">
+            <h4>Servizio Clienti</h4>
+            <a href="#">Spedizioni e Consegna</a>
+            <a href="#">Diritto di Recesso</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="footer-col">
+            <h4>Contatti</h4>
+            <p>Email: info@30artgallery.it</p>
+            <p>Sede: Italia</p>
+        </div>
     </footer>
 
 </body>
