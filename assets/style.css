@@ -211,12 +211,22 @@ footer p {
     margin-bottom: 20px;
 }
 
-.cart-close { cursor: pointer; font-size: 1.2rem; }
+<!-- STRUTTURA CARRELLO CORRETTA -->
+<div class="cart-overlay" id="cartOverlay"></div>
 
-.cart-items { flex-grow: 1; overflow-y: auto; }
-
-.cart-total {
-    padding-top: 20px;
-    border-top: 1px solid var(--border);
-    margin-top: 20px;
-}
+<div id="side-cart"> <!-- Rimosso l'ID duplicato, usa solo questo -->
+    <div class="cart-header">
+        <h2 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;">Carrello</h2>
+        <span class="cart-close" id="closeCart">&times;</span>
+    </div>
+    <div class="cart-items">
+        <!-- Qui lo script inserirà i prodotti -->
+    </div>
+    <div class="cart-total">
+        <div style="display:flex; justify-content:space-between; margin-bottom:20px;">
+            <span style="font-size: 0.8rem; letter-spacing: 1px;">TOTALE</span>
+            <span id="totale-carrello" style="font-weight: 600;">€ 0,00</span>
+        </div>
+        <button class="btn" style="width:100%">Vai al Checkout</button>
+    </div>
+</div>
