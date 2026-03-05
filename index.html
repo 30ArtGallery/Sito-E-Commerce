@@ -3,77 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>30ArtGallery | Quadri Moderni e Stampe su Tela d'Autore</title>
-    <meta name="description" content="Scopri la collezione esclusiva di 30ArtGallery. Stampe su tela di alta qualità, quadri astratti e paesaggi per arredare con stile la tua casa.">
+    <title>30ArtGallery | Quadri Moderni e Stampe su Tela Online</title>
+    <meta name="description" content="Esplora la collezione 30ArtGallery: quadri moderni, stampe su tela e decorazioni murali di design per un arredamento unico.">
     
-    <!-- Stile Professionale (CSS) -->
     <style>
+        @import url('https://fonts.googleapis.com');
+
         :root {
-            --primary: #222;
-            --accent: #c6a664; /* Oro elegante stile Bimago */
-            --light: #f9f9f9;
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --gold: #b39359; /* Oro opaco Bimago */
+            --light-gray: #f4f4f4;
         }
-        body { font-family: 'Helvetica', Arial, sans-serif; margin: 0; color: var(--primary); line-height: 1.6; }
-        
-        /* Header & Nav */
-        header { padding: 20px; text-align: center; border-bottom: 1px solid #eee; position: sticky; top: 0; background: white; z-index: 100; }
-        nav a { margin: 0 15px; text-decoration: none; color: var(--primary); font-weight: bold; font-size: 0.9rem; text-transform: uppercase; }
-        
-        /* Hero Section - Il pezzo forte */
-        .hero { background: var(--light); padding: 80px 20px; text-align: center; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; letter-spacing: 2px; }
-        .hero p { font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto 30px; }
-        .cta-button { background: var(--primary); color: white; padding: 15px 30px; text-decoration: none; border-radius: 4px; font-weight: bold; transition: 0.3s; }
-        .cta-button:hover { background: var(--accent); }
 
-        /* Griglia Categorie */
-        .categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 50px 20px; max-width: 1200px; margin: 0 auto; }
-        .cat-card { position: relative; overflow: hidden; border-radius: 8px; height: 400px; background: #ddd; display: flex; align-items: flex-end; }
-        .cat-card div { background: rgba(255,255,255,0.9); width: 100%; padding: 20px; text-align: center; }
-        .cat-card a { text-decoration: none; color: var(--primary); font-weight: bold; font-size: 1.2rem; }
+        body { font-family: 'Montserrat', sans-serif; margin: 0; background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
 
-        footer { background: var(--primary); color: white; text-align: center; padding: 40px 20px; margin-top: 50px; }
+        /* Barra Superiore (Annuncio) */
+        .top-bar { background: var(--text); color: white; text-align: center; padding: 8px; font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; }
+
+        /* Header Minimale */
+        header { padding: 30px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; sticky; top: 0; background: white; z-index: 1000; }
+        .logo { font-size: 1.6rem; font-weight: 700; letter-spacing: 4px; text-decoration: none; color: var(--text); }
+        nav a { margin-left: 30px; text-decoration: none; color: var(--text); font-size: 0.85rem; font-weight: 400; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Hero Bimago Style - Immagine a tutta larghezza */
+        .hero { position: relative; height: 70vh; background: url('https://images.unsplash.com') center/cover no-repeat; display: flex; align-items: center; justify-content: center; }
+        .hero-overlay { background: rgba(0,0,0,0.2); position: absolute; inset: 0; }
+        .hero-content { position: relative; text-align: center; color: white; max-width: 800px; padding: 20px; }
+        .hero h1 { font-size: 3rem; font-weight: 300; margin-bottom: 20px; letter-spacing: 5px; }
+        .btn-white { background: white; color: var(--text); padding: 15px 40px; text-decoration: none; font-size: 0.9rem; font-weight: 700; transition: 0.3s; border: 1px solid white; }
+        .btn-white:hover { background: transparent; color: white; }
+
+        /* Griglia Collezioni - Pulizia assoluta */
+        .section-title { text-align: center; padding: 60px 0 30px; font-weight: 300; font-size: 1.8rem; letter-spacing: 3px; text-transform: uppercase; }
+        .grid-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; padding: 0 50px 80px; }
+        .grid-item { position: relative; overflow: hidden; height: 500px; cursor: pointer; }
+        .grid-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+        .grid-item:hover img { transform: scale(1.05); }
+        .grid-label { position: absolute; bottom: 30px; left: 30px; background: white; padding: 12px 25px; font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+
+        /* Footer elegante */
+        footer { background: var(--light-gray); padding: 80px 50px; text-align: center; font-size: 0.8rem; border-top: 1px solid #ddd; }
+        .footer-links a { margin: 0 15px; color: #666; text-decoration: none; }
     </style>
 </head>
 <body>
 
+    <div class="top-bar">Spedizione Gratuita su tutti i quadri sopra i 150€</div>
+
     <header>
-        <div style="font-size: 1.8rem; font-weight: 900; margin-bottom: 10px;">30ARTGALLERY</div>
+        <a href="index.html" class="logo">30ARTGALLERY</a>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="#collezioni">Collezioni</a>
-            <a href="chi-siamo.html">L'Artista</a>
+            <a href="#astratti">Astratti</a>
+            <a href="#paesaggi">Paesaggi</a>
+            <a href="#minimal">Minimal</a>
             <a href="contatti.html">Contatti</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>L'ARTE CHE VIVE SULLE TUE PARETI</h1>
-        <p>Trasforma i tuoi spazi con stampe su tela di altissima qualità. Design esclusivi e materiali premium per un arredamento senza tempo.</p>
-        <a href="#collezioni" class="cta-button">SCOPRI LE NOVITÀ</a>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>NUOVA COLLEZIONE 2026</h1>
+            <p style="letter-spacing: 2px; margin-bottom: 40px;">Eleganza e stile per le tue pareti</p>
+            <a href="#collezioni" class="btn-white">ESPLORA</a>
+        </div>
     </section>
 
-    <main id="collezioni">
-        <h2 style="text-align: center; margin-top: 50px; font-size: 2rem;">LE NOSTRE COLLEZIONI</h2>
-        <div class="categories">
-            <!-- Categoria 1 -->
-            <div class="cat-card" style="background-image: url('https://images.unsplash.com'); background-size: cover;">
-                <div><a href="quadri-astratti.html">QUADRI ASTRATTI</a></div>
-            </div>
-            <!-- Categoria 2 -->
-            <div class="cat-card" style="background-image: url('https://images.unsplash.com'); background-size: cover;">
-                <div><a href="paesaggi.html">PAESAGGI MODERNI</a></div>
-            </div>
-            <!-- Categoria 3 -->
-            <div class="cat-card" style="background-image: url('https://images.unsplash.com'); background-size: cover;">
-                <div><a href="stampe-minimal.html">STAMPE MINIMAL</a></div>
-            </div>
+    <div class="section-title" id="collezioni">Scegli il tuo stile</div>
+
+    <div class="grid-container">
+        <!-- Card 1 -->
+        <div class="grid-item">
+            <img src="https://images.unsplash.com" alt="Quadri Astratti">
+            <div class="grid-label">Astratti</div>
         </div>
-    </main>
+        <!-- Card 2 -->
+        <div class="grid-item">
+            <img src="https://images.unsplash.com" alt="Paesaggi">
+            <div class="grid-label">Paesaggi</div>
+        </div>
+        <!-- Card 3 -->
+        <div class="grid-item">
+            <img src="https://images.unsplash.com" alt="Minimal">
+            <div class="grid-label">Minimal</div>
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; 2026 30ArtGallery - Qualità Artigianale Italiana</p>
-        <p style="font-size: 0.8rem; color: #888;">Spedizione Assicurata in tutta Europa</p>
+        <div class="footer-links">
+            <a href="#">FAQ</a> | <a href="#">Spedizioni</a> | <a href="#">Termini</a>
+        </div>
+        <p style="margin-top: 30px; color: #999;">&copy; 2026 30ArtGallery. Realizzato con precisione artigianale.</p>
     </footer>
 
 </body>
