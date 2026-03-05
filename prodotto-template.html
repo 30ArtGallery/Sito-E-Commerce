@@ -57,6 +57,54 @@
             <p>&copy; 2026 MOODHAUS.IT - QUALITÀ ARTIGIANALE ITALIANA</p>
         </div>
     </footer>
+<script>
+    // 1. Configurazione Prezzi (Stile Moodhaus)
+    const prezzi = {
+        "30 x 40 cm": 49.00,
+        "50 x 70 cm": 69.00,
+        "70 x 100 cm": 94.00
+    };
+
+    const selectMisura = document.querySelector('select'); // Il tuo menu a tendina
+    const displayPrezzo = document.querySelector('p[style*="1.5rem"]'); // Il testo del prezzo
+    const btnAggiungi = document.querySelector('.btn');
+    const sideCart = document.getElementById('side-cart');
+    const cartItems = document.querySelector('.cart-items');
+    const overlay = document.getElementById('cartOverlay');
+
+    // 2. Aggiornamento Dinamico Prezzo
+    selectMisura.addEventListener('change', (e) => {
+        const scelta = e.target.value;
+        const nuovoPrezzo = prezzi[scelta] || 49.00;
+        displayPrezzo.innerHTML = `€ ${nuovoPrezzo.toFixed(2)} <span style="font-size: 0.8rem; color: #999; font-weight: 400;">IVA incl.</span>`;
+    });
+
+    // 3. Logica Carrello
+    btnAggiungi.addEventListener('click', () => {
+        const nomeProdotto = document.querySelector('h1').innerText;
+        const misuraScelta = selectMisura.value;
+        const prezzoFinale = prezzi[misuraScelta] || 49.00;
+
+        // Inseriamo l'elemento nel carrello
+        cartItems.innerHTML = `
+            <div style="display: flex; gap: 15px; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+                <img src="https://images.unsplash.com" style="width: 60px; height: 80px; object-fit: cover;">
+                <div>
+                    <h4 style="font-size: 0.85rem; text-transform: uppercase;">${nomeProdotto}</h4>
+                    <p style="font-size: 0.75rem; color: #777;">Misura: ${misuraScelta}</p>
+                    <p style="font-weight: 600; margin-top: 5px;">€ ${prezzoFinale.toFixed(2)}</p>
+                </div>
+            </div>
+        `;
+
+        // Aggiorniamo il totale nel carrello
+        document.querySelector('.cart-total span:last-child').innerText = `€ ${prezzoFinale.toFixed(2)}`;
+
+        // Apriamo il carrello
+        sideCart.classList.add('open');
+        overlay.classList.add('open');
+    });
+</script>
 
 </body>
 </html>
