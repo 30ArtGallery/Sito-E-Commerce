@@ -27,7 +27,7 @@ body {
     overflow-x: hidden;
 }
 
-/* --- 2. LAYOUT STRUTTURALE (IL "BINARIO") --- */
+/* --- 2. LAYOUT STRUTTURALE (IL "BINARIO" CHE CENTRA TUTTO) --- */
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -143,3 +143,20 @@ footer p {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
+
+/* --- 7. BOTTONI --- */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--text);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover { background: var(--accent); }
