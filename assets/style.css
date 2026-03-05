@@ -1,4 +1,4 @@
-/* --- 1. RESET E FONT (LUXURY STYLE) --- */
+/* --- 1. RESET E FONT (MOODHAUS LUXURY STYLE) --- */
 @import url('https://fonts.googleapis.com');
 
 :root {
@@ -7,7 +7,7 @@
     --sabbia: #f2eee9;
     --sabbia-dark: #d2c5b3;
     --border: #eeeeee;
-    --accent: #8e7d6a;
+    --accent: #8e7d6a; /* Colore fango/oro Moodhaus */
     --white: #ffffff;
     --max-width: 1200px;
 }
@@ -27,7 +27,7 @@ body {
     overflow-x: hidden;
 }
 
-/* --- 2. LAYOUT STRUTTURALE (IL "BINARIO" CHE CENTRA TUTTO) --- */
+/* --- 2. LAYOUT STRUTTURALE --- */
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -35,7 +35,7 @@ body {
     width: 100%;
 }
 
-/* --- 3. HEADER PULITO E ALLINEATO --- */
+/* --- 3. HEADER MOODHAUS --- */
 header { 
     background: var(--white);
     border-bottom: 1px solid var(--border);
@@ -53,9 +53,9 @@ header .container {
 }
 
 .logo { 
-    font-size: 1.3rem; 
+    font-size: 1.4rem; 
     font-weight: 600; 
-    letter-spacing: 3px; 
+    letter-spacing: 4px; 
     text-transform: uppercase; 
     text-decoration: none; 
     color: var(--text);
@@ -69,27 +69,28 @@ nav {
 nav a {
     text-decoration: none;
     color: var(--text);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
+    font-weight: 400;
     transition: color 0.3s;
 }
 
 nav a:hover { color: var(--accent); }
 
-/* --- 4. HERO & SEZIONI TITOLO --- */
+/* --- 4. HERO SECTION --- */
 .hero { 
     background: var(--sabbia); 
-    padding: 100px 0;
+    padding: 120px 0;
     text-align: center;
 }
 
 .hero h1 { 
     font-family: 'Playfair Display', serif;
-    font-size: 2.5rem; 
+    font-size: 2.8rem; 
     font-weight: 400; 
-    letter-spacing: 2px;
-    margin-bottom: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
     text-transform: uppercase;
 }
 
@@ -98,63 +99,67 @@ nav a:hover { color: var(--accent); }
     max-width: 600px;
     margin: 0 auto;
     color: #555;
+    letter-spacing: 0.5px;
 }
 
-/* --- 5. GRIGLIA PRODOTTI (STABILE) --- */
+/* --- 5. GRIGLIA PRODOTTI --- */
 .grid { 
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 30px; 
-    padding: 60px 0;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 40px; 
+    padding: 80px 0;
 }
 
 .card {
     background: var(--white);
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .card-img {
     aspect-ratio: 3/4;
     background: var(--sabbia);
     overflow: hidden;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .card-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: 0.6s;
+    transition: transform 0.8s ease;
 }
 
 .card:hover img { transform: scale(1.05); }
 
-/* --- 6. FOOTER MINIMALE --- */
+/* --- 6. FOOTER --- */
 footer { 
     background: var(--white);
     border-top: 1px solid var(--border);
-    padding: 60px 0;
+    padding: 80px 0;
     text-align: center;
 }
 
 footer p {
-    font-size: 0.75rem; 
-    color: #888;
-    letter-spacing: 1px;
+    font-size: 0.7rem; 
+    color: #999;
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-/* --- 7. BOTTONI --- */
+/* --- 7. COMPONENTI --- */
 .btn {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 18px 45px;
     background: var(--text);
     color: white;
     text-decoration: none;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.8rem;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     transition: 0.3s;
     border: none;
     cursor: pointer;
