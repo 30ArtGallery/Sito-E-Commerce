@@ -1,232 +1,39 @@
-/* --- 1. RESET E FONT (CORRETTO) --- */
-/* Ho aggiunto l'import completo dei font Inter e Playfair Display */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&
-family=Playfair+Display:wght@400;700&display=swap');
+/* --- 1. RESET E FONT --- */
+@import url('https://fonts.googleapis.com');
 
 :root {
-    --bg: #ffffff;
-    --text: #1a1a1a;
-    --sabbia: #f2eee9;
-    --sabbia-dark: #d2c5b3;
-    --border: #eeeeee;
-    --accent: #8e7d6a; 
-    --white: #ffffff;
-    --max-width: 1200px;
+    --bg: #ffffff; --text: #1a1a1a; --sabbia: #f2eee9; --border: #eeeeee;
+    --accent: #8e7d6a; --white: #ffffff; --max-width: 1200px;
 }
 
-* {
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box; -webkit-font-smoothing: antialiased; margin: 0; padding: 0; }
 
-body { 
-    font-family: 'Inter', sans-serif; 
-    background: var(--bg); 
-    color: var(--text); 
-    line-height: 1.6;
-    overflow-x: hidden;
-}
+body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
 
-/* --- 2. LAYOUT STRUTTURALE --- */
-.container {
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 0 20px;
-    width: 100%;
-}
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
 
-/* --- 3. HEADER MOODHAUS --- */
-header { 
-    background: var(--white);
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-}
+header { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1000; }
+header .container { height: 90px; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.4rem; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; text-decoration: none; color: var(--text); font-family: 'Playfair Display', serif; }
 
-header .container {
-    height: 90px;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-}
+.hero { background: var(--sabbia); padding: 120px 0; text-align: center; }
+.hero h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; letter-spacing: 3px; text-transform: uppercase; }
 
-.logo { 
-    font-size: 1.4rem; 
-    font-weight: 600; 
-    letter-spacing: 4px; 
-    text-transform: uppercase; 
-    text-decoration: none; 
-    color: var(--text);
-    font-family: 'Playfair Display', serif; /* Aggiunto font luxury al logo */
-}
-
-nav {
-    display: flex;
-    gap: 30px;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--text);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 400;
-    transition: color 0.3s;
-}
-
-nav a:hover { color: var(--accent); }
-
-/* --- 4. HERO SECTION --- */
-.hero { 
-    background: var(--sabbia); 
-    padding: 120px 0;
-    text-align: center;
-}
-
-.hero h1 { 
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8rem; 
-    font-weight: 400; 
-    letter-spacing: 3px;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    color: var(--text);
-}
-
-.hero p {
-    font-size: 0.95rem;
-    max-width: 600px;
-    margin: 0 auto;
-    color: #555;
-    letter-spacing: 0.5px;
-}
-
-/* --- 5. GRIGLIA PRODOTTI --- */
-.grid { 
-    display: grid; 
-    /* Fix: auto-fit forzato per mobile */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 40px; 
-    padding: 80px 0;
-}
-
-.card {
-    background: var(--white);
-    transition: transform 0.4s ease;
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-.card-img {
-    aspect-ratio: 3/4;
-    background: var(--sabbia);
-    overflow: hidden;
-    margin-bottom: 20px;
-}
-
-.card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.8s ease;
-}
-
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; padding: 80px 0; }
+.card { transition: transform 0.4s ease; text-decoration: none; color: inherit; display: block; }
+.card-img { aspect-ratio: 3/4; background: var(--sabbia); overflow: hidden; margin-bottom: 20px; }
+.card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
 .card:hover img { transform: scale(1.05); }
 
-/* --- 6. FOOTER --- */
-footer { 
-    background: var(--white);
-    border-top: 1px solid var(--border);
-    padding: 80px 0;
-    text-align: center;
-}
-
-footer p {
-    font-size: 0.7rem; 
-    color: #999;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-/* --- 7. COMPONENTI --- */
-.btn {
-    display: inline-block;
-    padding: 18px 45px;
-    background: var(--text);
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    transition: 0.3s;
-    border: none;
-    cursor: pointer;
-}
+.btn { display: inline-block; padding: 18px 45px; background: var(--text); color: white; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px; border: none; cursor: pointer; text-align: center; }
 .btn:hover { background: var(--accent); }
 
-/* --- 8. SIDE CART (CARRELLO LATERALE) --- */
-#side-cart {
-    position: fixed;
-    top: 0;
-    right: -400px; /* Nascosto a destra */
-    width: 350px;
-    height: 100%;
-    background: var(--white);
-    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-    z-index: 2000;
-    transition: right 0.4s cubic-bezier(0.82, 0.085, 0.395, 0.895);
-    padding: 40px 25px;
-    display: flex;
-    flex-direction: column;
-}
-
+/* --- SIDE CART CSS --- */
+#side-cart { position: fixed; top: 0; right: -450px; width: 350px; height: 100%; background: var(--white); box-shadow: -5px 0 15px rgba(0,0,0,0.1); z-index: 2000; transition: right 0.4s ease; padding: 40px 25px; display: flex; flex-direction: column; }
 #side-cart.open { right: 0; }
-
-.cart-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4);
-    display: none;
-    z-index: 1500;
-}
-
+.cart-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); display: none; z-index: 1500; }
 .cart-overlay.open { display: block; }
-
-.cart-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--border);
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-}
-
-<!-- STRUTTURA CARRELLO CORRETTA -->
-<div class="cart-overlay" id="cartOverlay"></div>
-
-<div id="side-cart"> <!-- Rimosso l'ID duplicato, usa solo questo -->
-    <div class="cart-header">
-        <h2 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;">Carrello</h2>
-        <span class="cart-close" id="closeCart">&times;</span>
-    </div>
-    <div class="cart-items">
-        <!-- Qui lo script inserirà i prodotti -->
-    </div>
-    <div class="cart-total">
-        <div style="display:flex; justify-content:space-between; margin-bottom:20px;">
-            <span style="font-size: 0.8rem; letter-spacing: 1px;">TOTALE</span>
-            <span id="totale-carrello" style="font-weight: 600;">€ 0,00</span>
-        </div>
-        <button class="btn" style="width:100%">Vai al Checkout</button>
-    </div>
-</div>
+.cart-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 20px; }
+.cart-close { cursor: pointer; font-size: 1.5rem; }
+.cart-items { flex-grow: 1; overflow-y: auto; }
+.cart-total { padding-top: 20px; border-top: 1px solid var(--border); margin-top: 20px; }
