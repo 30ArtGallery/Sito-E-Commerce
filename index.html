@@ -1,152 +1,161 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="it-IT" translate="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
     
-    <!-- SEO METADATI PROFESSIONALI -->
-    <title>30ArtGallery | Vendita Online Stampe su Tela e Quadri Moderni d'Autore</title>
-    <meta name="description" content="Cerchi stampe su tela di alta qualità? 30ArtGallery offre una collezione esclusiva di quadri moderni e decorazioni murali artigianali. Spedizione sicura e materiali premium.">
-    <meta name="keywords" content="stampe su tela, quadri moderni, arredamento pareti, quadri astratti, stampe d'arredo, galleria d'arte online">
-    <link rel="canonical" href="https://30artgallery.github.io">
+    <!-- SEO TECNICA STILE BIMAGO -->
+    <title>Quadri su Tela e Stampe d'Autore - 30ArtGallery</title>
+    <meta name="description" content="30ArtGallery: la tua galleria online di quadri moderni e stampe su tela di alta qualità. Decorazioni murali artigianali per un arredamento raffinato."/>
+    <meta name="keywords" content="quadro, quadri moderni, stampe su tela, foto su tela, decorazioni pareti, quadri d'autore, 30artgallery"/>
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="https://30artgallery.github.io"/>
+    
+    <!-- OPEN GRAPH (SOCIAL) -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Quadri su Tela e Stampe d'Autore - 30ArtGallery"/>
+    <meta property="og:description" content="Decorazioni murali artigianali. Quadri su tela da 60€ e spedizione assicurata."/>
+    <meta property="og:site_name" content="30ArtGallery"/>
+
+    <!-- PRELOAD IMMAGINI (Per velocità estrema) -->
+    <link rel="preload" href="https://images.unsplash.com" as="image"/>
 
     <style>
         @import url('https://fonts.googleapis.com');
 
         :root {
-            --sabbia-light: #f5f2ed;
-            --sabbia-dark: #d2c5b3;
-            --text: #2c2c2c;
-            --accent: #8e7d6a;
-            --white: #ffffff;
+            --bg: #ffffff;
+            --text: #1a1a1a;
+            --sabbia: #f2eee9;
+            --border: #eeeeee;
         }
 
-        body { font-family: 'Lato', sans-serif; margin: 0; background: var(--white); color: var(--text); line-height: 1.8; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: 1px; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            background: var(--bg); 
+            color: var(--text); 
+            line-height: 1.5; 
+            -webkit-font-smoothing: antialiased;
+        }
 
-        /* Annuncio Header */
-        .promo-bar { background: var(--sabbia-dark); color: var(--text); text-align: center; padding: 10px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
+        /* Navigazione minimale */
+        header { 
+            padding: 20px 40px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1px solid var(--border);
+        }
+        .logo { 
+            font-size: 1.1rem; 
+            font-weight: 600; 
+            letter-spacing: 2px; 
+            text-transform: uppercase;
+        }
 
-        header { padding: 40px 5%; display: flex; justify-content: space-between; align-items: center; background: var(--white); border-bottom: 1px solid var(--sabbia-light); sticky; top: 0; z-index: 1000; }
-        .logo { font-size: 2rem; color: var(--text); text-decoration: none; font-weight: 700; letter-spacing: 5px; }
-        nav a { margin-left: 30px; text-decoration: none; color: var(--text); text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; }
+        /* Hero Section minimale */
+        .hero { 
+            padding: 80px 40px; 
+            background: var(--sabbia); 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center;
+        }
+        .hero h1 { 
+            font-size: 1.8rem; 
+            font-weight: 300; 
+            letter-spacing: 1px; 
+            margin-bottom: 15px; 
+            text-transform: uppercase;
+        }
+        .hero p { 
+            font-size: 0.95rem; 
+            max-width: 500px; 
+            color: #555; 
+            margin-bottom: 30px;
+        }
+        .hero-img { 
+            width: 100%; 
+            max-width: 900px; 
+            height: 450px; 
+            background: url('https://images.unsplash.com') center/cover;
+            border-radius: 2px;
+        }
 
-        /* Hero Section */
-        .hero { background: var(--sabbia-light); display: flex; align-items: center; padding: 100px 5%; min-height: 60vh; }
-        .hero-text { flex: 1; padding-right: 50px; }
-        .hero-text h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 25px; color: var(--accent); }
-        .hero-image { flex: 1; height: 500px; background: url('https://images.unsplash.com') center/cover no-repeat; border-radius: 2px; box-shadow: 20px 20px 0px var(--sabbia-dark); }
+        /* Sezione Contenuto SEO */
+        .content-section { 
+            padding: 100px 10%; 
+            max-width: 800px; 
+            margin: 0 auto;
+        }
+        .content-section h2 { 
+            font-size: 1.4rem; 
+            font-weight: 600; 
+            margin-bottom: 25px; 
+            text-align: center;
+        }
+        .content-section p { 
+            font-size: 0.9rem; 
+            color: #444; 
+            margin-bottom: 20px; 
+            text-align: justify;
+        }
 
-        /* Sezione SEO Text (H2) */
-        .seo-section { padding: 80px 10%; text-align: center; background: var(--white); }
-        .seo-section h2 { font-size: 2.2rem; margin-bottom: 30px; }
-        .seo-section p { max-width: 900px; margin: 0 auto; color: #555; font-size: 1.1rem; }
+        /* Griglia Prodotti (Solo struttura) */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px; 
+            padding: 40px;
+        }
+        .item { 
+            aspect-ratio: 3/4; 
+            background: var(--sabbia); 
+        }
 
-        /* Griglia Categorie (H3) */
-        .categories { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; padding: 50px 5%; }
-        .category-card { position: relative; height: 450px; overflow: hidden; background: var(--sabbia-light); display: flex; align-items: flex-end; transition: 0.5s; }
-        .category-card img { position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: 1; transition: transform 1s; }
-        .category-card:hover img { transform: scale(1.1); }
-        .category-info { position: relative; z-index: 2; background: rgba(255,255,255,0.9); width: 100%; padding: 30px; text-align: center; }
-        .category-info h3 { margin: 0; font-size: 1.4rem; text-transform: uppercase; }
-
-        /* Footer */
-        footer { background: var(--sabbia-light); padding: 80px 10%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; border-top: 1px solid var(--sabbia-dark); }
-        .footer-col h4 { margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; }
-        .footer-col p, .footer-col a { font-size: 0.85rem; color: #666; text-decoration: none; display: block; margin-bottom: 10px; }
+        footer { 
+            padding: 60px 40px; 
+            border-top: 1px solid var(--border); 
+            text-align: center; 
+            font-size: 0.8rem; 
+            color: #888;
+            letter-spacing: 1px;
+        }
     </style>
 </head>
 <body>
 
-    <div class="promo-bar">Eccellenza Italiana: Stampe su Tela Artigianali con Spedizione Assicurata</div>
-
     <header>
-        <a href="index.html" class="logo">30ARTGALLERY</a>
-        <nav>
-            <a href="#collezioni">Collezioni</a>
-            <a href="#perche-noi">Qualità</a>
-            <a href="chi-siamo.html">L'Artista</a>
-            <a href="contatti.html">Supporto</a>
-        </nav>
+        <div class="logo">30ArtGallery</div>
+        <div style="font-size: 0.8rem; letter-spacing: 1px;">EST. 2026</div>
     </header>
 
     <section class="hero">
-        <div class="hero-text">
-            <h1>Le Tue Emozioni, <br>Su Tele d'Autore.</h1>
-            <p>Specialisti nella vendita online di <strong>stampe su tela</strong> di alta gamma. Trasformiamo i tuoi spazi in una galleria d'arte privata con materiali certificati e design esclusivi.</p>
-            <br>
-            <a href="#collezioni" style="background:var(--accent); color:white; padding:18px 40px; text-decoration:none; font-weight:bold; letter-spacing:2px;">SCOPRI IL CATALOGO</a>
-        </div>
-        <div class="hero-image"></div>
+        <h1>Stampe su tela d'autore</h1>
+        <p>L'essenzialità dell'arte moderna incontra la qualità artigianale italiana. Trasforma le tue pareti con discrezione ed eleganza.</p>
+        <div class="hero-img"></div>
     </section>
 
-    <article class="seo-section" id="perche-noi">
-        <h2>Perché scegliere le nostre Stampe su Tela?</h2>
+    <main class="content-section">
+        <h2>Eccellenza nelle stampe murali</h2>
         <p>
-            Benvenuti su <strong>30ArtGallery</strong>, la destinazione definitiva per chi desidera arredare con personalità. 
-            Le nostre <strong>stampe su tela</strong> non sono semplici riproduzioni, ma opere curate nei minimi dettagli. 
-            Utilizziamo telai in legno massello levigato e tele in cotone premium che garantiscono colori vibranti e una durata eterna. 
-            Dalla scelta del soggetto alla spedizione, ogni processo è gestito internamente per assicurare la massima qualità artigianale italiana.
+            Benvenuti su <strong>30ArtGallery</strong>. La nostra filosofia si basa sulla purezza visiva. Proponiamo una selezione esclusiva di <strong>stampe su tela</strong> realizzate con pigmenti naturali e telai in legno certificato. Ogni opera è pensata per integrarsi perfettamente in ambienti minimali, uffici di design e abitazioni contemporanee.
         </p>
-    </article>
-
-    <div class="section-title" style="text-align:center;"><h3>Esplora le Collezioni</h3></div>
-
-    <section class="categories" id="collezioni">
-        <div class="category-card">
-            <img src="https://images.unsplash.com" alt="Quadri Astratti Moderni">
-            <div class="category-info">
-                <h3>Quadri Astratti</h3>
-                <p>Forme e colori per ambienti moderni</p>
-            </div>
-        </div>
-        <div class="category-card">
-            <img src="https://images.unsplash.com" alt="Paesaggi d'Autore">
-            <div class="category-info">
-                <h3>Paesaggi</h3>
-                <p>La natura entra in casa tua</p>
-            </div>
-        </div>
-        <div class="category-card">
-            <img src="https://images.unsplash.com" alt="Stampe Minimali">
-            <div class="category-info">
-                <h3>Minimalismo</h3>
-                <p>Essenzialità ed eleganza pura</p>
-            </div>
-        </div>
-    </section>
-
-    <article class="seo-section" style="background:var(--sabbia-light)">
-        <h2>Arredamento Pareti: Tendenze e Consigli</h2>
         <p>
-            Ogni ambiente richiede il giusto equilibrio. Che tu stia cercando un pezzo centrale per il tuo soggiorno o una serie di stampe per l'ufficio, 
-            la nostra galleria offre soluzioni su misura. Le <strong>stampe su tela moderne</strong> sono la scelta ideale per chi cerca un impatto estetico 
-            senza il peso delle cornici tradizionali. Scopri come i nostri quadri possono cambiare la percezione della luce e dello spazio nei tuoi interni.
+            Vendere quadri online per noi significa garantire un'esperienza sensoriale: dalla trama della tela alla profondità dei neri. Utilizziamo tecnologie di stampa a 12 colori per assicurare una fedeltà cromatica che dura nel tempo. Scopri il valore di una decorazione murale che non stanca mai l'occhio, progettata per durare decenni.
         </p>
-    </article>
+    </main>
+
+    <div class="grid">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
 
     <footer>
-        <div class="footer-col">
-            <h4>30ArtGallery</h4>
-            <p>Laboratorio artigianale specializzato in decorazioni murali d'eccellenza.</p>
-        </div>
-        <div class="footer-col">
-            <h4>Collezioni</h4>
-            <a href="#">Quadri Astratti</a>
-            <a href="#">Paesaggi su Tela</a>
-            <a href="#">Arte Contemporanea</a>
-        </div>
-        <div class="footer-col">
-            <h4>Servizio Clienti</h4>
-            <a href="#">Spedizioni e Consegna</a>
-            <a href="#">Diritto di Recesso</a>
-            <a href="#">FAQ</a>
-        </div>
-        <div class="footer-col">
-            <h4>Contatti</h4>
-            <p>Email: info@30artgallery.it</p>
-            <p>Sede: Italia</p>
-        </div>
+        &copy; 2026 30ARTGALLERY - VENDITA ONLINE QUADRI E STAMPE - MADE IN ITALY
     </footer>
 
 </body>
