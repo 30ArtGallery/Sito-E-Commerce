@@ -3,261 +3,114 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Moodhaus | Stampe su Tela d'Autore</title>
     
-    <!-- SEO & META TAGS -->
-    <title>Moodhaus | Stampe su Tela d'Autore e Quadri Moderni</title>
-    <meta name="description" content="Scopri l'esclusiva collezione Moodhaus: stampe su tela di alta qualità, quadri moderni e decorazioni murali artigianali. Spedizione gratuita."/>
-    <link rel="canonical" href="https://30artgallery.github.io"/>
-
-    <!-- FONTS -->
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     
-    <!-- SCHEMA.ORG MARKUP (SEO TECNICA) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "OnlineStore",
-      "name": "Moodhaus",
-      "description": "Galleria specializzata in stampe su tela e quadri moderni d'autore.",
-      "url": "https://30artgallery.github.io",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "IT"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://30artgallery.github.iosearch?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-
     <style>
         :root {
             --sand-bg: #fdfcf9;
-            --sand-accent: #f4f1ea;
-            --sand-dark: #e5e0d5;
-            --gold-soft: #c2a683;
-            --black: #1a1a1a;
+            --sand-soft: #f4f1ea;
+            --text-main: #2c2c2c;
             --white: #ffffff;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--black); background: var(--white); line-height: 1.6; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-main); background: var(--white); -webkit-font-smoothing: antialiased; }
         .container { max-width: 1400px; margin: 0 auto; padding: 0 30px; }
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        a { text-decoration: none; color: inherit; }
 
-        /* PROMO BAR */
-        .promo-bar {
-            background: var(--sand-accent);
-            padding: 12px 0;
-            font-size: 0.75rem;
-            text-align: center;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border-bottom: 1px solid var(--sand-dark);
-        }
-        .timer { font-weight: 600; color: #b33939; margin-left: 5px; }
-
-        /* HEADER */
-        header { padding: 30px 0; background: white; border-bottom: 1px solid #f0f0f0; position: sticky; top: 0; z-index: 1000; }
-        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 600; letter-spacing: -1px; }
+        /* HEADER & MENU */
+        header { padding: 30px 0; background: white; border-bottom: 1px solid #f0f0f0; text-align: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 500; letter-spacing: -1px; margin-bottom: 20px; display: block; }
         
         .main-nav { display: flex; justify-content: center; gap: 35px; }
-        .main-nav a { font-size: 0.85rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1.5px; color: #444; }
-        .main-nav a:hover { color: var(--gold-soft); }
+        .main-nav a { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #555; }
 
-        /* GRID PRODOTTI */
-        .section-title { text-align: center; margin: 80px 0 40px; }
-        .section-title h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 400; }
+        /* MOCKUP PRINCIPALE (LARGO) */
+        .hero-mockup-main {
+            width: 100%;
+            height: 70vh; /* Altezza grande */
+            background-color: var(--sand-bg);
+            overflow: hidden;
+        }
+        .hero-mockup-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 40px; }
-        .product-card { position: relative; group; }
-        .img-box { aspect-ratio: 1/1; background: var(--sand-bg); overflow: hidden; margin-bottom: 20px; border: 1px solid var(--sand-accent); }
-        .img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-        .product-card:hover img { transform: scale(1.05); }
-        .badge { position: absolute; top: 15px; left: 15px; background: white; padding: 5px 12px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--sand-dark); }
-        
-        .product-info { text-align: center; }
-        .product-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 500; margin-bottom: 5px; }
-        .product-info .category { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+        /* SEZIONE DUE FOTO AFFIANCATE */
+        .mockup-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Due colonne uguali */
+            gap: 20px;
+            padding: 20px;
+            background: var(--white);
+        }
+        .mockup-box {
+            aspect-ratio: 16 / 9; /* Formato orizzontale morbido */
+            overflow: hidden;
+            background: var(--sand-soft);
+        }
+        .mockup-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1s ease;
+        }
+        .mockup-box:hover img {
+            transform: scale(1.05);
+        }
 
-        /* USP SECTION (Vantaggi) */
-        .usp-section { display: flex; justify-content: space-around; background: var(--sand-bg); padding: 50px 0; margin-top: 80px; text-align: center; border-top: 1px solid var(--sand-dark); }
-        .usp-item h5 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
-        .usp-item p { font-size: 0.75rem; color: #777; }
+        /* FOOTER MINIMALE */
+        footer { padding: 60px 0; text-align: center; border-top: 1px solid var(--sand-soft); margin-top: 40px; }
+        .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 10px; display: block; }
+        .copy { font-size: 0.6rem; letter-spacing: 2px; color: #999; text-transform: uppercase; }
 
-        /* FOOTER */
-        footer { padding: 80px 0 40px; border-top: 1px solid #eee; background: #fff; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 50px; margin-bottom: 60px; }
-        .footer-col h4 { font-size: 0.9rem; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1px; font-weight: 600; }
-        .footer-col ul { list-style: none; }
-        .footer-col li { font-size: 0.85rem; color: #666; margin-bottom: 12px; cursor: pointer; }
-        .footer-col li:hover { color: var(--gold-soft); }
-
-        .newsletter-section { text-align: center; padding: 60px 0; border-top: 1px solid var(--sand-accent); }
-        .newsletter-section h4 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 15px; }
-        .newsletter-input { padding: 12px; width: 300px; border: 1px solid var(--sand-dark); font-family: inherit; }
-        .newsletter-btn { padding: 12px 30px; background: var(--black); color: white; border: none; cursor: pointer; font-size: 0.8rem; letter-spacing: 1px; }
-
+        /* MOBILE */
         @media (max-width: 768px) {
-            .logo { font-size: 2rem; }
-            .main-nav { display: none; } /* Su mobile solitamente si usa un menu a scomparsa */
-            .usp-section { flex-direction: column; gap: 30px; }
+            .mockup-grid { grid-template-columns: 1fr; } /* Una sopra l'altra su mobile */
+            .hero-mockup-main { height: 40vh; }
+            .main-nav { gap: 15px; font-size: 0.6rem; }
         }
     </style>
 </head>
 <body>
 
-    <div class="promo-bar">
-        Consegna gratuita da 89 € — <strong>Promozione Primavera -40%</strong> 
-        <span class="timer" id="countdown">05h : 44m : 00s</span>
-    </div>
-
     <header>
         <div class="container">
-            <div class="header-top">
-                <a href="index.html" class="logo">moodhaus</a>
-                <div style="font-size: 1.2rem; display: flex; gap: 20px;">
-                    <span>🔍</span> <span>🛒</span>
-                </div>
-            </div>
+            <a href="index.html" class="logo">moodhaus</a>
             <nav class="main-nav">
-                <a href="#">Stampe su Tela</a>
-                <a href="#">Quadri Astratti</a>
-                <a href="#">Collezioni d'Autore</a>
-                <a href="#">Novità</a>
-                <a href="#">Bestseller</a>
+                <a href="#">Collezioni</a>
+                <a href="#">Stampe</a>
+                <a href="#">Materiali</a>
+                <a href="#">Contatti</a>
             </nav>
         </div>
     </header>
 
-    <main class="container">
-        <section class="section-title">
-            <h2>I Bestseller di Moodhaus</h2>
-        </section>
+    <!-- 1. MOCKUP PRINCIPALE LARGO -->
+    <section class="hero-mockup-main">
+        <img src="LINK_MOCKUP_PRINCIPALE.jpg" alt="Moodhaus Main Interior">
+    </section>
 
-        <div class="product-grid">
-            <!-- Prodotto 1 -->
-            <a href="prodotti/bauhaus-1.html" class="product-card">
-                <div class="badge">Bestseller</div>
-                <div class="img-box">
-                    <img src="https://images.unsplash.com" alt="Stampa su tela Bauhaus">
-                </div>
-                <div class="product-info">
-                    <h3>Composizione Astratta No. 1</h3>
-                    <p class="category">Stampa su tela</p>
-                </div>
-            </a>
-
-            <!-- Prodotto 2 -->
-            <a href="#" class="product-card">
-                <div class="img-box">
-                    <img src="https://images.unsplash.com" alt="Paesaggio Moderno">
-                </div>
-                <div class="product-info">
-                    <h3>Sinfonia di Sabbia</h3>
-                    <p class="category">Quadro Moderno</p>
-                </div>
-            </a>
-
-            <!-- Prodotto 3 -->
-            <a href="#" class="product-card">
-                <div class="badge">Nuovo</div>
-                <div class="img-box">
-                    <img src="https://images.unsplash.com" alt="Minimalismo">
-                </div>
-                <div class="product-info">
-                    <h3>Minimalismo Organico</h3>
-                    <p class="category">Stampa su tela</p>
-                </div>
-            </a>
+    <!-- 2. DUE FOTO AFFIANCATE -->
+    <section class="mockup-grid">
+        <div class="mockup-box">
+            <img src="LINK_FOTO_SINISTRA.jpg" alt="Dettaglio Stampa 1">
         </div>
-
-        <div class="usp-section">
-            <div class="usp-item">
-                <h5>Consegna Gratuita</h5>
-                <p>Su ordini superiori a 89€</p>
-            </div>
-            <div class="usp-item">
-                <h5>30 Giorni per il reso</h5>
-                <p>Soddisfatti o rimborsati</p>
-            </div>
-            <div class="usp-item">
-                <h5>Acquisti Sicuri</h5>
-                <p>Pagamenti criptati SSL</p>
-            </div>
+        <div class="mockup-box">
+            <img src="LINK_FOTO_DESTRA.jpg" alt="Dettaglio Stampa 2">
         </div>
-
-        <section class="newsletter-section">
-            <h4>Entra nell'Atelier Moodhaus</h4>
-            <p style="margin-bottom: 25px; color: #777; font-size: 0.9rem;">Iscriviti per ricevere anteprime sulle nuove collezioni e uno sconto immediato di 5€.</p>
-            <input type="email" class="newsletter-input" placeholder="Il tuo indirizzo email">
-            <button class="newsletter-btn">ISCRIVITI</button>
-        </section>
-    </main>
+    </section>
 
     <footer>
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>Informazioni</h4>
-                    <ul>
-                        <li>Chi Siamo</li>
-                        <li>I Nostri Prodotti</li>
-                        <li>Spedizioni</li>
-                        <li>Istruzioni Montaggio</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Assistenza</h4>
-                    <ul>
-                        <li>Contattaci</li>
-                        <li>Resi e Rimborsi</li>
-                        <li>Tracciamento Ordine</li>
-                        <li>Domande Frequenti</li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Social</h4>
-                    <ul>
-                        <li>Instagram</li>
-                        <li>Pinterest</li>
-                        <li>Facebook</li>
-                    </ul>
-                </div>
-            </div>
-            <div style="text-align: center; padding-top: 40px; border-top: 1px solid #f0f0f0;">
-                <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem;">moodhaus</p>
-                <p style="font-size: 0.7rem; color: #aaa; margin-top: 10px;">&copy; 2026 MOODHAUS STUDIO — TUTTI I DIRITTI RISERVATI</p>
-            </div>
+            <span class="footer-logo">moodhaus</span>
+            <p class="copy">&copy; 2026 Studio Moodhaus — Italia</p>
         </div>
     </footer>
 
-    <script>
-        // Semplice script per il countdown
-        function startTimer(duration, display) {
-            var timer = duration, hours, minutes, seconds;
-            setInterval(function () {
-                hours = parseInt(timer / 3600, 10);
-                minutes = parseInt((timer % 3600) / 60, 10);
-                seconds = parseInt(timer % 60, 10);
-
-                hours = hours < 10 ? "0" + hours : hours;
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                display.textContent = hours + "h : " + minutes + "m : " + seconds + "s";
-
-                if (--timer < 0) { timer = duration; }
-            }, 1000);
-        }
-        window.onload = function () {
-            var fiveHours = 60 * 60 * 5 + 44 * 60;
-            var display = document.querySelector('#countdown');
-            startTimer(fiveHours, display);
-        };
-    </script>
 </body>
 </html>
