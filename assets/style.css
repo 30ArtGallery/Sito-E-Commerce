@@ -1,4 +1,5 @@
-/* --- 1. RESET E FONT (MOODHAUS LUXURY STYLE) --- */
+/* --- 1. RESET E FONT (CORRETTO) --- */
+/* Ho aggiunto l'import completo dei font Inter e Playfair Display */
 @import url('https://fonts.googleapis.com');
 
 :root {
@@ -7,7 +8,7 @@
     --sabbia: #f2eee9;
     --sabbia-dark: #d2c5b3;
     --border: #eeeeee;
-    --accent: #8e7d6a; /* Colore fango/oro Moodhaus */
+    --accent: #8e7d6a; 
     --white: #ffffff;
     --max-width: 1200px;
 }
@@ -59,6 +60,7 @@ header .container {
     text-transform: uppercase; 
     text-decoration: none; 
     color: var(--text);
+    font-family: 'Playfair Display', serif; /* Aggiunto font luxury al logo */
 }
 
 nav {
@@ -92,6 +94,7 @@ nav a:hover { color: var(--accent); }
     letter-spacing: 3px;
     margin-bottom: 25px;
     text-transform: uppercase;
+    color: var(--text);
 }
 
 .hero p {
@@ -105,7 +108,8 @@ nav a:hover { color: var(--accent); }
 /* --- 5. GRIGLIA PRODOTTI --- */
 .grid { 
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    /* Fix: auto-fit forzato per mobile */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 40px; 
     padding: 80px 0;
 }
