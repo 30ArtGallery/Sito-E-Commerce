@@ -2,64 +2,61 @@
 <html lang="it-IT">
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
     
-    <!-- SEO DINAMICO (Da personalizzare per ogni quadro) -->
+    <!-- SEO DINAMICO - DA PERSONALIZZARE PER OGNI PRODOTTO -->
     <title>Nome Quadro - Stampa su Tela d'Autore | 30ArtGallery</title>
     <meta name="description" content="Acquista la stampa su tela 'Nome Quadro'. Alta qualità artigianale, colori resistenti nel tempo e telaio in legno massello. Spedizione assicurata."/>
     
-   <link rel="stylesheet" href="assets/style.css">
+    <!-- COLLEGAMENTO AL CSS (Usa ../ per uscire dalla cartella prodotti) -->
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
 
     <header>
-        <a href="index.html" class="logo">30ARTGALLERY</a>
-        <div style="font-size: 0.8rem;">CARRELLO (0)</div>
+        <div class="container">
+            <a href="../index.html" class="logo">30ArtGallery</a>
+            <div style="font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; color: #888;">Carrello (0)</div>
+        </div>
     </header>
 
-    <main class="product-container">
-        <!-- Lato Immagine -->
-        <div class="product-image">
-            <img src="https://images.unsplash.com" alt="Nome Quadro">
-        </div>
-
-        <!-- Lato Dati -->
-        <div class="product-info">
-            <div class="product-category">Collezione Astratti</div>
-            <h1>Orizzonti Blu</h1>
-            <div class="price">€ 89,00</div>
-
-            <div class="options">
-                <label>Seleziona Dimensione</label>
-                <select class="select-style">
-                    <option>50x70 cm</option>
-                    <option>70x100 cm (+€30)</option>
-                    <option>100x140 cm (+€70)</option>
-                </select>
-
-                <label>Finitura</label>
-                <select class="select-style">
-                    <option>Solo Tela</option>
-                    <option>Telaio in Legno 2cm</option>
-                    <option>Telaio in Legno 4cm Premium</option>
-                </select>
+    <main class="container" style="padding: 80px 0;">
+        <div style="display: flex; flex-wrap: wrap; gap: 60px; align-items: flex-start;">
+            
+            <!-- COLONNA IMMAGINE -->
+            <div style="flex: 1.2; min-width: 300px;">
+                <div class="card-img" style="aspect-ratio: auto; background: #f2eee9;">
+                    <img src="https://images.unsplash.com" alt="Dettaglio stampa su tela">
+                </div>
             </div>
 
-            <button class="buy-btn">Aggiungi al carrello</button>
+            <!-- COLONNA DATI -->
+            <div style="flex: 1; min-width: 300px;">
+                <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #8e7d6a; margin-bottom: 15px;">Collezione Astratti</div>
+                <h1 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 10px; line-height: 1.2;">Orizzonti Blu</h1>
+                <div style="font-size: 1.4rem; font-weight: 600; margin-bottom: 30px;">€ 89,00</div>
 
-            <div class="product-description">
-                <h2>Descrizione e Dettagli</h2>
-                <p>
-                    Questa <strong>stampa su tela</strong> rappresenta l'apice della nostra ricerca cromatica. Realizzata con pigmenti resistenti ai raggi UV, garantisce una brillantezza eterna. 
-                    Il supporto è una tela in cotone da 360g, montata artigianalmente su telai in legno di abete certificato.
-                </p>
-                <p>Spedizione gratuita in 3-5 giorni lavorativi. Imballaggio eco-friendly e ultra-resistente.</p>
+                <!-- TASTO ACQUISTO -->
+                <button class="btn" style="width: 100%; border: none; cursor: pointer;">Aggiungi al carrello</button>
+
+                <!-- DETTAGLI TECNICI SEO -->
+                <div style="margin-top: 50px; border-top: 1px solid #eee; padding-top: 30px;">
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 20px;">Dettagli dell'opera</h2>
+                    <p style="font-size: 0.95rem; color: #444; line-height: 1.8; text-align: justify; margin-bottom: 15px;">
+                        Questa <strong>stampa su tela</strong> rappresenta l'apice della nostra ricerca cromatica. Realizzata con pigmenti naturali resistenti ai raggi UV, garantisce una brillantezza dei colori che dura nel tempo senza sbiadire.
+                    </p>
+                    <p style="font-size: 0.95rem; color: #444; line-height: 1.8; text-align: justify;">
+                        Il supporto è una tela in cotone da 360g di altissima qualità, montata artigianalmente su un telaio in legno di abete certificato. Ogni pezzo viene controllato singolarmente prima della spedizione assicurata.
+                    </p>
+                </div>
             </div>
         </div>
     </main>
 
     <footer>
-        &copy; 2026 30ARTGALLERY - QUALITÀ ARTIGIANALE ITALIANA
+        <div class="container">
+            <p>&copy; 2026 30ARTGALLERY - QUALITÀ ARTIGIANALE ITALIANA</p>
+        </div>
     </footer>
 
 </body>
