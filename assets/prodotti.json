@@ -2,14 +2,14 @@
   {
     "id": "001",
     "slug": "quadro-bauhaus",
-    "titolo": "Orizzonti Blu",
+    "titolo": "Bauhaus 1376",
     "prezzo": 89.00,
     "categoria": "Astratti",
     "immagine": "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-1376.jpg",
-    "seo_title": "Quadro Astratto Bauhaus' - Stampa su Tela Moderna - moodhaus.it",
-    "seo_description": "Acquista la stampa su tela 'Orizzonti Blu'. Realizzata a mano con pigmenti naturali e telaio in legno. Spedizione gratuita in 24/48h.",
-    "descrizione_breve": "Un'esplosione di blu e oro per il tuo living moderno.",
-    "dettagli": "Tela in cotone 360g, telaio abete 2cm, stampa HD 12 colori."
+    "seo_title": "Quadro Astratto Bauhaus - Stampa su Tela Moderna | Moodhaus",
+    "seo_description": "Acquista la stampa su tela della collezione Bauhaus. Realizzata a mano con pigmenti naturali e telaio in legno massello. Spedizione gratuita in 24/48h.",
+    "descrizione_breve": "Geometrie iconiche e stile minimalista per il tuo living moderno.",
+    "dettagli": "Tela in cotone 360g, telaio abete 2cm, stampa professionale HD."
   },
   {
     "id": "002",
@@ -17,10 +17,10 @@
     "titolo": "Sabbia Dorata",
     "prezzo": 95.00,
     "categoria": "Minimal",
-    "immagine": "https://link-tua-foto-2.jpg",
-    "seo_title": "Sabbia Dorata - Quadro Minimalista Materico - moodhaus.it",
+    "immagine": "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-1376.jpg",
+    "seo_title": "Sabbia Dorata - Quadro Minimalista Materico | Moodhaus",
     "seo_description": "Eleganza e texture naturali con il quadro 'Sabbia Dorata'. Stampa premium su tela per arredamenti di lusso e studi professionali.",
-    "descrizione_breve": "Texture naturali e toni caldi per un'atmosfera rilassante.",
+    "descrizione_breve": "Texture naturali e toni caldi per un'atmosfera rilassante e sofisticata.",
     "dettagli": "Finitura opaca antiriflesso, montaggio artigianale italiano."
   }
 ]
