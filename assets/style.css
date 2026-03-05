@@ -1,6 +1,7 @@
 /* --- 1. RESET E FONT (CORRETTO) --- */
 /* Ho aggiunto l'import completo dei font Inter e Playfair Display */
-@import url('https://fonts.googleapis.com');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&
+family=Playfair+Display:wght@400;700&display=swap');
 
 :root {
     --bg: #ffffff;
@@ -169,3 +170,53 @@ footer p {
     cursor: pointer;
 }
 .btn:hover { background: var(--accent); }
+
+/* --- 8. SIDE CART (CARRELLO LATERALE) --- */
+#side-cart {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Nascosto a destra */
+    width: 350px;
+    height: 100%;
+    background: var(--white);
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    z-index: 2000;
+    transition: right 0.4s cubic-bezier(0.82, 0.085, 0.395, 0.895);
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+#side-cart.open { right: 0; }
+
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    z-index: 1500;
+}
+
+.cart-overlay.open { display: block; }
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.cart-close { cursor: pointer; font-size: 1.2rem; }
+
+.cart-items { flex-grow: 1; overflow-y: auto; }
+
+.cart-total {
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    margin-top: 20px;
+}
