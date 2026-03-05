@@ -1,118 +1,145 @@
-/* --- CONFIGURAZIONE CORE 30ARTGALLERY --- */
+/* --- 1. RESET E FONT (BIMAGO LUXURY STYLE) --- */
 @import url('https://fonts.googleapis.com');
 
 :root {
     --bg: #ffffff;
     --text: #1a1a1a;
-    --sabbia-light: #f2eee9;
+    --sabbia: #f2eee9;
     --sabbia-dark: #d2c5b3;
     --border: #eeeeee;
-    --accent: #8e7d6a; /* Oro brunito elegante */
+    --accent: #8e7d6a;
     --white: #ffffff;
+    --max-width: 1200px;
 }
 
 * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
 }
 
 body { 
     font-family: 'Inter', sans-serif; 
-    margin: 0; 
     background: var(--bg); 
     color: var(--text); 
-    line-height: 1.6; 
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-h1, h2, h3 { 
-    font-family: 'Playfair Display', serif; 
-    font-weight: 700; 
-    letter-spacing: 1px; 
-    margin: 0;
+/* --- 2. LAYOUT STRUTTURALE (IL "BINARIO") --- */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
 }
 
-/* --- LAYOUT HEADER --- */
+/* --- 3. HEADER PULITO E ALLINEATO --- */
 header { 
-    padding: 25px 5%; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    border-bottom: 1px solid var(--border);
     background: var(--white);
+    border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
+}
+
+header .container {
+    height: 90px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
 }
 
 .logo { 
-    font-size: 1.4rem; 
+    font-size: 1.3rem; 
     font-weight: 600; 
-    letter-spacing: 4px; 
+    letter-spacing: 3px; 
     text-transform: uppercase; 
     text-decoration: none; 
     color: var(--text);
 }
 
+nav {
+    display: flex;
+    gap: 30px;
+}
+
 nav a {
-    margin-left: 25px;
     text-decoration: none;
     color: var(--text);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    font-weight: 400;
     transition: color 0.3s;
 }
 
-nav a:hover {
-    color: var(--accent);
+nav a:hover { color: var(--accent); }
+
+/* --- 4. HERO & SEZIONI TITOLO --- */
+.hero { 
+    background: var(--sabbia); 
+    padding: 100px 0;
+    text-align: center;
 }
 
-/* --- BOTTONI PROFESSIONALI --- */
-.btn {
-    display: inline-block;
-    padding: 18px 40px;
-    background: var(--text);
-    color: var(--white);
-    text-decoration: none;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.8rem;
+.hero h1 { 
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem; 
+    font-weight: 400; 
     letter-spacing: 2px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
-.btn:hover {
-    background: var(--accent);
-    transform: translateY(-2px);
+.hero p {
+    font-size: 0.95rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #555;
 }
 
-/* --- GRIGLIE PRODOTTI E CATEGORIE --- */
+/* --- 5. GRIGLIA PRODOTTI (STABILE) --- */
 .grid { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px; 
-    padding: 60px 5%;
-    max-width: 1400px;
-    margin: 0 auto;
+    padding: 60px 0;
 }
 
-/* --- FOOTER ELEGANTE --- */
+.card {
+    background: var(--white);
+    transition: transform 0.3s ease;
+}
+
+.card-img {
+    aspect-ratio: 3/4;
+    background: var(--sabbia);
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.6s;
+}
+
+.card:hover img { transform: scale(1.05); }
+
+/* --- 6. FOOTER MINIMALE --- */
 footer { 
-    padding: 80px 5%; 
-    background: var(--sabbia-light);
-    border-top: 1px solid var(--sabbia-dark); 
-    text-align: center; 
-    font-size: 0.8rem; 
-    color: #777;
-    letter-spacing: 1px;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    padding: 60px 0;
+    text-align: center;
 }
 
-footer p { margin-bottom: 10px; }
-
-/* --- UTILITIES --- */
-.section-padding { padding: 80px 5%; }
-.text-center { text-align: center; }
-.bg-sabbia { background: var(--sabbia-light); }
+footer p {
+    font-size: 0.75rem; 
+    color: #888;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
