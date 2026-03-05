@@ -10,8 +10,8 @@
     <meta name="keywords" content="stampe su tela, quadri moderni, quadri d'autore, arredamento pareti, moodhaus"/>
     <meta name="robots" content="index, follow"/>
     
-    <!-- Corretto Canonical: punta al percorso relativo di GitHub per ora -->
-    <link rel="canonical" href="https://30artgallery.github.io/index.html"/>
+    <!-- FIX CANONICAL: Punta al file locale per evitare blocchi browser -->
+    <link rel="canonical" href="./index.html"/>
     
     <!-- OPEN GRAPH (SOCIAL) -->
     <meta property="og:type" content="website"/>
@@ -19,7 +19,7 @@
     <meta property="og:description" content="Decorazioni murali artigianali. Alta qualità e spedizione assicurata su moodhaus.it"/>
     <meta property="og:site_name" content="Moodhaus"/>
 
-    <!-- COLLEGAMENTO AL CSS ESTERNO (Assicurati che la cartella si chiami 'assets') -->
+    <!-- COLLEGAMENTO AL CSS (Verifica che la cartella sia 'assets') -->
     <link rel="stylesheet" href="./assets/style.css">
 
 </head>
@@ -27,69 +27,67 @@
 
     <!-- HEADER MOODHAUS -->
     <header>
-        <div class="container">
-            <!-- Link relativo interno -->
-            <a href="./index.html" class="logo" style="text-decoration: none; color: inherit; font-weight: bold; font-size: 1.5rem;">moodhaus</a>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #eee;">
+            <a href="./index.html" class="logo" style="text-decoration: none; color: #1a1a1a; font-weight: bold; font-size: 1.8rem; letter-spacing: -1px;">moodhaus</a>
             <nav>
-                <div style="font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: #888;">EST. 2026</div>
+                <div style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #888;">EST. 2026</div>
             </nav>
         </div>
     </header>
 
     <main>
         <!-- SEZIONE HERO -->
-        <section class="hero" style="padding: 60px 0; text-align: center;">
+        <section class="hero" style="padding: 80px 0; text-align: center; background-color: #f9f9f9;">
             <div class="container">
-                <h1 style="font-size: 2.5rem; margin-bottom: 20px;">L'arte su tela incontra il design</h1>
-                <p style="max-width: 600px; margin: 0 auto; color: #666;">L'essenzialità dell'arte moderna incontra la qualità artigianale italiana. Trasforma le tue pareti con la firma di Moodhaus.</p>
+                <h1 style="font-size: 2.8rem; margin-bottom: 20px; font-family: serif;">L'arte su tela incontra il design</h1>
+                <p style="max-width: 700px; margin: 0 auto; color: #555; line-height: 1.6;">L'essenzialità dell'arte moderna incontra la qualità artigianale italiana. Trasforma le tue pareti con la firma di Moodhaus.</p>
             </div>
         </section>
 
-        <!-- CONTENUTO SEO PULITO -->
-        <div class="container" style="padding-top: 40px;">
-            <article style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <h2 style="font-family: serif; font-size: 2rem; margin-bottom: 30px; letter-spacing: 1px;">Stampe su tela d'eccellenza</h2>
-                <p style="font-size: 1rem; color: #444; text-align: justify; margin-bottom: 20px; line-height: 1.8;">
-                    Benvenuti su <strong>Moodhaus</strong>. La nostra filosofia si basa sulla purezza visiva e sulla cura del dettaglio. Proponiamo una selezione esclusiva di <strong>stampe su tela</strong> realizzate con pigmenti naturali e telai in legno certificato.
+        <!-- CONTENUTO SEO E GRIGLIA -->
+        <div class="container" style="padding: 60px 0;">
+            <article style="max-width: 800px; margin: 0 auto 60px; text-align: center;">
+                <h2 style="font-size: 2rem; margin-bottom: 20px; letter-spacing: 1px;">Stampe su tela d'eccellenza</h2>
+                <p style="font-size: 1rem; color: #444; text-align: justify; line-height: 1.8;">
+                    Benvenuti su <strong>Moodhaus</strong>. La nostra filosofia si basa sulla purezza visiva e sulla cura del dettaglio. Proponiamo una selezione esclusiva di <strong>stampe su tela</strong> realizzate con pigmenti naturali e telai in legno certificato. Ogni opera è pensata per integrarsi perfettamente in ambienti minimali e abitazioni contemporanee.
                 </p>
             </article>
 
             <!-- GRIGLIA COLLEZIONI -->
-            <div class="grid" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 50px;">
-                <!-- CARD 1 -->
-                <a href="categorie/categoria-template.html" class="card" style="text-decoration: none; color: inherit; width: 300px;">
-                    <div class="card-img" style="background: #f4f4f4; height: 400px; overflow: hidden;">
-                        <!-- Immagine di esempio Bauhaus -->
-                        <img src="https://images.unsplash.com" alt="Collezione Bauhaus" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <p style="text-align:center; font-size:0.8rem; margin-top:10px; letter-spacing:2px; text-transform:uppercase; font-weight:600;">Collezione Bauhaus</p>
-                </a>
+            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
                 
-                <!-- CARD 2 -->
-                <a href="#" class="card" style="text-decoration: none; color: inherit; width: 300px;">
-                    <div class="card-img" style="background: #f4f4f4; height: 400px; overflow: hidden;">
-                        <!-- Immagine di esempio Paesaggi -->
-                        <img src="https://images.unsplash.com" alt="Paesaggi Moderni" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- CARD 1: Baco a categoria-template -->
+                <a href="./categorie/categoria-template.html" class="card" style="text-decoration: none; color: inherit;">
+                    <div class="card-img" style="aspect-ratio: 3/4; background: #eee; overflow: hidden;">
+                        <img src="https://images.unsplash.com" alt="Collezione Bauhaus Moodhaus" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <p style="text-align:center; font-size:0.8rem; margin-top:10px; letter-spacing:2px; text-transform:uppercase; font-weight:600;">Paesaggi Moderni</p>
+                    <p style="text-align:center; font-size:0.8rem; margin-top:15px; letter-spacing:2px; text-transform:uppercase; font-weight:600;">Collezione Bauhaus</p>
+                </a>
+
+                <!-- CARD 2 -->
+                <a href="#" class="card" style="text-decoration: none; color: inherit;">
+                    <div class="card-img" style="aspect-ratio: 3/4; background: #eee; overflow: hidden;">
+                        <img src="https://images.unsplash.com" alt="Paesaggi Moderni Moodhaus" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <p style="text-align:center; font-size:0.8rem; margin-top:15px; letter-spacing:2px; text-transform:uppercase; font-weight:600;">Paesaggi Moderni</p>
                 </a>
 
                 <!-- CARD 3 -->
-                <a href="#" class="card" style="text-decoration: none; color: inherit; width: 300px;">
-                    <div class="card-img" style="background: #f4f4f4; height: 400px; overflow: hidden;">
-                        <!-- Immagine di esempio Minimal -->
-                        <img src="https://images.unsplash.com" alt="Minimalismo" style="width: 100%; height: 100%; object-fit: cover;">
+                <a href="#" class="card" style="text-decoration: none; color: inherit;">
+                    <div class="card-img" style="aspect-ratio: 3/4; background: #eee; overflow: hidden;">
+                        <img src="https://images.unsplash.com" alt="Minimalismo Moodhaus" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <p style="text-align:center; font-size:0.8rem; margin-top:10px; letter-spacing:2px; text-transform:uppercase; font-weight:600;">Minimalismo</p>
+                    <p style="text-align:center; font-size:0.8rem; margin-top:15px; letter-spacing:2px; text-transform:uppercase; font-weight:600;">Minimalismo</p>
                 </a>
+
             </div>
         </div>
     </main>
 
-    <!-- FOOTER COORDINATO -->
-    <footer style="margin-top: 100px; padding: 40px 0; border-top: 1px solid #eee; text-align: center;">
+    <!-- FOOTER -->
+    <footer style="background: #1a1a1a; color: #fff; padding: 50px 0; text-align: center; margin-top: 80px;">
         <div class="container">
-            <p style="font-size: 0.7rem; color: #999; letter-spacing: 1px;">&copy; 2026 MOODHAUS.IT - VENDITA ONLINE QUADRI E STAMPE - MADE IN ITALY</p>
+            <p style="font-size: 0.7rem; letter-spacing: 1px; opacity: 0.7;">&copy; 2026 MOODHAUS.IT - VENDITA ONLINE QUADRI E STAMPE - MADE IN ITALY</p>
         </div>
     </footer>
 
