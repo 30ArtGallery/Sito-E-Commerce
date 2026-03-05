@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="it-IT" translate="no">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
+    
+    <!-- SEO CATEGORIA MOODHAUS -->
+    <title>Quadri Bauhaus e Astratti Moderni | Moodhaus - Stampe su Tela</title>
+    <meta name="description" content="Esplora la collezione Bauhaus di Moodhaus. Stampe su tela di alta qualità e design minimale per un arredamento raffinato. Made in Italy."/>
+    <link rel="canonical" href="https://www.moodhaus.it" />
 
+    <!-- COLLEGAMENTO AL VESTITO (CSS) -->
+    <!-- Se il file è dentro la cartella /categorie/, usa ../ per trovare assets -->
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../index.html" class="logo">Moodhaus</a>
+            <div style="font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: #888;">Est. 2026</div>
+        </div>
+    </header>
+
+    <!-- HERO CATEGORIA -->
+    <section class="hero">
+        <div class="container">
+            <h1>Collezione Bauhaus</h1>
+            <p>L'essenzialità delle forme incontra la profondità del colore. Una selezione curata per ambienti dal carattere deciso e minimale.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- GRIGLIA PRODOTTI AGGANCIATA AL CSS -->
+        <div class="grid">
+            
+            <!-- PRODOTTO 1 -->
+            <a href="../prodotti/quadro-bauhaus.html" class="card">
+                <div class="card-img">
+                    <img src="https://www.moodhaus.it" alt="Quadro Bauhaus 1376">
+                </div>
+                <div style="text-align: center;">
+                    <h3 style="font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px;">Bauhaus 1376</h3>
+                    <p style="font-size: 0.9rem; color: #8e7d6a; font-weight: 600;">€ 89,00</p>
+                </div>
+            </a>
+
+            <!-- PRODOTTO 2 -->
+            <a href="#" class="card">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com" alt="Quadro Sabbia Dorata">
+                </div>
+                <div style="text-align: center;">
+                    <h3 style="font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px;">Sabbia Dorata</h3>
+                    <p style="font-size: 0.9rem; color: #8e7d6a; font-weight: 600;">€ 95,00</p>
+                </div>
+            </a>
+
+            <!-- PRODOTTO 3 -->
+            <a href="#" class="card">
+                <div class="card-img">
+                    <img src="https://images.unsplash.com" alt="Quadro Minimal Gray">
+                </div>
+                <div style="text-align: center;">
+                    <h3 style="font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 5px;">Minimal Gray</h3>
+                    <p style="font-size: 0.9rem; color: #8e7d6a; font-weight: 600;">€ 79,00</p>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 MOODHAUS.IT - ECCELLENZA ARTIGIANALE ITALIANA</p>
+        </div>
+    </footer>
+
+</body>
+</html>
