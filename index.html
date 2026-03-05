@@ -9,7 +9,9 @@
     <meta name="description" content="Moodhaus: la tua galleria online specializzata in stampe su tela di alta qualità. Collezioni esclusive e materiali artigianali per un arredamento raffinato."/>
     <meta name="keywords" content="stampe su tela, quadri moderni, quadri d'autore, arredamento pareti, moodhaus"/>
     <meta name="robots" content="index, follow"/>
-    <link rel="canonical" href="https://www.moodhaus.it"/>
+    
+    <!-- Corretto Canonical: punta al percorso relativo di GitHub per ora -->
+    <link rel="canonical" href="./index.html"/>
     
     <!-- OPEN GRAPH (SOCIAL) -->
     <meta property="og:type" content="website"/>
@@ -17,8 +19,8 @@
     <meta property="og:description" content="Decorazioni murali artigianali. Alta qualità e spedizione assicurata su moodhaus.it"/>
     <meta property="og:site_name" content="Moodhaus"/>
 
-    <!-- COLLEGAMENTO AL CSS ESTERNO -->
-    <link rel="stylesheet" href="assets/style.css">
+    <!-- COLLEGAMENTO AL CSS ESTERNO (Assicurati che la cartella si chiami 'assets') -->
+    <link rel="stylesheet" href="./assets/style.css">
 
 </head>
 <body>
@@ -26,7 +28,8 @@
     <!-- HEADER MOODHAUS -->
     <header>
         <div class="container">
-            <a href="index.html" class="logo">moodhaus</a>
+            <!-- Link relativo interno -->
+            <a href="./index.html" class="logo" style="text-decoration: none; color: inherit; font-weight: bold; font-size: 1.5rem;">moodhaus</a>
             <nav>
                 <div style="font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: #888;">EST. 2026</div>
             </nav>
@@ -35,45 +38,47 @@
 
     <main>
         <!-- SEZIONE HERO -->
-        <section class="hero">
+        <section class="hero" style="padding: 60px 0; text-align: center;">
             <div class="container">
-                <h1>L'arte su tela incontra il design</h1>
-                <p>L'essenzialità dell'arte moderna incontra la qualità artigianale italiana. Trasforma le tue pareti con la firma di Moodhaus.</p>
+                <h1 style="font-size: 2.5rem; margin-bottom: 20px;">L'arte su tela incontra il design</h1>
+                <p style="max-width: 600px; margin: 0 auto; color: #666;">L'essenzialità dell'arte moderna incontra la qualità artigianale italiana. Trasforma le tue pareti con la firma di Moodhaus.</p>
             </div>
         </section>
 
         <!-- CONTENUTO SEO PULITO -->
-        <div class="container" style="padding-top: 80px;">
+        <div class="container" style="padding-top: 40px;">
             <article style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 30px; letter-spacing: 1px;">Stampe su tela d'eccellenza</h2>
+                <h2 style="font-family: serif; font-size: 2rem; margin-bottom: 30px; letter-spacing: 1px;">Stampe su tela d'eccellenza</h2>
                 <p style="font-size: 1rem; color: #444; text-align: justify; margin-bottom: 20px; line-height: 1.8;">
-                    Benvenuti su <strong>Moodhaus</strong>. La nostra filosofia si basa sulla purezza visiva e sulla cura del dettaglio. Proponiamo una selezione esclusiva di <strong>stampe su tela</strong> realizzate con pigmenti naturali e telai in legno certificato. Ogni opera è pensata per integrarsi perfettamente in ambienti minimali, uffici di design e abitazioni contemporanee.
-                </p>
-                <p style="font-size: 1rem; color: #444; text-align: justify; line-height: 1.8;">
-                    Vendere quadri online per noi significa garantire un'esperienza sensoriale: dalla trama della tela alla profondità dei neri. Utilizziamo tecnologie di stampa a 12 colori per assicurare una fedeltà cromatica che dura nel tempo. Scopri il valore di una decorazione murale firmata Moodhaus.
+                    Benvenuti su <strong>Moodhaus</strong>. La nostra filosofia si basa sulla purezza visiva e sulla cura del dettaglio. Proponiamo una selezione esclusiva di <strong>stampe su tela</strong> realizzate con pigmenti naturali e telai in legno certificato.
                 </p>
             </article>
 
-            <!-- GRIGLIA COLLEZIONI (Sincronizzata con il CSS) -->
-            <div class="grid">
+            <!-- GRIGLIA COLLEZIONI -->
+            <div class="grid" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 50px;">
                 <!-- CARD 1 -->
-                <a href="categorie/categoria-template.html" class="card">
-                    <div class="card-img">
-                        <img src="https://www.moodhaus.it" alt="Collezione Bauhaus Moodhaus">
+                <a href="categorie/categoria-template.html" class="card" style="text-decoration: none; color: inherit; width: 300px;">
+                    <div class="card-img" style="background: #f4f4f4; height: 400px; overflow: hidden;">
+                        <!-- Immagine di esempio Bauhaus -->
+                        <img src="https://images.unsplash.com" alt="Collezione Bauhaus" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <p style="text-align:center; font-size:0.8rem; margin-top:10px; letter-spacing:2px; text-transform:uppercase; font-weight:600;">Collezione Bauhaus</p>
                 </a>
+                
                 <!-- CARD 2 -->
-                <a href="#" class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com" alt="Paesaggi Moderni Moodhaus">
+                <a href="#" class="card" style="text-decoration: none; color: inherit; width: 300px;">
+                    <div class="card-img" style="background: #f4f4f4; height: 400px; overflow: hidden;">
+                        <!-- Immagine di esempio Paesaggi -->
+                        <img src="https://images.unsplash.com" alt="Paesaggi Moderni" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <p style="text-align:center; font-size:0.8rem; margin-top:10px; letter-spacing:2px; text-transform:uppercase; font-weight:600;">Paesaggi Moderni</p>
                 </a>
+
                 <!-- CARD 3 -->
-                <a href="#" class="card">
-                    <div class="card-img">
-                        <img src="https://images.unsplash.com" alt="Minimalismo Moodhaus">
+                <a href="#" class="card" style="text-decoration: none; color: inherit; width: 300px;">
+                    <div class="card-img" style="background: #f4f4f4; height: 400px; overflow: hidden;">
+                        <!-- Immagine di esempio Minimal -->
+                        <img src="https://images.unsplash.com" alt="Minimalismo" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <p style="text-align:center; font-size:0.8rem; margin-top:10px; letter-spacing:2px; text-transform:uppercase; font-weight:600;">Minimalismo</p>
                 </a>
@@ -82,9 +87,9 @@
     </main>
 
     <!-- FOOTER COORDINATO -->
-    <footer>
+    <footer style="margin-top: 100px; padding: 40px 0; border-top: 1px solid #eee; text-align: center;">
         <div class="container">
-            <p>&copy; 2026 MOODHAUS.IT - VENDITA ONLINE QUADRI E STAMPE - MADE IN ITALY</p>
+            <p style="font-size: 0.7rem; color: #999; letter-spacing: 1px;">&copy; 2026 MOODHAUS.IT - VENDITA ONLINE QUADRI E STAMPE - MADE IN ITALY</p>
         </div>
     </footer>
 
