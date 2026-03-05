@@ -1,95 +1,263 @@
 <!DOCTYPE html>
-<html lang="it-IT" translate="no">
+<html lang="it-IT">
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     
-    <!-- SEO TECNICA MOODHAUS -->
-    <title>Moodhaus | Stampe su Tela e Quadri Moderni d'Autore</title>
-    <meta name="description" content="Moodhaus: la tua galleria online specializzata in stampe su tela di alta qualità. Collezioni esclusive e materiali artigianali per un arredamento raffinato."/>
-    <meta name="keywords" content="stampe su tela, quadri moderni, quadri d'autore, arredamento pareti, moodhaus"/>
-    <meta name="robots" content="index, follow"/>
-    
-    <!-- FIX CANONICAL: Punta al file locale per evitare blocchi browser -->
-    <link rel="canonical" href="./index.html"/>
-    
-    <!-- OPEN GRAPH (SOCIAL) -->
-    <meta property="og:type" content="website"/>
-    <meta property="og:title" content="Moodhaus | Stampe su Tela e Quadri Moderni"/>
-    <meta property="og:description" content="Decorazioni murali artigianali. Alta qualità e spedizione assicurata su moodhaus.it"/>
-    <meta property="og:site_name" content="Moodhaus"/>
+    <!-- SEO & META TAGS -->
+    <title>Moodhaus | Stampe su Tela d'Autore e Quadri Moderni</title>
+    <meta name="description" content="Scopri l'esclusiva collezione Moodhaus: stampe su tela di alta qualità, quadri moderni e decorazioni murali artigianali. Spedizione gratuita sopra gli 89€."/>
+    <link rel="canonical" href="https://30artgallery.github.io"/>
 
-    <!-- COLLEGAMENTO AL CSS (Verifica che la cartella sia 'assets') -->
-    <link rel="stylesheet" href="./assets/style.css">
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    
+    <!-- SCHEMA.ORG MARKUP (SEO TECNICA) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "OnlineStore",
+      "name": "Moodhaus",
+      "description": "Galleria specializzata in stampe su tela e quadri moderni d'autore.",
+      "url": "https://30artgallery.github.io",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IT"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://30artgallery.github.iosearch?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 
+    <style>
+        :root {
+            --sand-bg: #fdfcf9;
+            --sand-accent: #f4f1ea;
+            --sand-dark: #e5e0d5;
+            --gold-soft: #c2a683;
+            --black: #1a1a1a;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--black); background: var(--white); line-height: 1.6; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 30px; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+        /* PROMO BAR */
+        .promo-bar {
+            background: var(--sand-accent);
+            padding: 12px 0;
+            font-size: 0.75rem;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--sand-dark);
+        }
+        .timer { font-weight: 600; color: #b33939; margin-left: 5px; }
+
+        /* HEADER */
+        header { padding: 30px 0; background: white; border-bottom: 1px solid #f0f0f0; position: sticky; top: 0; z-index: 1000; }
+        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 600; letter-spacing: -1px; }
+        
+        .main-nav { display: flex; justify-content: center; gap: 35px; }
+        .main-nav a { font-size: 0.85rem; font-weight: 500; text-transform: uppercase; letter-spacing: 1.5px; color: #444; }
+        .main-nav a:hover { color: var(--gold-soft); }
+
+        /* GRID PRODOTTI */
+        .section-title { text-align: center; margin: 80px 0 40px; }
+        .section-title h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 400; }
+
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 40px; }
+        .product-card { position: relative; group; }
+        .img-box { aspect-ratio: 1/1; background: var(--sand-bg); overflow: hidden; margin-bottom: 20px; border: 1px solid var(--sand-accent); }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+        .product-card:hover img { transform: scale(1.05); }
+        .badge { position: absolute; top: 15px; left: 15px; background: white; padding: 5px 12px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border: 1px solid var(--sand-dark); }
+        
+        .product-info { text-align: center; }
+        .product-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 500; margin-bottom: 5px; }
+        .product-info .category { font-size: 0.75rem; color: #888; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* USP SECTION (Vantaggi) */
+        .usp-section { display: flex; justify-content: space-around; background: var(--sand-bg); padding: 50px 0; margin-top: 80px; text-align: center; border-top: 1px solid var(--sand-dark); }
+        .usp-item h5 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+        .usp-item p { font-size: 0.75rem; color: #777; }
+
+        /* FOOTER */
+        footer { padding: 80px 0 40px; border-top: 1px solid #eee; background: #fff; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 50px; margin-bottom: 60px; }
+        .footer-col h4 { font-size: 0.9rem; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 1px; font-weight: 600; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { font-size: 0.85rem; color: #666; margin-bottom: 12px; cursor: pointer; }
+        .footer-col li:hover { color: var(--gold-soft); }
+
+        .newsletter-section { text-align: center; padding: 60px 0; border-top: 1px solid var(--sand-accent); }
+        .newsletter-section h4 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 15px; }
+        .newsletter-input { padding: 12px; width: 300px; border: 1px solid var(--sand-dark); font-family: inherit; }
+        .newsletter-btn { padding: 12px 30px; background: var(--black); color: white; border: none; cursor: pointer; font-size: 0.8rem; letter-spacing: 1px; }
+
+        @media (max-width: 768px) {
+            .logo { font-size: 2rem; }
+            .main-nav { display: none; } /* Su mobile solitamente si usa un menu a scomparsa */
+            .usp-section { flex-direction: column; gap: 30px; }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- HEADER MOODHAUS -->
+    <div class="promo-bar">
+        Consegna gratuita da 89 € — <strong>Promozione Primavera -40%</strong> 
+        <span class="timer" id="countdown">05h : 44m : 00s</span>
+    </div>
+
     <header>
-        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid #eee;">
-            <a href="./index.html" class="logo" style="text-decoration: none; color: #1a1a1a; font-weight: bold; font-size: 1.8rem; letter-spacing: -1px;">moodhaus</a>
-            <nav>
-                <div style="font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #888;">EST. 2026</div>
+        <div class="container">
+            <div class="header-top">
+                <a href="index.html" class="logo">moodhaus</a>
+                <div style="font-size: 1.2rem; display: flex; gap: 20px;">
+                    <span>🔍</span> <span>🛒</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <a href="#">Stampe su Tela</a>
+                <a href="#">Quadri Astratti</a>
+                <a href="#">Collezioni d'Autore</a>
+                <a href="#">Novità</a>
+                <a href="#">Bestseller</a>
             </nav>
         </div>
     </header>
 
-    <main>
-        <!-- SEZIONE HERO -->
-        <section class="hero" style="padding: 80px 0; text-align: center; background-color: #f9f9f9;">
-            <div class="container">
-                <h1 style="font-size: 2.8rem; margin-bottom: 20px; font-family: serif;">L'arte su tela incontra il design</h1>
-                <p style="max-width: 700px; margin: 0 auto; color: #555; line-height: 1.6;">L'essenzialità dell'arte moderna incontra la qualità artigianale italiana. Trasforma le tue pareti con la firma di Moodhaus.</p>
-            </div>
+    <main class="container">
+        <section class="section-title">
+            <h2>I Bestseller di Moodhaus</h2>
         </section>
 
-        <!-- CONTENUTO SEO E GRIGLIA -->
-        <div class="container" style="padding: 60px 0;">
-            <article style="max-width: 800px; margin: 0 auto 60px; text-align: center;">
-                <h2 style="font-size: 2rem; margin-bottom: 20px; letter-spacing: 1px;">Stampe su tela d'eccellenza</h2>
-                <p style="font-size: 1rem; color: #444; text-align: justify; line-height: 1.8;">
-                    Benvenuti su <strong>Moodhaus</strong>. La nostra filosofia si basa sulla purezza visiva e sulla cura del dettaglio. Proponiamo una selezione esclusiva di <strong>stampe su tela</strong> realizzate con pigmenti naturali e telai in legno certificato. Ogni opera è pensata per integrarsi perfettamente in ambienti minimali e abitazioni contemporanee.
-                </p>
-            </article>
+        <div class="product-grid">
+            <!-- Prodotto 1 -->
+            <a href="prodotti/bauhaus-1.html" class="product-card">
+                <div class="badge">Bestseller</div>
+                <div class="img-box">
+                    <img src="https://images.unsplash.com" alt="Stampa su tela Bauhaus">
+                </div>
+                <div class="product-info">
+                    <h3>Composizione Astratta No. 1</h3>
+                    <p class="category">Stampa su tela</p>
+                </div>
+            </a>
 
-            <!-- GRIGLIA COLLEZIONI -->
-            <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                
-                <!-- CARD 1: Baco a categoria-template -->
-                <a href="./categorie/categoria-template.html" class="card" style="text-decoration: none; color: inherit;">
-                    <div class="card-img" style="aspect-ratio: 3/4; background: #eee; overflow: hidden;">
-                        <img src="https://images.unsplash.com" alt="Collezione Bauhaus Moodhaus" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <p style="text-align:center; font-size:0.8rem; margin-top:15px; letter-spacing:2px; text-transform:uppercase; font-weight:600;">Collezione Bauhaus</p>
-                </a>
+            <!-- Prodotto 2 -->
+            <a href="#" class="product-card">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com" alt="Paesaggio Moderno">
+                </div>
+                <div class="product-info">
+                    <h3>Sinfonia di Sabbia</h3>
+                    <p class="category">Quadro Moderno</p>
+                </div>
+            </a>
 
-                <!-- CARD 2 -->
-                <a href="#" class="card" style="text-decoration: none; color: inherit;">
-                    <div class="card-img" style="aspect-ratio: 3/4; background: #eee; overflow: hidden;">
-                        <img src="https://images.unsplash.com" alt="Paesaggi Moderni Moodhaus" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <p style="text-align:center; font-size:0.8rem; margin-top:15px; letter-spacing:2px; text-transform:uppercase; font-weight:600;">Paesaggi Moderni</p>
-                </a>
+            <!-- Prodotto 3 -->
+            <a href="#" class="product-card">
+                <div class="badge">Nuovo</div>
+                <div class="img-box">
+                    <img src="https://images.unsplash.com" alt="Minimalismo">
+                </div>
+                <div class="product-info">
+                    <h3>Minimalismo Organico</h3>
+                    <p class="category">Stampa su tela</p>
+                </div>
+            </a>
+        </div>
 
-                <!-- CARD 3 -->
-                <a href="#" class="card" style="text-decoration: none; color: inherit;">
-                    <div class="card-img" style="aspect-ratio: 3/4; background: #eee; overflow: hidden;">
-                        <img src="https://images.unsplash.com" alt="Minimalismo Moodhaus" style="width: 100%; height: 100%; object-fit: cover;">
-                    </div>
-                    <p style="text-align:center; font-size:0.8rem; margin-top:15px; letter-spacing:2px; text-transform:uppercase; font-weight:600;">Minimalismo</p>
-                </a>
-
+        <div class="usp-section">
+            <div class="usp-item">
+                <h5>Consegna Gratuita</h5>
+                <p>Su ordini superiori a 89€</p>
+            </div>
+            <div class="usp-item">
+                <h5>30 Giorni per il reso</h5>
+                <p>Soddisfatti o rimborsati</p>
+            </div>
+            <div class="usp-item">
+                <h5>Acquisti Sicuri</h5>
+                <p>Pagamenti criptati SSL</p>
             </div>
         </div>
+
+        <section class="newsletter-section">
+            <h4>Entra nell'Atelier Moodhaus</h4>
+            <p style="margin-bottom: 25px; color: #777; font-size: 0.9rem;">Iscriviti per ricevere anteprime sulle nuove collezioni e uno sconto immediato di 5€.</p>
+            <input type="email" class="newsletter-input" placeholder="Il tuo indirizzo email">
+            <button class="newsletter-btn">ISCRIVITI</button>
+        </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer style="background: #1a1a1a; color: #fff; padding: 50px 0; text-align: center; margin-top: 80px;">
+    <footer>
         <div class="container">
-            <p style="font-size: 0.7rem; letter-spacing: 1px; opacity: 0.7;">&copy; 2026 MOODHAUS.IT - VENDITA ONLINE QUADRI E STAMPE - MADE IN ITALY</p>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Informazioni</h4>
+                    <ul>
+                        <li>Chi Siamo</li>
+                        <li>I Nostri Prodotti</li>
+                        <li>Spedizioni</li>
+                        <li>Istruzioni Montaggio</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Assistenza</h4>
+                    <ul>
+                        <li>Contattaci</li>
+                        <li>Resi e Rimborsi</li>
+                        <li>Tracciamento Ordine</li>
+                        <li>Domande Frequenti</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Social</h4>
+                    <ul>
+                        <li>Instagram</li>
+                        <li>Pinterest</li>
+                        <li>Facebook</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; padding-top: 40px; border-top: 1px solid #f0f0f0;">
+                <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem;">moodhaus</p>
+                <p style="font-size: 0.7rem; color: #aaa; margin-top: 10px;">&copy; 2026 MOODHAUS STUDIO — TUTTI I DIRITTI RISERVATI</p>
+            </div>
         </div>
     </footer>
 
+    <script>
+        // Semplice script per il countdown
+        function startTimer(duration, display) {
+            var timer = duration, hours, minutes, seconds;
+            setInterval(function () {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = hours + "h : " + minutes + "m : " + seconds + "s";
+
+                if (--timer < 0) { timer = duration; }
+            }, 1000);
+        }
+        window.onload = function () {
+            var fiveHours = 60 * 60 * 5 + 44 * 60;
+            var display = document.querySelector('#countdown');
+            startTimer(fiveHours, display);
+        };
+    </script>
 </body>
 </html>
