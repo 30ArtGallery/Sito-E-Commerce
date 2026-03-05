@@ -3,11 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
-    
-    <!-- SEO PRODOTTO MOODHAUS -->
     <title>Bauhaus 1376 - Stampa su Tela Moderna | Moodhaus</title>
-    <meta name="description" content="Acquista la stampa su tela Bauhaus 1376 su Moodhaus.it. Qualità artigianale, colori resistenti UV e telaio in legno massello. Spedizione assicurata."/>
-    
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -24,86 +20,115 @@
     <main class="container" style="padding: 80px 0;">
         <div style="display: flex; flex-wrap: wrap; gap: 60px; align-items: flex-start;">
             
-            <!-- COLONNA IMMAGINE REALE -->
+            <!-- IMMAGINE -->
             <div style="flex: 1.2; min-width: 300px;">
                 <div class="card-img" style="aspect-ratio: auto; background: #f2eee9;">
-                    <img src="https://www.moodhaus.it" alt="Quadro Bauhaus 1376 Moodhaus">
+                    <img src="https://images.unsplash.com" alt="Quadro Bauhaus 1376">
                 </div>
             </div>
 
-            <!-- COLONNA DATI -->
+            <!-- DATI E ACQUISTO -->
             <div style="flex: 1; min-width: 300px;">
                 <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #8e7d6a; margin-bottom: 15px;">Collezione Bauhaus</div>
-                <h1 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 10px; line-height: 1.2;">Bauhaus 1376</h1>
-                <div style="font-size: 1.4rem; font-weight: 600; margin-bottom: 30px;">€ 89,00</div>
+                <h1 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 10px;">Bauhaus 1376</h1>
+                
+                <!-- ID PREZZO PER LO SCRIPT -->
+                <div id="prezzo-display" style="font-size: 1.5rem; font-weight: 600; margin-bottom: 30px;">€ 49,00</div>
 
-                <button class="btn" style="width: 100%; border: none; cursor: pointer;">Aggiungi al carrello</button>
+                <!-- SELETTORE MISURE -->
+                <div style="margin-bottom: 25px;">
+                    <label style="display:block; font-size:0.7rem; text-transform:uppercase; margin-bottom:10px;">Seleziona Dimensione:</label>
+                    <select id="select-misura" style="width:100%; padding:15px; border:1px solid #eee; font-family:inherit;">
+                        <option value="30 x 40 cm">30 x 40 cm - € 49,00</option>
+                        <option value="50 x 70 cm">50 x 70 cm - € 69,00</option>
+                        <option value="70 x 100 cm">70 x 100 cm - € 94,00</option>
+                    </select>
+                </div>
+
+                <button class="btn" id="btn-aggiungi" style="width: 100%; border: none; cursor: pointer;">Aggiungi al carrello</button>
 
                 <div style="margin-top: 50px; border-top: 1px solid #eee; padding-top: 30px;">
                     <h2 style="font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 20px;">Dettagli dell'opera</h2>
-                    <p style="font-size: 0.95rem; color: #444; line-height: 1.8; text-align: justify; margin-bottom: 15px;">
-                        Questa <strong>stampa su tela</strong> firmata <strong>Moodhaus</strong> rappresenta l'apice della nostra ricerca cromatica. Realizzata con pigmenti naturali resistenti ai raggi UV, garantisce una brillantezza dei colori che dura nel tempo.
-                    </p>
                     <p style="font-size: 0.95rem; color: #444; line-height: 1.8; text-align: justify;">
-                        Il supporto è una tela in cotone da 360g montata artigianalmente su un telaio in legno di abete certificato. Eccellenza italiana pronta per arredare i tuoi spazi.
+                        Questa stampa firmata Moodhaus è realizzata con pigmenti naturali resistenti UV su tela di cotone da 360g.
                     </p>
                 </div>
             </div>
         </div>
     </main>
 
+    <!-- STRUTTURA CARRELLO (NECESSARIA) -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div id="side-cart">
+        <div class="cart-header">
+            <h2 style="font-size: 0.9rem; text-transform: uppercase;">Carrello</h2>
+            <span class="cart-close" id="closeCart">&times;</span>
+        </div>
+        <div class="cart-items">
+            <!-- Qui lo script inserirà i prodotti -->
+        </div>
+        <div class="cart-total">
+            <div style="display:flex; justify-content:space-between; margin-bottom:20px;">
+                <span>TOTALE</span>
+                <span id="totale-carrello">€ 0,00</span>
+            </div>
+            <button class="btn" style="width:100%">Vai al Checkout</button>
+        </div>
+    </div>
+
     <footer>
         <div class="container">
             <p>&copy; 2026 MOODHAUS.IT - QUALITÀ ARTIGIANALE ITALIANA</p>
         </div>
     </footer>
+
 <script>
-    // 1. Configurazione Prezzi (Stile Moodhaus)
     const prezzi = {
         "30 x 40 cm": 49.00,
         "50 x 70 cm": 69.00,
         "70 x 100 cm": 94.00
     };
 
-    const selectMisura = document.querySelector('select'); // Il tuo menu a tendina
-    const displayPrezzo = document.querySelector('p[style*="1.5rem"]'); // Il testo del prezzo
-    const btnAggiungi = document.querySelector('.btn');
+    const selectMisura = document.getElementById('select-misura');
+    const displayPrezzo = document.getElementById('prezzo-display');
+    const btnAggiungi = document.getElementById('btn-aggiungi');
     const sideCart = document.getElementById('side-cart');
     const cartItems = document.querySelector('.cart-items');
     const overlay = document.getElementById('cartOverlay');
+    const btnClose = document.getElementById('closeCart');
 
-    // 2. Aggiornamento Dinamico Prezzo
+    // Aggiorna prezzo a video
     selectMisura.addEventListener('change', (e) => {
-        const scelta = e.target.value;
-        const nuovoPrezzo = prezzi[scelta] || 49.00;
-        displayPrezzo.innerHTML = `€ ${nuovoPrezzo.toFixed(2)} <span style="font-size: 0.8rem; color: #999; font-weight: 400;">IVA incl.</span>`;
+        const prezzo = prezzi[e.target.value];
+        displayPrezzo.innerText = `€ ${prezzo.toFixed(2)}`;
     });
 
-    // 3. Logica Carrello
+    // Apri e aggiungi al carrello
     btnAggiungi.addEventListener('click', () => {
-        const nomeProdotto = document.querySelector('h1').innerText;
-        const misuraScelta = selectMisura.value;
-        const prezzoFinale = prezzi[misuraScelta] || 49.00;
-
-        // Inseriamo l'elemento nel carrello
+        const misura = selectMisura.value;
+        const prezzo = prezzi[misura];
+        
         cartItems.innerHTML = `
-            <div style="display: flex; gap: 15px; margin-bottom: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px;">
-                <img src="https://images.unsplash.com" style="width: 60px; height: 80px; object-fit: cover;">
+            <div style="display:flex; gap:15px; padding-bottom:15px; border-bottom:1px solid #eee;">
+                <div style="width:60px; height:80px; background:#f2eee9;"></div>
                 <div>
-                    <h4 style="font-size: 0.85rem; text-transform: uppercase;">${nomeProdotto}</h4>
-                    <p style="font-size: 0.75rem; color: #777;">Misura: ${misuraScelta}</p>
-                    <p style="font-weight: 600; margin-top: 5px;">€ ${prezzoFinale.toFixed(2)}</p>
+                    <h4 style="font-size:0.8rem;">BAUHAUS 1376</h4>
+                    <p style="font-size:0.7rem; color:#888;">${misura}</p>
+                    <p style="font-weight:600;">€ ${prezzo.toFixed(2)}</p>
                 </div>
             </div>
         `;
-
-        // Aggiorniamo il totale nel carrello
-        document.querySelector('.cart-total span:last-child').innerText = `€ ${prezzoFinale.toFixed(2)}`;
-
-        // Apriamo il carrello
+        
+        document.getElementById('totale-carrello').innerText = `€ ${prezzo.toFixed(2)}`;
         sideCart.classList.add('open');
         overlay.classList.add('open');
     });
+
+    // Chiudi carrello
+    [btnClose, overlay].forEach(el => el.addEventListener('click', () => {
+        sideCart.classList.remove('open');
+        overlay.classList.remove('open');
+    }));
 </script>
 
 </body>
