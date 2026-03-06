@@ -227,6 +227,50 @@ template-columns: 1fr; }
         grid-template-columns: repeat(2, 1fr);
     }
 }
+/* --- SEZIONE USP (3 VANTAGGI) --- */
+.usp-section {
+    margin-top: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #eee; /* Linea sottile di separazione */
+    text-align: center;
+}
+
+.usp-grid {
+    display: flex;
+    justify-content: space-around; /* Spazia i 3 elementi in modo uniforme */
+    align-items: flex-start;
+    max-width: 1100px; /* Centra il blocco rispetto al container */
+    margin: 0 auto;
+}
+
+.usp-item {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.usp-item h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.usp-item p {
+    font-family: 'Cormorant Garamond', serif; /* Font elegante per la descrizione */
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Adattamento Mobile: in colonna per non affollare lo schermo */
+@media (max-width: 768px) {
+    .usp-grid { 
+        flex-direction: column;
+        gap: 35px;
+    }
+}
 
     </style>
 </head>
@@ -448,22 +492,21 @@ letter-spacing: 1px;
     <div class="usp-grid">
         <div class="usp-item">
             <h4>CONSEGNA RAPIDA</h4>
-            <p>3-5 giorni</p>
+            <p>3-5 giorni lavorativi</p>
         </div>
+        
         <div class="usp-item">
             <h4>CONSEGNA GRATUITA</h4>
-            <p>Spedizione gratuita sopra i 59 €</p>
+            <p>Sempre inclusa in ogni ordine</p>
         </div>
-        <div class="usp-item">
-            <h4>IL NOSTRO PIANETA</h4>
-            <p>Scopri di più sul nostro lavoro per la sostenibilità ambientale</p>
-        </div>
+
         <div class="usp-item">
             <h4>PAGAMENTI SICURI</h4>
-            <p>Rapidi e sicuri con carta di credito o Paypal</p>
+            <p>Carta di credito o PayPal</p>
         </div>
     </div>
 </section>
+
 
     
 <footer>
