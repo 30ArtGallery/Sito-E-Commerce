@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materiali | Moodhaus®</title>
 
-    <!-- RIGA CORRETTA: Carica Cormorant Garamond e Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
-    
     <style>
         :root {
             --sand-bg: #fdfcf9;
@@ -19,35 +14,63 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--text-main); background: var(--white); -webkit-font-smoothing: antialiased; }
+
+        /* TESTI: Font lineare di sistema (Sans-Serif) identico alla Index */
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            color: var(--text-main); 
+            background: var(--white); 
+            -webkit-font-smoothing: antialiased; 
+        }
+
         .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
         a { text-decoration: none; color: inherit; }
 
-        /* HEADER REPLICATO */
+        /* HEADER */
         header { padding: 30px 0; background: white; border-bottom: 1px solid #f0f0f0; text-align: center; }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 500; letter-spacing: -1px; margin-bottom: 20px; display: block; }
+        
+        /* LOGO: Font classico (Serif) identico alla Index */
+        .logo { 
+            font-family: "Times New Roman", Times, Baskerville, Georgia, serif; 
+            font-size: 2.6rem; 
+            font-weight: 500; 
+            letter-spacing: -1px; 
+            margin-bottom: 20px; 
+            display: block; 
+        }
+        
         .main-nav { display: flex; justify-content: center; gap: 35px; }
         .main-nav a { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #555; }
 
-        /* CONTENUTO MATERIALI */
-        .materials-wrapper { padding: 60px 0; max-width: 900px; margin: 0 auto; }
-        .materials-header { text-align: center; margin-bottom: 60px; }
-        .materials-header h1 { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 500; margin-bottom: 10px; }
-        .materials-header p { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; color: #999; }
+        /* SEZIONE MATERIALI */
+        .materials-content { padding: 60px 0; max-width: 900px; margin: 0 auto; }
+        .materials-content h1 { 
+            font-family: "Times New Roman", Times, serif; 
+            font-size: 2.5rem; 
+            text-align: center; 
+            margin-bottom: 50px; 
+            font-weight: 500; 
+        }
+        
+        .material-block { margin-bottom: 60px; padding: 0 20px; }
+        .material-block h2 { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; color: #000; margin-bottom: 10px; font-weight: 600; }
+        .material-block h3 { font-family: "Times New Roman", Times, serif; font-size: 1.8rem; margin-bottom: 15px; font-weight: 500; }
+        .material-block p { font-size: 0.95rem; line-height: 1.8; color: #444; text-align: justify; }
 
-        .material-block { margin-bottom: 50px; }
-        .material-block h2 { font-family: 'Inter', sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 15px; }
-        .material-block h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; margin-bottom: 15px; font-weight: 500; }
-        .material-block p { font-size: 0.95rem; line-height: 1.8; color: #555; text-align: justify; }
-
-        /* FOOTER REPLICATO */
+        /* FOOTER */
         footer { padding: 40px 0; text-align: center; border-top: 1px solid var(--sand-soft); margin-top: 40px; }
-        .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 10px; display: block; }
+        
+        .footer-logo { 
+            font-family: "Times New Roman", Times, serif; 
+            font-size: 1.8rem; 
+            margin-bottom: 10px; 
+            display: block; 
+        }
+        
         .copy { font-size: 0.6rem; letter-spacing: 2px; color: #999; text-transform: uppercase; }
 
         @media (max-width: 768px) {
             .main-nav { gap: 15px; font-size: 0.6rem; flex-wrap: wrap; }
-            .materials-header h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -57,44 +80,35 @@
         <div class="container">
             <h1 class="logo"><a href="index.html">moodhaus</a></h1>
             <nav class="main-nav">
+                <a href="index.html">Home</a>
                 <a href="#">Collezioni</a>
-                <a href="#">Stampe su Tela</a>
                 <a href="materiali.html">Materiali</a>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <div class="materials-wrapper">
-            <div class="materials-header">
-                <p>L'anima dei nostri quadri su tela</p>
-                <h1>Materiali d'Eccellenza</h1>
-            </div>
+        <section class="materials-content">
+            <h1>Materiali d'Eccellenza</h1>
 
-            <article class="material-block">
+            <div class="material-block">
                 <h2>Il Supporto</h2>
                 <h3>La Tela: Matt Canvas Premium da 250 grammi</h3>
-                <p>La scelta della superficie è il primo passo verso un'opera d'arte perfetta. Moodhaus utilizza esclusivamente tela Matt Canvas da 250 grammi, un supporto professionale di alta grammatura che garantisce una stabilità strutturale senza precedenti. La speciale finitura opaca (Matt) elimina completamente i riflessi fastidiosi tipici delle stampe economiche.</p>
-            </article>
+                <p>La scelta della superficie è il primo passo verso un'opera d'arte perfetta. Moodhaus utilizza esclusivamente tela Matt Canvas da 250 grammi, un supporto professionale di alta grammatura che garantisce una stabilità strutturale senza precedenti. La speciale finitura opaca (Matt) è stata selezionata per la sua capacità di assorbire la luce in modo uniforme, eliminando completamente i riflessi fastidiosi tipici delle stampe economiche.</p>
+            </div>
 
-            <article class="material-block">
+            <div class="material-block">
                 <h2>La Struttura</h2>
                 <h3>Il Cuore: Telai in Pino Levigato da 3 cm</h3>
-                <p>I nostri telai sono realizzati in legno massello di pino di alta qualità, accuratamente selezionato e levigato. Con uno spessore di 3 cm (Gallery Style), il telaio conferisce alla stampa una presenza scenica imponente sulla parete, donando tridimensionalità e carattere all'intero ambiente.</p>
-            </article>
+                <p>Dietro ogni grande opera d'è una struttura solida e duratura. I nostri telai sono realizzati in legno massello di pino di alta qualità, accuratamente selezionato e levigato per garantire bordi netti e superfici prive di imperfezioni. Con uno spessore di 3 cm (Gallery Style), il telaio conferisce alla stampa una presenza scenica imponente sulla parete.</p>
+            </div>
 
-            <article class="material-block">
+            <div class="material-block">
                 <h2>Sostenibilità</h2>
                 <h3>Inchiostri Ecologici e Sicurezza Ambientale</h3>
-                <p>Moodhaus utilizza esclusivamente inchiostri ecologici a base d'acqua certificati. Questi pigmenti sono totalmente privi di solventi tossici e inodore, rendendo le nostre stampe perfette anche per gli ambienti più sensibili come le camere da letto.</p>
-            </article>
-
-            <article class="material-block">
-                <h2>Made in Italy</h2>
-                <h3>Artigianalità Italiana: Cura Meticolosa</h3>
-                <p>Ogni prodotto Moodhaus è intriso dell'eccellenza tipica del Made in Italy. Dalla calibrazione del colore alla stesa manuale della tela sul telaio, ogni passaggio è un rito di precisione per creare capolavori di tecnica fatti per durare.</p>
-            </article>
-        </div>
+                <p>Moodhaus utilizza esclusivamente inchiostri ecologici a base d'acqua certificati. Questi pigmenti di ultima generazione sono totalmente privi di solventi tossici e inodore, rendendo le nostre stampe perfette anche per gli ambienti più sensibili.</p>
+            </div>
+        </section>
     </main>
 
     <footer>
