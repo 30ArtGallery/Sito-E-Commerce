@@ -1,14 +1,20 @@
 [
   {
-    "id": "bauhaus-01",
-    "titolo": "Composizione Bauhaus Gialla",
-    "immagine": "https://www.moodhaus.it",
-    "descrizione": "Questa esclusiva <strong>stampa su tela</strong> rappresenta l'eccellenza Moodhaus. Un pezzo iconico per il tuo arredamento."
+    "id": "minimal-02",
+    "titolo": "Astrazione Minimalista Nera",
+    "prezzo": "49,00",
+    "misura": "90 x 60 cm",
+    "telaio": "Galleria h 3 cm",
+    "immagine": "img/minimal-02.jpg",
+    "descrizione": "Questa opera rappresenta l'essenza del <strong>minimalismo moderno</strong>. Stampata su tela premium, si adatta perfettamente a living contemporanei..."
   },
   {
-    "id": "minimal-02",
-    "titolo": "Minimalismo Astratto Nero",
-    "immagine": "https://www.moodhaus.it",
-    "descrizione": "Eleganza pura e linee essenziali. Una <strong>stampa canvas</strong> perfetta per ambienti moderni e raffinati."
+    "id": "bauhaus-01",
+    "titolo": "Composizione Bauhaus 01",
+    "prezzo": "49,00",
+    "misura": "90 x 60 cm",
+    "telaio": "Galleria h 3 cm",
+    "immagine": "img/bauhaus-01.jpg",
+    "descrizione": "Un tributo alle geometrie razionali. Questa <strong>stampa su tela</strong> utilizza colori primari per un impatto visivo deciso..."
   }
 ]
