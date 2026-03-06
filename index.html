@@ -141,12 +141,21 @@ spacing: -1px; margin-bottom: 20px; display: block; }
 
 .main-nav a { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #555; }
 
-        .hero-mockup-main { width: 
+   .hero-mockup-main { 
+    width: 100%; 
+    height: auto; 
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
 
-100%; height: auto; background-color: var(--sand-bg); overflow: hidden; }
-        .hero-mockup-main img { width: 100%; height: 
+.hero-mockup-main img { 
+    width: 100%; 
+    height: auto; 
+    display: block;
+    max-width: 100%;
+}
 
-auto; display: block; }
 
         .mockup-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px; background: var
 
@@ -241,15 +250,9 @@ href="#">Materiali</a>
         </div>
     </header>
 
-    <section class="hero-
-
-mockup-main">
-        <img src="https://www.moodhaus.it/wp-content/uploads/2026/02/Stampe-su-tela-moderne-stile-
-
-bauhaus.webp" alt="Collezione Moodhaus stampe su tela moderne in stile Bauhaus per arredamento d'interni">
-    </section>
-
-    
+   <section class="hero-mockup-main">
+    <img src="https://www.moodhaus.it" alt="Collezione Moodhaus">
+</section>
 
 <section class="mockup-grid">
         <div class="mockup-box">
