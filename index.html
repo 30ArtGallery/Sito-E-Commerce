@@ -269,6 +269,21 @@ template-columns: 1fr; }
     .usp-grid { 
         flex-direction: column;
         gap: 35px;
+        }
+            /* Forza gli articoli in fondo in colonna singola e riduci i testi */
+    .seo-grid { 
+        grid-template-columns: 1fr !important; 
+        gap: 30px !important; 
+        padding: 0 10px;
+    }
+    .seo-title { 
+        font-size: 0.95rem !important; /* Titolo discreto */
+        text-align: center; 
+    }
+       .seo-text { 
+        font-size: 0.75rem !important; /* Testo più corto alla vista */
+        line-height: 1.5;
+        text-align: center; 
     }
 }
 
@@ -506,8 +521,6 @@ letter-spacing: 1px;
         </div>
     </div>
 </section>
-
-
     
 <footer>
         <div class="container">
