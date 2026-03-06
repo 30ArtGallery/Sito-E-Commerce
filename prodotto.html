@@ -189,28 +189,28 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
 
 
 
-  
 <main>
   <div class="container" style="max-width: 1100px; padding: 80px 20px;">
     
     <!-- SEZIONE SUPERIORE: FOTO E DETTAGLI ACQUISTO -->
     <div style="display: flex; flex-wrap: wrap; gap: 60px; align-items: flex-start; margin-bottom: 80px;">
       
-      <!-- COLONNA SINISTRA: FOTO (SPAZIO A SX) -->
+      <!-- COLONNA SINISTRA: FOTO (ID p-img) -->
       <div style="flex: 1.5; min-width: 350px;">
         <div style="background-color: #f9f9f9; line-height: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
-          <!-- Inserirai qui l'URL dell'immagine del quadro -->
-          <img src="URL_IMMAGINE_QUADRO" alt="Stampa su tela Moodhaus" style="width: 100%; height: auto; display: block;">
+          <img id="p-img" src="" alt="Stampa su tela Moodhaus" style="width: 100%; height: auto; display: block;">
         </div>
       </div>
 
       <!-- COLONNA DESTRA: DETTAGLI RAPIDI -->
       <div style="flex: 1; min-width: 300px; text-align: left;">
-        <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 2.2rem; font-weight: 500; margin-bottom: 10px; color: #000; line-height: 1.1;">Titolo Opera Moodhaus®</h1>
+        <!-- ID p-titolo -->
+        <h1 id="p-titolo" style="font-family: 'Times New Roman', Times, serif; font-size: 2.2rem; font-weight: 500; margin-bottom: 10px; color: #000; line-height: 1.1;">Caricamento...</h1>
         <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; color: #999; margin-bottom: 30px;">Stampa su tela intelaiata — Fine Art Edition</p>
         
         <div style="margin-bottom: 40px; padding: 25px 0; border-top: 1px solid #f0f0f0; border-bottom: 1px solid #f0f0f0;">
-          <p style="font-family: 'Times New Roman', Times, serif; font-size: 1.8rem; color: #2c2c2c; margin-bottom: 20px;">€ 49,00</p>
+          <!-- ID p-prezzo -->
+          <p id="p-prezzo" style="font-family: 'Times New Roman', Times, serif; font-size: 1.8rem; color: #2c2c2c; margin-bottom: 20px;">€ --,--</p>
           
           <ul style="list-style: none; padding: 0;">
             <li style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #555; margin-bottom: 10px;"><strong>Misura:</strong> 90 x 60 cm</li>
@@ -226,17 +226,39 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
       </div>
     </div>
 
-    <!-- SEZIONE INFERIORE: DESCRIZIONE A TUTTA LARGHEZZA (STILE QUADRATO) -->
+    <!-- SEZIONE INFERIORE: DESCRIZIONE DINAMICA (ID p-descrizione) -->
     <div style="border-top: 1px solid #f0f0f0; padding-top: 60px;">
       <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 1.5rem; margin-bottom: 25px; font-weight: 500; color: #000; text-align: center;">Dettagli Tecnici e Qualità Moodhaus®</h2>
-      <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 2; color: #444; font-size: 1rem; margin: 0 auto; max-width: 900px; text-align: justify; hyphens: auto;">
-        Questa esclusiva <strong>stampa su tela intelaiata</strong> rappresenta l'eccellenza della produzione artigianale Moodhaus, pensata per chi desidera trasformare le proprie pareti con un oggetto di design autentico e duraturo. L'opera viene realizzata su supporto <strong>Matt Canvas Premium da 250 grammi</strong>, una tela professionale ad alta grammatura che garantisce una stabilità strutturale superiore e una resa cromatica impeccabile, priva di riflessi sotto ogni condizione di luce. Ogni pezzo viene montato rigorosamente a mano su un <strong>telaio da galleria h 3 cm</strong> in legno massello di pino levigato, conferendo al quadro una profondità scenica imponente e garantendo la perfetta tensione della fibra nel tempo. Utilizziamo esclusivamente inchiostri ecologici a base d'acqua, resistenti ai raggi UV e totalmente inodori, rendendo questa <strong>decorazione murale</strong> una scelta sicura, ecosostenibile e perfetta per l'<strong>arredamento d'interni</strong> d'autore. Acquistare una creazione Moodhaus significa investire nella qualità del <strong>Made in Italy</strong>, usufruendo di un sistema di <strong>pagamento sicuro</strong> e di una <strong>spedizione gratuita</strong> con imballaggi ultra-rinforzati per una protezione totale.
-      </p>
+      <div id="p-descrizione" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 2; color: #444; font-size: 1rem; margin: 0 auto; max-width: 900px; text-align: justify; hyphens: auto;">
+        <!-- Qui verrà iniettato il testo dal file JSON -->
+      </div>
     </div>
 
   </div>
 </main>
 
+<!-- LO SCRIPT DA INCOLLARE PRIMA DI </body> -->
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const productId = params.get('id');
+
+  fetch('prodotti.json')
+    .then(res => res.json())
+    .then(data => {
+      const p = data.find(item => item.id === productId);
+      if (p) {
+        document.getElementById('p-titolo').innerText = p.titolo;
+        document.getElementById('p-prezzo').innerText = "€ " + p.prezzo;
+        document.getElementById('p-img').src = p.immagine;
+        document.getElementById('p-img').alt = p.titolo;
+        document.getElementById('p-descrizione').innerHTML = p.descrizione;
+        document.title = p.titolo + " | Moodhaus®";
+      } else {
+        document.getElementById('p-titolo').innerText = "Prodotto non trovato";
+      }
+    })
+    .catch(err => console.error("Errore caricamento prodotti:", err));
+</script>
 
   
     
