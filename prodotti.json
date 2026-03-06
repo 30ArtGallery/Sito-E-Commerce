@@ -1,20 +1,12 @@
-[
-  {
-    "id": "minimal-02",
-    "titolo": "Astrazione Minimalista Nera",
-    "prezzo": "49,00",
-    "misura": "90 x 60 cm",
-    "telaio": "Galleria h 3 cm",
-    "immagine": "img/minimal-02.jpg",
-    "descrizione": "Questa opera rappresenta l'essenza del <strong>minimalismo moderno</strong>. Stampata su tela premium, si adatta perfettamente a living contemporanei..."
-  },
-  {
-    "id": "bauhaus-01",
-    "titolo": "Composizione Bauhaus 01",
-    "prezzo": "49,00",
-    "misura": "90 x 60 cm",
-    "telaio": "Galleria h 3 cm",
-    "immagine": "img/bauhaus-01.jpg",
-    "descrizione": "Un tributo alle geometrie razionali. Questa <strong>stampa su tela</strong> utilizza colori primari per un impatto visivo deciso..."
-  }
-]
+{
+  "id": "minimal-02",
+  "titolo": "Stampa su tela Astrazione Minimalista Nera",
+  "prezzo": "49,00",
+  "misura": "90 x 60 cm",
+  "telaio": "Galleria h 3 cm",
+  "immagine": "img/minimal-02.jpg",
+  "descrizione": "Testo lungo che compare nella pagina sotto la foto...",
+  
+  "seo_title": "Quadro Minimalista Nero 90x60 | Stampe su Tela Moodhaus",
+  "seo_desc": "Acquista la stampa su tela Astrazione Minimalista Nera. Formato 90x60, telaio 3cm, qualità fine-art Made in Italy. Spedizione gratuita."
+}
