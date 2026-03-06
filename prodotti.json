@@ -1,4 +1,6 @@
-{"id": "minimal-02",
+[
+{
+  "id": "minimal-02",
   "titolo": "Astrazione Minimalista Nera",
   "prezzo": "49,00",
   "misura": "90 x 60 cm",
@@ -6,8 +8,10 @@
   "immagine": "img/minimal-02.jpg",
   "descrizione": "Testo lungo giustificato per la pagina...",
   "seo_title": "Quadro Minimalista Nero 90x60 - Design Moderno",
-  "seo_desc": "Acquista la stampa su tela Astrazione Minimalista Nera Moodhaus. Qualità fine-art Made in Italy. Spedizione gratuita."}
-{"id": "minimal-03",
+  "seo_desc": "Acquista la stampa su tela Astrazione Minimalista Nera Moodhaus. Qualità fine-art Made in Italy. Spedizione gratuita."
+},
+{
+  "id": "minimal-03",
   "titolo": "Astrazione Minimalista Nera",
   "prezzo": "49,00",
   "misura": "90 x 60 cm",
@@ -15,7 +19,8 @@
   "immagine": "img/minimal-02.jpg",
   "descrizione": "Testo lungo giustificato per la pagina...",
   "seo_title": "Quadro Minimalista Nero 90x60 - Design Moderno",
-  "seo_desc": "Acquista la stampa su tela Astrazione Minimalista Nera Moodhaus. Qualità fine-art Made in Italy. Spedizione gratuita."}
+  "seo_desc": "Acquista la stampa su tela Astrazione Minimalista Nera Moodhaus. Qualità fine-art Made in Italy. Spedizione gratuita."
+},
 {
   "id": "minimal-04",
   "titolo": "Astrazione Minimalista Nera",
@@ -26,7 +31,7 @@
   "descrizione": "Testo lungo giustificato per la pagina...",
   "seo_title": "Quadro Minimalista Nero 90x60 - Design Moderno",
   "seo_desc": "Acquista la stampa su tela Astrazione Minimalista Nera Moodhaus. Qualità fine-art Made in Italy. Spedizione gratuita."
-}
+},
 {
   "id": "minimal-05",
   "titolo": "Astrazione Minimalista Nera",
@@ -38,3 +43,4 @@
   "seo_title": "Quadro Minimalista Nero 90x60 - Design Moderno",
   "seo_desc": "Acquista la stampa su tela Astrazione Minimalista Nera Moodhaus. Qualità fine-art Made in Italy. Spedizione gratuita."
 }
+]
