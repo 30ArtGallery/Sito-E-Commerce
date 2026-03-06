@@ -5,48 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://www.moodhaus.it"/>
     
-    <!-- SEO TITLES & DESCRIPTION (Specifica per Materiali) -->
-    <title>Materiali e Qualità | Moodhaus® Stampe su Tela Fine-Art</title>
-    <meta name="description" content="Scopri la qualità Moodhaus: telai in legno di pino levigato da 3cm e tela Matt Canvas da 250gr. Eccellenza artigianale Made in Italy per i tuoi quadri moderni."/>
-    
+    <!-- SEO SPECIFICO PER MATERIALI -->
+    <title>Materiali e Qualità | Moodhaus® Stampe su Tela e Telai in Pino</title>
+    <meta name="description" content="Scopri l'eccellenza dei materiali Moodhaus. Tela Matt Canvas da 250gr e telai in legno di pino levigato spessi 3cm. La qualità del Made in Italy per il tuo arredo."/>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com" rel="stylesheet">
     
-    <!-- IL TUO CSS IDENTICO ALLA INDEX -->
+    <!-- TUO STYLE ORIGINALE IDENTICO ALLA INDEX -->
     <style>
-        :root { --sand-bg: #fdfcf9; --sand-soft: #f4f1ea; --text-main: #2c2c2c; --white: #ffffff; }
+        :root {
+            --sand-bg: #fdfcf9;
+            --sand-soft: #f4f1ea;
+            --text-main: #2c2c2c;
+            --white: #ffffff;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; color: var(--text-main); background: var(--white); -webkit-font-smoothing: antialiased; }
         .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
         a { text-decoration: none; color: inherit; }
+
         header { padding: 30px 0; background: white; border-bottom: 1px solid #f0f0f0; text-align: center; }
         .logo { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 500; letter-spacing: -1px; margin-bottom: 20px; display: block; }
+        
         .main-nav { display: flex; justify-content: center; gap: 35px; }
         .main-nav a { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #555; }
+
         footer { padding: 40px 0; text-align: center; border-top: 1px solid var(--sand-soft); margin-top: 40px; }
         .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 10px; display: block; }
         .copy { font-size: 0.6rem; letter-spacing: 2px; color: #999; text-transform: uppercase; }
-        
-        /* Stili per la griglia descrittiva materiali */
-        .material-section { padding: 80px 0; text-align: center; }
-        .material-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 40px; text-align: left; }
-        .material-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 15px; font-weight: 500; }
-        .material-item p { font-size: 0.9rem; line-height: 1.8; color: #555; }
 
-        @media (max-width: 768px) {
-            .main-nav { gap: 15px; font-size: 0.6rem; flex-wrap: wrap; }
-            .material-grid { grid-template-columns: 1fr; gap: 40px; }
-            .material-section { padding: 40px 20px; }
-        }
+        /* Stili per le sezioni descrittive */
+        .seo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px 60px; margin-top: 50px; }
+        .seo-title { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; margin-bottom: 10px; }
+        .seo-text { font-size: 0.85rem; line-height: 1.6; color: #666; text-align: justify; }
 
-        /* --- LE TUE REGOLE PER GLI ARTICOLI SEO E USP --- */
+        /* USP Section */
         .usp-section { margin-top: 100px; padding-bottom: 40px; border-bottom: none; text-align: center; }
         .usp-grid { display: flex; justify-content: space-between; align-items: flex-start; max-width: 1500px; margin: 0 auto; }
         .usp-item { flex: 1; padding: 0 20px; text-align: center; }
         .usp-item h4 { font-family: 'Inter', sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; font-weight: 600; }
         .usp-item p { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; color: #666; font-style: italic; }
-        
+
         @media (max-width: 768px) {
+            .main-nav { gap: 15px; font-size: 0.6rem; flex-wrap: wrap; }
             .usp-grid { flex-direction: column; gap: 35px; }
             .seo-grid { grid-template-columns: 1fr !important; gap: 30px !important; padding: 0 10px; }
             .seo-title { font-size: 0.95rem !important; text-align: center; }
@@ -60,45 +63,56 @@
         <div class="container">
             <h1 class="logo"><a href="index.html">moodhaus</a></h1>
             <nav class="main-nav">
-                <a href="index.html">Collezioni</a>
+                <a href="index.html">Home</a>
+                <a href="#">Collezioni</a>
                 <a href="#">Stampe su Tela</a>
                 <a href="materiali.html">Materiali</a>
             </nav>
         </div>
     </header>
 
-    <main class="container material-section">
-        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 400; margin-bottom: 10px;">Qualità senza compromessi</h2>
-        <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; color: #999;">L'eccellenza artigianale di Moodhaus</p>
+    <main class="container" style="margin-top: 60px; margin-bottom: 80px;">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 400; letter-spacing: 1px;">Materiali d'Eccellenza</h2>
+            <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #999; margin-top: 10px;">L'anima dei nostri quadri su tela</p>
+        </div>
 
-        <div class="material-grid">
+        <div class="seo-grid">
             <!-- Blocco 1: La Tela -->
-            <div class="material-item">
-                <h3>Tela Matt Canvas 250gr</h3>
-                <p>La nostra scelta ricade esclusivamente su <strong>tela Matt Canvas professionale da 250 grammi</strong>. Questa grammatura premium offre una consistenza tattile superiore e una resistenza impeccabile nel tempo. La finitura opaca (Matt) è studiata per assorbire la luce in modo uniforme, eliminando riflessi fastidiosi e garantendo che i colori della tua stampa rimangano vibranti e profondi da ogni angolazione, proprio come in una galleria d'arte fine-art.</p>
+            <div>
+                <h3 class="seo-title">La Tela: Matt Canvas Premium da 250 grammi</h3>
+                <p class="seo-text">
+                    La scelta della superficie è il primo passo verso un'opera d'arte perfetta. Moodhaus utilizza esclusivamente <strong>tela Matt Canvas da 250 grammi</strong>, un supporto professionale di alta grammatura che garantisce una stabilità strutturale senza precedenti. La speciale finitura opaca (Matt) è stata selezionata per la sua capacità di assorbire la luce in modo uniforme, eliminando completamente i riflessi fastidiosi tipici delle stampe economiche. Questo permette di godere di neri profondi e colori vibranti sotto ogni condizione di illuminazione, rendendo i quadri moderni Moodhaus adatti anche a stanze molto luminose. La trama naturale del cotone rimane visibile, donando quella profondità tattile tipica della stampa fine-art che trasforma una semplice immagine in un oggetto di design autentico.
+                </p>
             </div>
 
             <!-- Blocco 2: Il Telaio -->
-            <div class="material-item">
-                <h3>Legno di Pino da 3cm</h3>
-                <p>Ogni quadro Moodhaus è montato su un <strong>telaio in legno di pino massello</strong> accuratamente levigato. Con uno <strong>spessore di 3 cm</strong>, il telaio conferisce all'opera una profondità scenica imponente, trasformando la stampa in un vero oggetto di design tridimensionale. La levigatura artigianale assicura bordi perfetti e l'assenza di schegge, proteggendo la tela e garantendo una tensione costante negli anni.</p>
+            <div>
+                <h3 class="seo-title">Il Cuore: Telai in Pino Levigato da 3 cm</h3>
+                <p class="seo-text">
+                    Dietro ogni grande opera c'è una struttura solida e duratura. I nostri <strong>telai sono realizzati in legno massello di pino</strong> di alta qualità, accuratamente selezionato e levigato per garantire bordi netti e superfici prive di imperfezioni. Con uno <strong>spessore di 3 cm</strong> (Gallery Style), il telaio conferisce alla stampa una presenza scenica imponente sulla parete, donando tridimensionalità e carattere all'intero ambiente. A differenza dei telai standard più sottili, la struttura da 3 cm di Moodhaus previene le torsioni del legno nel tempo e mantiene la tensione della tela impeccabile per decenni. Ogni telaio è assemblato a mano dai nostri artigiani, assicurando che ogni angolo sia in squadro perfetto e pronto per essere appeso nel tuo spazio quotidiano.
+                </p>
             </div>
 
-            <!-- Blocco 3: Inchiostri -->
-            <div class="material-item">
-                <h3>Stampa Eco-Sostenibile</h3>
-                <p>Utilizziamo tecnologie di stampa all'avanguardia con inchiostri ecologici certificati. Le nostre stampe sono prive di sostanze nocive e solventi, rendendole sicure per ogni ambiente della casa, comprese le zone notte. La resa cromatica è garantita per decenni, grazie a una protezione UV naturale che preserva la brillantezza originale dell'opera contro l'invecchiamento solare.</p>
+            <!-- Blocco 3: Inchiostri e Sostenibilità -->
+            <div>
+                <h3 class="seo-title">Inchiostri Ecologici e Sicurezza Ambientale</h3>
+                <p class="seo-text">
+                    La bellezza di un quadro non deve mai andare a discapito della salute o del pianeta. Per questo motivo, Moodhaus utilizza esclusivamente <strong>inchiostri ecologici a base d'acqua</strong> certificati. Questi pigmenti di ultima generazione sono totalmente privi di solventi tossici e inodore, rendendo le nostre stampe su tela perfette anche per gli ambienti più sensibili come le camere da letto e le stanze dei bambini. Nonostante la natura eco-friendly, i nostri inchiostri offrono una resistenza ai raggi UV superiore agli standard industriali: questo significa che i colori della tua collezione Bauhaus o dei tuoi quadri astratti non sbiadiranno mai, mantenendo la stessa intensità cromatica del primo giorno, anche se esposti alla luce diretta del sole.
+                </p>
             </div>
 
-            <!-- Blocco 4: Made in Italy -->
-            <div class="material-item">
-                <h3>Artigianalità Italiana</h3>
-                <p>Dalla selezione del legno alla stesa finale della tela, tutto il processo produttivo avviene in Italia. La maestria dei nostri artigiani assicura che ogni angolo sia piegato con precisione chirurgica e che ogni telaio sia perfettamente in squadro. Non è solo una stampa, è un pezzo di artigianato italiano che entra nel tuo spazio quotidiano.</p>
+            <!-- Blocco 4: Made in Italy e Cura del Dettaglio -->
+            <div>
+                <h3 class="seo-title">Artigianalità Italiana: Cura Meticolosa</h3>
+                <p class="seo-text">
+                    Ogni prodotto Moodhaus è intriso dell'eccellenza tipica del <strong>Made in Italy</strong>. Il processo che porta alla creazione di ogni stampa su tela è un rito di precisione: dalla calibrazione del colore alla stesa manuale della tela sul telaio. La nostra cura per il dettaglio si riflette nel retro del quadro, dove la tela viene graffettata con regolarità chirurgica e gli angoli sono ripiegati a mano per evitare spessori eccessivi. Questo approccio artigianale permette di creare quadri per arredamento che sono veri e propri capolavori di tecnica, pronti a elevare lo stile del tuo living o del tuo ufficio. Acquistare su Moodhaus significa scegliere la trasparenza di una filiera corta e la garanzia di un prodotto fatto per emozionare e durare.
+                </p>
             </div>
         </div>
     </main>
 
-    <!-- SEZIONE VANTAGGI (USP) -->
+    <!-- SEZIONE VANTAGGI (IDENTICA ALLA INDEX) -->
     <section class="container usp-section">
         <div class="usp-grid">
             <div class="usp-item">
@@ -116,6 +130,7 @@
         </div>
     </section>
 
+    <!-- FOOTER IDENTICO ALLA INDEX -->
     <footer>
         <div class="container">
             <span class="footer-logo">moodhaus</span>
