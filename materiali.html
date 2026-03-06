@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materiali | Moodhaus®</title>
     
-    <!-- IMPORTANTE: Questi link caricano i font corretti per far apparire il logo e i testi come nella index -->
+    <!-- LINK AI FONT - FONDAMENTALI PER LO STILE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com" rel="stylesheet">
@@ -23,52 +23,64 @@
         .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
         a { text-decoration: none; color: inherit; }
 
-        /* HEADER (Copiato fedelmente dalla tua Index) */
+        /* HEADER - REPLICA ESATTA */
         header { padding: 30px 0; background: white; border-bottom: 1px solid #f0f0f0; text-align: center; }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 500; letter-spacing: -1px; margin-bottom: 20px; display: block; }
+        .logo { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 2.6rem; 
+            font-weight: 500; 
+            letter-spacing: -1px; 
+            margin-bottom: 20px; 
+            display: block; 
+        }
         .main-nav { display: flex; justify-content: center; gap: 35px; }
         .main-nav a { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #555; }
 
-        /* CONTENUTO PAGINA MATERIALI */
-        .materials-content { padding: 80px 0; max-width: 800px; margin: 0 auto; }
-        .page-title { 
+        /* SEZIONE MATERIALI */
+        .materials-content { padding: 80px 0; max-width: 850px; margin: 0 auto; }
+        .materials-content h1 { 
             font-family: 'Cormorant Garamond', serif; 
             font-size: 2.8rem; 
+            font-weight: 500; 
             text-align: center; 
-            margin-bottom: 50px; 
-            font-weight: 400;
+            margin-bottom: 60px; 
         }
-        .material-block { margin-bottom: 60px; }
-        .material-tag { 
-            font-size: 0.65rem; 
+        .material-item { margin-bottom: 60px; }
+        .material-item h2 { 
+            font-family: 'Inter', sans-serif; 
+            font-size: 0.7rem; 
             text-transform: uppercase; 
             letter-spacing: 2px; 
-            color: #999; 
-            margin-bottom: 10px; 
-            display: block; 
-            font-weight: 600;
+            margin-bottom: 15px; 
+            color: #000; 
         }
-        .material-block h2 { 
+        .material-item h3 { 
             font-family: 'Cormorant Garamond', serif; 
             font-size: 1.8rem; 
             margin-bottom: 15px; 
             font-weight: 500;
         }
-        .material-block p { 
+        .material-item p { 
             font-size: 0.95rem; 
             line-height: 1.8; 
             color: #444; 
-            text-align: justify;
+            text-align: justify; 
         }
 
-        /* FOOTER (Copiato fedelmente dalla tua Index) */
+        /* FOOTER - REPLICA ESATTA */
         footer { padding: 40px 0; text-align: center; border-top: 1px solid var(--sand-soft); margin-top: 40px; }
-        .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 10px; display: block; }
+        .footer-logo { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 1.8rem; 
+            margin-bottom: 10px; 
+            display: block; 
+            font-weight: 500;
+        }
         .copy { font-size: 0.6rem; letter-spacing: 2px; color: #999; text-transform: uppercase; }
 
         @media (max-width: 768px) {
             .main-nav { gap: 15px; font-size: 0.6rem; flex-wrap: wrap; }
-            .page-title { font-size: 2.2rem; }
+            .materials-content h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -87,31 +99,31 @@
 
     <main class="container">
         <section class="materials-content">
-            <h1 class="page-title">Materiali d'Eccellenza</h1>
+            <h1>Materiali d'Eccellenza</h1>
 
-            <div class="material-block">
-                <span class="material-tag">Il Supporto</span>
-                <h2>La Tela: Matt Canvas Premium da 250 grammi</h2>
-                <p>La scelta della superficie è il primo passo verso un'opera d'arte perfetta. Moodhaus utilizza esclusivamente tela Matt Canvas da 250 grammi, un supporto professionale di alta grammatura che garantisce una stabilità strutturale senza precedenti. La speciale finitura opaca (Matt) è stata selezionata per la sua capacità di assorbire la luce in modo uniforme, eliminando completamente i riflessi fastidiosi tipici delle stampe economiche...</p>
-            </div>
+            <article class="material-item">
+                <h2>Il Supporto</h2>
+                <h3>La Tela: Matt Canvas Premium da 250 grammi</h3>
+                <p>La scelta della superficie è il primo passo verso un'opera d'arte perfetta. Moodhaus utilizza esclusivamente tela Matt Canvas da 250 grammi, un supporto professionale di alta grammatura che garantisce una stabilità strutturale senza precedenti. La speciale finitura opaca (Matt) elimina completamente i riflessi fastidiosi tipici delle stampe economiche.</p>
+            </article>
 
-            <div class="material-block">
-                <span class="material-tag">La Struttura</span>
-                <h2>Il Cuore: Telai in Pino Levigato da 3 cm</h2>
-                <p>Dietro ogni grande opera c'è una struttura solida e duratura. I nostri telai sono realizzati in legno massello di pino di alta qualità, accuratamente selezionato e levigato per garantire bordi netti e superfici prive di imperfezioni. Con uno spessore di 3 cm (Gallery Style), il telaio conferisce alla stampa una presenza scenica imponente sulla parete...</p>
-            </div>
+            <article class="material-item">
+                <h2>La Struttura</h2>
+                <h3>Il Cuore: Telai in Pino Levigato da 3 cm</h3>
+                <p>I nostri telai sono realizzati in legno massello di pino di alta qualità, accuratamente selezionato e levigato. Con uno spessore di 3 cm (Gallery Style), il telaio conferisce alla stampa una presenza scenica imponente sulla parete, donando tridimensionalità e carattere all'intero ambiente.</p>
+            </article>
 
-            <div class="material-block">
-                <span class="material-tag">Sostenibilità</span>
-                <h2>Inchiostri Ecologici e Sicurezza Ambientale</h2>
-                <p>La bellezza di un quadro non deve mai andare a discapito della salute o del pianeta. Per questo motivo, Moodhaus utilizza esclusivamente inchiostri ecologici a base d'acqua certificati. Questi pigmenti di ultima generazione sono totalmente privi di solventi tossici e inodore, rendendo le nostre stampe su tela perfette anche per gli ambienti più sensibili...</p>
-            </div>
+            <article class="material-item">
+                <h2>Sostenibilità</h2>
+                <h3>Inchiostri Ecologici e Sicurezza Ambientale</h3>
+                <p>Moodhaus utilizza esclusivamente inchiostri ecologici a base d'acqua certificati. Questi pigmenti di ultima generazione sono totalmente privi di solventi tossici e inodore, rendendo le nostre stampe perfette anche per gli ambienti più sensibili come le camere da letto.</p>
+            </article>
 
-            <div class="material-block">
-                <span class="material-tag">Artigianalità</span>
-                <h2>Made in Italy: Cura Meticolosa</h2>
-                <p>Ogni prodotto Moodhaus è intriso dell'eccellenza tipica del Made in Italy. Il processo che porta alla creazione di ogni stampa su tela è un rito di precisione: dalla calibrazione del colore alla stesa manuale della tela sul telaio. La nostra cura per il dettaglio si riflette nel retro del quadro, dove la tela viene graffettata con regolarità chirurgica...</p>
-            </div>
+            <article class="material-item">
+                <h2>Produzione</h2>
+                <h3>Artigianalità Italiana: Cura Meticolosa</h3>
+                <p>Ogni prodotto Moodhaus è intriso dell'eccellenza tipica del Made in Italy. Dalla calibrazione del colore alla stesa manuale della tela sul telaio, ogni passaggio è un rito di precisione per creare quadri che sono veri e propri capolavori di tecnica.</p>
+            </article>
         </section>
     </main>
 
