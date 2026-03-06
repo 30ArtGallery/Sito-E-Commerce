@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="it-IT">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- SEO dinamica gestita dallo script -->
-  <title id="p-page-title">Moodhaus®</title>
-  <meta id="p-meta-desc" name="description" content="">
-  <link id="p-canonical" rel="canonical" href="">
+  <link rel="canonical" href="https://www.moodhaus.it/materiali.html" />
+
+  <!-- SEO TITLES & 
+
+DESCRIPTION (Livello Advanced) -->
+  <title>Moodhaus® | Stampe su Tela e Quadri Moderni d'Autore | Made in Italy</title>
+
+  <meta name="description" content="Moodhaus è la tua galleria online per stampe su tela di alta qualità. Scopri i nostri quadri 
+
+moderni, astratti e minimalisti. Trasforma il tuo arredo con eleganza artigianale." />
+  <meta name="keywords" content="stampe su tela, quadri moderni, quadri per arredamento, stampe canvas, quadri astratti, design interni, quadri bauhaus, moodhaus" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+
+  <!-- OPEN GRAPH (Potenza Social) -->
+
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Moodhaus® | Stampe su Tela e Quadri Moderni" />
+  <meta property="og:description" content="L'eccellenza delle 
+
+stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
+  <meta property="og:url" content="https://30artgallery.github.io" />
+  <meta property="og:site_name" content="Moodhaus" />
+  <meta property="og:image" content="https://www.moodhaus.it" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Moodhaus | Quadri Moderni su Tela" />
+
+  <!-- 
+
+  <!-- SCHEMA.ORG MARKUP JSON-LD (Specifico per Pagina Materiali) -->
+  <script type="application/ld+json">
+    [{
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Materiali e Qualità | Moodhaus®",
+        "description": "Scopri la qualità tecnica delle nostre stampe su tela: Matt Canvas 250g, telai in pino da 3cm e inchiostri ecologici.",
+        "url": "https://www.moodhaus.it/materiali.html"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Moodhaus",
+        "url": "https://www.moodhaus.it/materiali.html",
+        "logo": "https://www.moodhaus.it",
+        "sameAs": [
+          "https://www.facebook.com",
+          "https://www.instagram.com"
+        ]
+      }
+    ]
+  </script>
+
 
   <style>
     :root {
@@ -14,19 +67,57 @@
       --sand-soft: #f4f1ea;
       --text-main: #2c2c2c;
       --white: #ffffff;
+
+      /* Sostituisci la riga body { ... } con questa: */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        background: var(--white);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* Sostituisci la riga .logo { ... } con questa: */
+      .logo {
+        font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+        font-size: 2.6rem;
+        font-weight: 500;
+        letter-spacing: -1px;
+        margin-bottom: 20px;
+        display: block;
+      }
+
+      /* Sostituisci la riga .footer-logo { ... } con questa: */
+      .footer-logo {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        display: block;
+      }
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       color: var(--text-main);
       background: var(--white);
       -webkit-font-smoothing: antialiased;
     }
 
-    .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
-    a { text-decoration: none; color: inherit; }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     header {
       padding: 30px 0;
@@ -36,17 +127,28 @@
     }
 
     .logo {
-      font-family: "Times New Roman", Times, serif;
+      font-family: 'Cormorant Garamond', serif;
       font-size: 2.6rem;
       font-weight: 500;
-      letter-spacing: -1px;
+      letter- spacing: -1px;
       margin-bottom: 20px;
       display: block;
     }
 
-    .main-nav { display: flex; justify-content: center; gap: 35px; }
-    .main-nav a { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #555; }
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+    }
 
+    .main-nav a {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #555;
+    }
+
+    
     footer {
       padding: 40px 0;
       text-align: center;
@@ -55,7 +157,7 @@
     }
 
     .footer-logo {
-      font-family: "Times New Roman", Times, serif;
+      font- family: 'Cormorant Garamond', serif;
       font-size: 1.8rem;
       margin-bottom: 10px;
       display: block;
@@ -67,10 +169,7 @@
       color: #999;
       text-transform: uppercase;
     }
-
-    @media (max-width: 768px) {
-      .main-nav { gap: 15px; font-size: 0.6rem; flex-wrap: wrap; }
-    }
+    
   </style>
 </head>
 
@@ -78,6 +177,7 @@
 
   <header>
     <div class="container">
+
       <h1 class="logo"><a href="index.html">moodhaus</a></h1>
       <nav class="main-nav">
         <a href="collezioni.html">Collezioni</a>
@@ -87,93 +187,90 @@
     </div>
   </header>
 
-  <main>
-    <div class="container" style="max-width: 1100px; padding: 80px 20px;">
-      <div style="display: flex; flex-wrap: wrap; gap: 60px; align-items: flex-start; margin-bottom: 80px;">
+
+
+  
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const productId = params.get('id');
+
+  // Carica i dati dal file prodotti.json
+  fetch('prodotti.json')
+    .then(res => {
+      if (!res.ok) throw new Error("Errore nel caricamento del file JSON");
+      return res.json();
+    })
+    .then(data => {
+      const p = data.find(item => item.id === productId);
+      
+      if (p) {
+        // Popolamento testi
+        document.getElementById('p-titolo').innerText = p.titolo;
+        document.getElementById('p-prezzo').innerText = "€ " + p.prezzo;
+        document.getElementById('p-misura').innerText = p.misura;
+        document.getElementById('p-telaio').innerText = p.telaio;
+        document.getElementById('p-descrizione').innerHTML = p.descrizione;
+
+        // Gestione Immagine
+        const imgElement = document.getElementById('p-img');
+        imgElement.src = p.immagine;
+        imgElement.alt = p.titolo;
+
+        // SEO dinamica
+        document.title = p.seo_title || (p.titolo + " | Moodhaus®");
+        document.getElementById('p-meta-desc').content = p.seo_desc || "";
+        document.getElementById('p-canonical').href = window.location.href;
+
+        // Schema.org per Google
+        const schema = {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": p.titolo,
+          "image": window.location.origin + "/" + p.immagine, 
+          "description": p.seo_desc,
+          "offers": {
+            "@type": "Offer",
+            "price": p.prezzo.replace(',', '.'),
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org"
+          }
+        };
         
-        <!-- FOTO -->
-        <div style="flex: 1.5; min-width: 350px;">
-          <div style="background-color: #f9f9f9; line-height: 0; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
-            <img id="p-img" src="" alt="" style="width: 100%; height: auto; display: block;">
-          </div>
-        </div>
+        // Se l'immagine è già un URL completo (come il tuo id minimal-05), usa quello direttamente per lo schema
+        if (p.immagine.startsWith('http')) {
+          schema.image = p.immagine;
+        }
 
-        <!-- DETTAGLI -->
-        <div style="flex: 1; min-width: 300px; text-align: left;">
-          <h1 id="p-titolo" style="font-family: 'Times New Roman', serif; font-size: 2.2rem; font-weight: 500; margin-bottom: 10px;">Caricamento...</h1>
-          <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; color: #999; margin-bottom: 30px;">Stampa su tela intelaiata — Fine Art Edition</p>
-          
-          <div style="margin-bottom: 40px; padding: 25px 0; border-top: 1px solid #f0f0f0; border-bottom: 1px solid #f0f0f0;">
-            <p id="p-prezzo" style="font-family: 'Times New Roman', serif; font-size: 1.8rem; color: #2c2c2c; margin-bottom: 20px;">€ --,--</p>
-            <ul style="list-style: none; padding: 0;">
-              <li style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #555; margin-bottom: 10px;"><strong>Misura:</strong> <span id="p-misura"></span></li>
-              <li style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #555; margin-bottom: 10px;"><strong>Telaio:</strong> <span id="p-telaio"></span></li>
-              <li style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #555; margin-bottom: 10px;"><strong>Spedizione:</strong> Gratuita</li>
-              <li style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #27ae60;"><strong>Pagamento:</strong> Sicuro 100%</li>
-            </ul>
-          </div>
-          <button style="width: 100%; background: #000; color: #fff; border: none; padding: 20px; text-transform: uppercase; letter-spacing: 4px; font-size: 0.8rem; font-weight: 600; cursor: pointer;">Acquista Ora</button>
-        </div>
-      </div>
+        const scriptSchema = document.createElement('script');
+        scriptSchema.type = 'application/ld+json';
+        scriptSchema.text = JSON.stringify(schema);
+        document.head.appendChild(scriptSchema);
 
-      <!-- DESCRIZIONE -->
-      <div style="border-top: 1px solid #f0f0f0; padding-top: 60px;">
-        <h2 style="font-family: 'Times New Roman', serif; font-size: 1.5rem; margin-bottom: 25px; text-align: center;">Dettagli Tecnici e Qualità</h2>
-        <div id="p-descrizione" style="line-height: 2; color: #444; font-size: 1rem; margin: 0 auto; max-width: 900px; text-align: justify;"></div>
-      </div>
-    </div>
-  </main>
+      } else {
+        // Se l'ID non esiste o non è passato
+        document.getElementById('p-titolo').innerText = "Prodotto non trovato";
+        document.getElementById('p-prezzo').style.display = "none";
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      document.getElementById('p-titolo').innerText = "Errore di caricamento";
+    });
+</script>
+
+
+  
+    
 
   <footer>
     <div class="container">
       <span class="footer-logo">moodhaus</span>
-      <p class="copy">&copy; 2026 Studio Moodhaus</p>
+      <p class="copy">&copy;
+
+        2026 Studio Moodhaus — Eccellenza nelle stampe su tela</p>
     </div>
   </footer>
 
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const productId = params.get('id');
-
-    fetch('prodotti.json')
-      .then(res => res.json())
-      .then(data => {
-        const p = data.find(item => item.id === productId);
-        if (p) {
-          document.getElementById('p-titolo').innerText = p.titolo;
-          document.getElementById('p-prezzo').innerText = "€ " + p.prezzo;
-          document.getElementById('p-img').src = p.immagine;
-          document.getElementById('p-descrizione').innerHTML = p.descrizione;
-          document.getElementById('p-misura').innerText = p.misura;
-          document.getElementById('p-telaio').innerText = p.telaio;
-          
-          // SEO DINAMICA
-          document.title = p.seo_title || (p.titolo + " | Moodhaus®");
-          document.getElementById('p-meta-desc').content = p.seo_desc || "";
-          document.getElementById('p-canonical').href = window.location.href;
-
-          // SCHEMA.ORG AUTOMATICO
-          const schema = {
-            "@context": "https://schema.org",
-            "@type": "Product",
-            "name": p.titolo,
-            "image": p.immagine,
-            "description": p.seo_desc,
-            "offers": {
-              "@type": "Offer",
-              "price": p.prezzo.replace(',', '.'),
-              "priceCurrency": "EUR",
-              "availability": "https://schema.orgInStock"
-            }
-          };
-          const script = document.createElement('script');
-          script.type = 'application/ld+json';
-          script.text = JSON.stringify(schema);
-          document.head.appendChild(script);
-        } else {
-          document.getElementById('p-titolo').innerText = "Opera non trovata";
-        }
-      });
-  </script>
 </body>
+
 </html>
