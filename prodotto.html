@@ -192,66 +192,49 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
   
 <script>
   // 1. Prendo l'ID dall'URL (es: ?id=minimal-05)
-  const urlParams = new URLSearchParams(window.location.search);
-  const productId = urlParams.get('id');
+  const params = new URLSearchParams(window.location.search);
+  const productId = params.get('id');
 
-  // 2. Carico il file JSON
-  fetch('prodotti.json')
-    .then(response => {
-      if (!response.ok) throw new Error("Errore caricamento prodotti.json");
-      return response.json();
+  // 2. Carico il file JSON (aggiungo Date.now per evitare la cache di GitHub)
+  fetch('prodotti.json?v=' + Date.now())
+    .then(res => {
+      if (!res.ok) throw new Error("File prodotti.json non trovato");
+      return res.json();
     })
-    .then(prodotti => {
-      // 3. Cerco il prodotto che ha l'id corrispondente
-      const p = prodotti.find(item => item.id === productId);
+    .then(data => {
+      // 3. Cerco il prodotto nel JSON
+      const p = data.find(item => item.id === productId);
 
       if (p) {
-        // 4. Inserisco i dati negli elementi HTML
-        document.getElementById('p-titolo').textContent = p.titolo;
-        document.getElementById('p-prezzo').textContent = "€ " + p.prezzo;
-        document.getElementById('p-misura').textContent = p.misura;
-        document.getElementById('p-telaio').textContent = p.telaio;
+        // 4. Riempio i campi HTML
+        document.getElementById('p-titolo').innerText = p.titolo;
+        document.getElementById('p-prezzo').innerText = "€ " + p.prezzo;
+        document.getElementById('p-misura').innerText = p.misura;
+        document.getElementById('p-telaio').innerText = p.telaio;
         document.getElementById('p-descrizione').innerHTML = p.descrizione;
         
-        // Gestione immagine (funziona sia con link completi che relativi)
+        // Immagine: funziona sia con link locali che https://
         const imgElement = document.getElementById('p-img');
         imgElement.src = p.immagine;
         imgElement.alt = p.titolo;
 
-        // 5. Aggiorno SEO
+        // SEO
         document.title = p.seo_title;
-        document.querySelector('meta[name="description"]').setAttribute("content", p.seo_desc);
-        
-        // 6. Schema.org per Google
-        const schema = {
-          "@context": "https://schema.org",
-          "@type": "Product",
-          "name": p.titolo,
-          "image": p.immagine,
-          "description": p.seo_desc,
-          "offers": {
-            "@type": "Offer",
-            "price": p.prezzo.replace(',', '.'),
-            "priceCurrency": "EUR",
-            "availability": "https://schema.org"
-          }
-        };
-        const scriptSchema = document.createElement('script');
-        scriptSchema.type = 'application/ld+json';
-        scriptSchema.text = JSON.stringify(schema);
-        document.head.appendChild(scriptSchema);
+        const metaDesc = document.getElementById('p-meta-desc');
+        if (metaDesc) metaDesc.content = p.seo_desc;
 
       } else {
-        // Se l'ID non viene trovato
-        document.getElementById('p-titolo').textContent = "Prodotto non trovato";
-        console.error("ID prodotto non trovato nel JSON:", productId);
+        // Se l'ID non esiste nel JSON
+        document.getElementById('p-titolo').innerText = "Prodotto non trovato";
+        console.warn("Nessun prodotto trovato per l'ID:", productId);
       }
     })
-    .catch(error => {
-      console.error("Errore nello script:", error);
-      document.getElementById('p-titolo').textContent = "Errore di connessione dati";
+    .catch(err => {
+      console.error("Errore nel caricamento:", err);
+      document.getElementById('p-titolo').innerText = "Errore connessione dati";
     });
 </script>
+
 
 
 
