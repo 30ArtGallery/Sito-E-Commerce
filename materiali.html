@@ -3,67 +3,299 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Materiali | Moodhaus®</title>
+    <link rel="canonical" href="https://www.moodhaus.it"/>
+    
+    <!-- SEO TITLES & 
 
-    <style>
+DESCRIPTION (Livello Advanced) -->
+    <title>Moodhaus® | Stampe su Tela e Quadri Moderni d'Autore | Made in Italy</title>
+    
+
+<meta name="description" content="Moodhaus è la tua galleria online per stampe su tela di alta qualità. Scopri i nostri quadri 
+
+moderni, astratti e minimalisti. Trasforma il tuo arredo con eleganza artigianale."/>
+    <meta name="keywords" content="stampe su tela, quadri moderni, quadri per arredamento, stampe canvas, quadri astratti, design interni, quadri bauhaus, moodhaus"/>
+    <meta name="robots" content="index, follow, max-image-preview:large"/>
+    
+    <!-- OPEN GRAPH (Potenza Social) -->
+   
+<meta 
+
+property="og:locale" content="it_IT"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" 
+
+content="Moodhaus® | Stampe su Tela e Quadri Moderni"/>
+    <meta property="og:description" content="L'eccellenza delle 
+
+stampe su tela per un arredamento unico e moderno. Scopri la collezione."/>
+    <meta property="og:url" 
+
+content="https://30artgallery.github.io"/>
+    <meta property="og:site_name" content="Moodhaus"/>
+    <meta 
+
+property="og:image" content="https://www.moodhaus.it"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta 
+
+property="og:image:height" content="630"/>
+
+    <!-- TWITTER CARD -->
+    <meta name="twitter:card" 
+
+content="summary_large_image"/>
+    <meta name="twitter:title" content="Moodhaus | Quadri Moderni su Tela"/>
+    
+    <!-- 
+
+SCHEMA.ORG MARKUP JSON-LD (Potenza Semantica) -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": 
+
+"https://schema.org",
+        "@type": "WebSite",
+        "name": "Moodhaus",
+        "url": "https://30artgallery.github.io",
+        
+
+"potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://30artgallery.github.iosearch?q={search_term_string}",
+      
+
+    "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": 
+
+"Organization",
+        "name": "Moodhaus",
+        "url": "https://30artgallery.github.io",
+        "logo": "https://www.moodhaus.it",
+        
+
+"sameAs": [
+          "https://www.facebook.com",
+          "https://www.instagram.com"
+        ]
+      },
+      {
+        "@context": 
+
+"https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+        
+
+    "name": "Stampe Bauhaus",
+            "url": "https://30artgallery.github.iocollezioni/bauhaus"
+          }
+        ]
+      }
+    ]
+    </script>
+
+
+<style>
         :root {
             --sand-bg: #fdfcf9;
             --sand-soft: #f4f1ea;
             --text-main: #2c2c2c;
             --white: #ffffff;
-        }
+       
+/* Sostituisci la riga body { ... } con questa: */
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--text-main); background: var(--white); -webkit-font-smoothing: antialiased; }
+
+/* Sostituisci la riga .logo { ... } con questa: */
+.logo { font-family: "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 2.6rem; font-weight: 500; letter-spacing: -1px; margin-bottom: 20px; display: block; }
+
+/* Sostituisci la riga .footer-logo { ... } con questa: */
+.footer-logo { font-family: "Times New Roman", Times, serif; font-size: 1.8rem; margin-bottom: 10px; display: block; }
+
+ }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-main); 
 
-        /* RIGA IDENTICA ALLA INDEX PER IL BODY (TESTI) */
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--text-main); background: var(--white); -webkit-font-smoothing: antialiased; }
+background: var(--white); -webkit-font-smoothing: antialiased; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 
 
-        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+20px; }
         a { text-decoration: none; color: inherit; }
 
-        header { padding: 30px 0; background: white; border-bottom: 1px solid #f0f0f0; text-align: center; }
+        header { padding: 30px 0; background: white; border-bottom: 1px solid 
 
-        /* RIGA IDENTICA ALLA INDEX PER IL LOGO */
-        .logo { font-family: "Times New Roman", Times, Baskerville, Georgia, serif; font-size: 2.6rem; font-weight: 500; letter-spacing: -1px; margin-bottom: 20px; display: block; }
+#f0f0f0; text-align: center; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 500; letter-
+
+spacing: -1px; margin-bottom: 20px; display: block; }
         
         .main-nav { display: flex; justify-content: center; gap: 35px; }
-        .main-nav a { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #555; }
-
-        /* SEZIONE MATERIALI */
-        .materials-content { padding: 80px 0; max-width: 900px; margin: 0 auto; }
-        .materials-content h1 { font-family: "Times New Roman", Times, serif; font-size: 2.5rem; text-align: center; margin-bottom: 50px; font-weight: 500; }
         
-        .material-block { margin-bottom: 60px; padding: 0 20px; }
-        .material-block h2 { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; color: #000; margin-bottom: 10px; font-weight: 600; }
-        .material-block h3 { font-family: "Times New Roman", Times, serif; font-size: 1.8rem; margin-bottom: 15px; font-weight: 500; }
-        .material-block p { font-size: 0.95rem; line-height: 1.8; color: #444; text-align: justify; }
 
-        footer { padding: 40px 0; text-align: center; border-top: 1px solid var(--sand-soft); margin-top: 40px; }
+.main-nav a { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #555; }
 
-        /* RIGA IDENTICA ALLA INDEX PER IL FOOTER LOGO */
-        .footer-logo { font-family: "Times New Roman", Times, serif; font-size: 1.8rem; margin-bottom: 10px; display: block; }
+   .hero-mockup-main { 
+    width: 100%; 
+    height: auto; 
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.hero-mockup-main img { 
+    width: 100%; 
+    height: auto; 
+    display: block;
+    max-width: 100%;
+}
+
+
+        .mockup-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 5px; background: var
+
+(--white); }
+        .mockup-box { aspect-ratio: auto; overflow: hidden; background: var(--sand-soft); }
+        .mockup-box img { width: 
+
+100%; height: auto; display: block; transition: transform 1s ease; }
+        .mockup-box:hover img { transform: scale(1.05); }
+
         
-        .copy { font-size: 0.6rem; letter-spacing: 2px; color: #999; text-transform: uppercase; }
+
+footer { padding: 40px 0; text-align: center; border-top: 1px solid var(--sand-soft); margin-top: 40px; }
+        .footer-logo { font-
+
+family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin-bottom: 10px; display: block; }
+        .copy { font-size: 0.6rem; 
+
+letter-spacing: 2px; color: #999; text-transform: uppercase; }
 
         @media (max-width: 768px) {
+            .mockup-grid { grid-
+
+template-columns: 1fr; }
             .main-nav { gap: 15px; font-size: 0.6rem; flex-wrap: wrap; }
         }
+    /* Griglia dei Best Seller */
+.product-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colonne uguali */
+    gap: 20px; /* Spazio tra i prodotti */
+}
+
+.product-item {
+    text-align: center;
+}
+
+.product-img-box {
+    width: 100%;
+    aspect-ratio: 1/1; /* Forza le foto ad avere tutte la stessa proporzione */
+    overflow: hidden;
+    background: var(--sand-soft);
+    margin-bottom: 15px;
+}
+
+.product-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Taglia l'immagine per riempire il box senza distorcerla */
+    display: block;
+}
+
+.product-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.product-item p {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+}
+
+/* Fix per Mobile: 2 colonne invece di 4 */
+@media (max-width: 768px) {
+    .product-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* --- SEZIONE USP (3 VANTAGGI) --- */
+.usp-section {
+    margin-top: 100px;
+    padding-bottom: 40px;
+    border-bottom: none; /* Linea sottile di separazione */
+    text-align: center;
+}
+
+.usp-grid {
+    display: flex;
+    justify-content: space-between; /* Spazia i 3 elementi in modo uniforme */
+    align-items: flex-start;
+    max-width: 1500px; /* Centra il blocco rispetto al container */
+    margin: 0 auto;
+}
+
+.usp-item {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.usp-item h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.usp-item p {
+    font-family: 'Cormorant Garamond', serif; /* Font elegante per la descrizione */
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Adattamento Mobile: in colonna per non affollare lo schermo */
+@media (max-width: 768px) {
+    .usp-grid { 
+        flex-direction: column;
+        gap: 35px;
+        }
+            /* Forza gli articoli in fondo in colonna singola e riduci i testi */
+    .seo-grid { 
+        grid-template-columns: 1fr !important; 
+        gap: 30px !important; 
+        padding: 0 10px;
+    }
+    .seo-title { 
+        font-size: 0.95rem !important; /* Titolo discreto */
+        text-align: center; 
+    }
+       .seo-text { 
+        font-size: 0.75rem !important; /* Testo più corto alla vista */
+        line-height: 1.5;
+        text-align: center; 
+    }
+}
+
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1 class="logo"><a href="index.html">moodhaus</a></h1>
-            <nav class="main-nav">
-                <a href="#">Collezioni</a>
-                <a href="#">Stampe su Tela</a>
-                <a href="materiali.html">Materiali</a>
-            </nav>
-        </div>
-    </header>
 
-    <main class="container">
+<header>
+      <main class="container">
         <section class="materials-content">
             <h1>Materiali d'Eccellenza</h1>
 
@@ -86,11 +318,13 @@
             </div>
         </section>
     </main>
-
-    <footer>
+    
+<footer>
         <div class="container">
             <span class="footer-logo">moodhaus</span>
-            <p class="copy">© 2024 Moodhaus. Tutti i diritti riservati. Made in Italy.</p>
+            <p class="copy">&copy; 
+
+2026 Studio Moodhaus — Eccellenza nelle stampe su tela</p>
         </div>
     </footer>
 
