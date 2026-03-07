@@ -170,6 +170,79 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
       text-transform: uppercase;
     }
 
+
+
+/* Layout Specifico per il Singolo Prodotto */
+.product-single-layout {
+  display: flex;
+  gap: 60px;
+  margin: 60px 0;
+  align-items: flex-start;
+}
+
+.product-single-media {
+  flex: 1.2; /* L'immagine prende più spazio */
+}
+
+.product-single-media img {
+  width: 100%;
+  height: auto;
+  background-color: var(--sand-soft);
+  display: block;
+}
+
+.product-single-info {
+  flex: 0.8; /* I testi prendono meno spazio */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#titolo-prodotto {
+  font-family: "Times New Roman", serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+#prezzo-prodotto {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.product-specs {
+  list-style: none;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #555;
+}
+
+.product-specs li { margin-bottom: 8px; }
+
+#descrizione-prodotto {
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #444;
+  margin-top: 20px;
+}
+
+/* Mobile: una colonna sola */
+@media (max-width: 900px) {
+  .product-single-layout { flex-direction: column; gap: 30px; }
+}
+
+
+
+
+
+
+
+
+
+    
   </style>
 </head>
 
@@ -193,37 +266,62 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
 
 
 
-<main class="container">
-  <div id="gallery" class="product-grid">
-    <!-- I prodotti verranno caricati qui automaticamente -->
+<main class="container" id="contenitore-prodotto">
+  <div class="product-single-layout">
+    
+    <!-- SINISTRA: L'immagine del quadro -->
+    <div class="product-single-media">
+      <img id="immagine-prodotto" src="" alt="Caricamento...">
+    </div>
+
+    <!-- DESTRA: Titolo, Prezzo e Dettagli -->
+    <div class="product-single-info">
+      <h1 id="titolo-prodotto">Caricamento...</h1>
+      <p id="prezzo-prodotto"></p>
+      
+      <ul class="product-specs">
+        <li>Misura: <span id="misura-prodotto"></span></li>
+        <li>Telaio: <span id="telaio-prodotto"></span></li>
+      </ul>
+
+      <!-- Descrizione subito sotto ai dati -->
+      <div id="descrizione-prodotto"></div>
+    </div>
+
   </div>
 </main>
 
 <script>
-async function caricaGalleria() {
-    const gallery = document.getElementById('gallery');
-    
+async function caricaProdotto() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('id');
+
+    if (!productId) {
+        document.getElementById('contenitore-prodotto').innerHTML = "<h1>Prodotto non trovato</h1>";
+        return;
+    }
+
     try {
         const response = await fetch('prodotti.json');
         const prodotti = await response.json();
+        const prodotto = prodotti.find(p => p.id === productId);
 
-        gallery.innerHTML = prodotti.map(p => `
-            <a href="prodotto.html?id=${p.id}" class="product-card">
-                <img src="${p.immagine}" alt="${p.titolo}">
-                <h3>${p.titolo}</h3>
-                <p>€ ${p.prezzo}</p>
-            </a>
-        `).join('');
-
-    } catch (error) {
-        console.error("Errore caricamento prodotti:", error);
-        gallery.innerHTML = "<p>Caricamento prodotti fallito.</p>";
+        if (prodotto) {
+            document.title = prodotto.seo_title;
+            document.getElementById('titolo-prodotto').innerText = prodotto.titolo;
+            document.getElementById('prezzo-prodotto').innerText = "€ " + prodotto.prezzo;
+            document.getElementById('descrizione-prodotto').innerText = prodotto.descrizione;
+            document.getElementById('immagine-prodotto').src = prodotto.immagine;
+            document.getElementById('misura-prodotto').innerText = prodotto.misura;
+            document.getElementById('telaio-prodotto').innerText = prodotto.telaio;
+        }
+    } catch (e) {
+        console.error("Errore caricamento:", e);
     }
 }
-
-// Esegue la funzione all'avvio
-window.onload = caricaGalleria;
+window.onload = caricaProdotto;
 </script>
+
 
 
   
