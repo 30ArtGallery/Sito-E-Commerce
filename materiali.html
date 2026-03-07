@@ -443,6 +443,142 @@
   </div>
 </main>
 
+
+
+  
+
+
+<!-- SEZIONE FAQ VISIBILE (Sincronizzata al 100% con lo Schema) -->
+<section class="container" style="margin: 80px auto; max-width: 850px; padding: 0 20px;">
+  
+  <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; text-align: center; margin-bottom: 50px; font-weight: 300;">
+    Qualità e Dettagli Tecnici
+  </h2>
+
+  <div class="faq-accordion-container">
+    
+    <!-- FAQ 1 -->
+    <details class="mood-faq-item">
+      <summary>Qual è la grammatura della tela utilizzata da Moodhaus? <span class="faq-icon">+</span></summary>
+      <div class="faq-answer">
+        Utilizziamo esclusivamente tela Canvas Premium da 250g/m². Questa grammatura elevata garantisce una consistenza robusta e una trama professionale che esalta ogni dettaglio delle opere Bauhaus e astratte.
+      </div>
+    </details>
+
+    <!-- FAQ 2 -->
+    <details class="mood-faq-item">
+      <summary>Gli inchiostri sono resistenti allo sbiadimento nel tempo? <span class="faq-icon">+</span></summary>
+      <div class="faq-answer">
+        Assolutamente sì. Impieghiamo inchiostri a pigmento certificati con protezione UV integrata. Questo processo di stampa garantisce colori vividi che non sbiadiscono anche se esposti alla luce solare diretta per anni.
+      </div>
+    </details>
+
+    <!-- FAQ 3 -->
+    <details class="mood-faq-item">
+      <summary>Il telaio è incluso e di che materiale è fatto? <span class="faq-icon">+</span></summary>
+      <div class="faq-answer">
+        Ogni quadro Moodhaus è già montato su un telaio in legno massello levigato da 2cm o 4cm di spessore. Il legno proviene da foreste certificate FSC, garantendo stabilità strutturale e sostenibilità ambientale.
+      </div>
+    </details>
+
+    <!-- FAQ 4 -->
+    <details class="mood-faq-item">
+      <summary>Come vengono imballati i quadri per la spedizione? <span class="faq-icon">+</span></summary>
+      <div class="faq-answer">
+        La sicurezza è la nostra priorità. Ogni opera viene avvolta in uno strato protettivo di pluriball e inserita in scatole di cartone rigido doppia onda ultra-resistenti, progettate specificamente per il trasporto di opere d'arte.
+      </div>
+    </details>
+
+    <!-- FAQ 5 -->
+    <details class="mood-faq-item">
+      <summary>Le stampe su tela Moodhaus emanano odori chimici? <span class="faq-icon">+</span></summary>
+      <div class="faq-answer">
+        No, utilizziamo inchiostri ecologici a base d'acqua, totalmente privi di solventi e sostanze tossiche (VOC-free). Le nostre stampe sono sicure per camere da letto, camerette dei bambini e ambienti medici.
+      </div>
+    </details>
+
+    <!-- FAQ 6 -->
+    <details class="mood-faq-item">
+      <summary>I bordi del quadro sono stampati o bianchi? <span class="faq-icon">+</span></summary>
+      <div class="faq-answer">
+        Utilizziamo la tecnica del 'bordo specchiato': l'immagine continua sui lati del telaio. Questo permette di appendere il quadro senza cornice, mantenendo un design moderno e pulito da ogni angolazione.
+      </div>
+    </details>
+
+    <!-- FAQ 7 -->
+    <details class="mood-faq-item">
+      <summary>È possibile pulire la superficie della stampa? <span class="faq-icon">+</span></summary>
+      <div class="faq-answer">
+        Certamente. Grazie allo strato protettivo degli inchiostri a pigmento, è possibile rimuovere la polvere con un semplice panno in microfibra asciutto. Evitare l'uso di sgrassatori o spugne abrasive.
+      </div>
+    </details>
+
+    <!-- FAQ 8 -->
+    <details class="mood-faq-item">
+      <summary>Quali sono i tempi di produzione e consegna? <span class="faq-icon">+</span></summary>
+      <div class="faq-answer">
+        Ogni quadro è realizzato on-demand per garantire la massima qualità. La produzione richiede 2-3 giorni lavorativi, seguiti da una spedizione espressa tracciata che consegna in tutta Italia in 24/48 ore.
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- CSS PER UN LOOK MINIMALE E PROFESSIONALE -->
+<style>
+  .faq-accordion-container { border-top: 1px solid #eee; }
+  
+  .mood-faq-item {
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+    transition: background 0.3s;
+  }
+
+  .mood-faq-item summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #2c2c2c;
+    cursor: pointer;
+  }
+
+  /* Rimuove la freccia di default su Safari e Chrome */
+  .mood-faq-item summary::-webkit-details-marker { display: none; }
+
+  .faq-answer {
+    margin-top: 15px;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #666;
+    padding-right: 30px;
+    /* Animazione fluida */
+    animation: slideDown 0.3s ease-out;
+  }
+
+  .faq-icon {
+    font-size: 1.2rem;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+  }
+
+  .mood-faq-item[open] .faq-icon {
+    transform: rotate(45deg);
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+
+
+
   
     
 
