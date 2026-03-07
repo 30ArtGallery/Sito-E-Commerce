@@ -361,13 +361,13 @@
   
 
 
-<!-- 1. AGGIUNGI QUESTO CSS PER LE 3 COLONNE (dentro il tag <style> o qui sotto) -->
 <style>
-  .product-grid-3 {
+  .product-grid-4 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px 20px;
-    margin: 60px auto;
+    /* Forza 4 colonne su desktop */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px 20px;
+    margin: 40px auto;
     max-width: 1400px;
     padding: 0 20px;
   }
@@ -375,41 +375,38 @@
     text-align: center;
     text-decoration: none;
     color: inherit;
-    transition: opacity 0.3s;
+    transition: transform 0.3s ease;
   }
-  .product-card:hover { opacity: 0.7; }
+  .product-card:hover { transform: translateY(-5px); }
+  
   .product-card img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 1/1; /* Mantiene le immagini quadrate e ordinate */
+    object-fit: cover;
     background: var(--sand-soft);
     margin-bottom: 15px;
   }
+  
   .product-card h3 {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 5px;
   }
-  @media (max-width: 900px) {
-    .product-grid-3 { grid-template-columns: repeat(2, 1fr); }
+
+  /* Tablet: 2 colonne */
+  @media (max-width: 1024px) {
+    .product-grid-4 { grid-template-columns: repeat(2, 1fr); }
   }
+  /* Mobile: 2 colonne (più eleganti della colonna singola per i quadri) */
   @media (max-width: 600px) {
-    .product-grid-3 { grid-template-columns: 1fr; }
+    .product-grid-4 { 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 15px 10px;
+    }
   }
 </style>
 
-<!-- 2. AGGIUNGI QUESTO CONTENITORE (L'ID cercato dallo script) -->
-<div style="text-align: center; padding: 80px 0 30px;">
-  <h2 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #333;">
-    stampe bauhaus
-  </h2>
-</div>
-
-  
-  <div id="gallery-bauhaus" class="product-grid-3">
-      <!-- Qui lo script caricherà i prodotti -->
-  </div>
-</main>
 
 
 
@@ -419,37 +416,37 @@
 
 <script>
 async function caricaCollezioneBauhaus() {
-    const gallery = document.getElementById('gallery-bauhaus'); // Assicurati che l'ID del div sia questo
+    const gallery = document.getElementById('gallery-bauhaus');
     
     try {
-        // Carica il JSON con sistema anti-cache per vedere subito le modifiche
         const response = await fetch('prodotti.json?v=' + new Date().getTime());
         const prodotti = await response.json();
 
-        // FILTRO PROFESSIONALE: Prende solo i prodotti con campo collezione "bauhaus"
         const prodottiFiltrati = prodotti.filter(p => p.collezione === "bauhaus");
 
         if (prodottiFiltrati.length > 0) {
-            gallery.innerHTML = prodottiFiltrati.map(p => `
+            gallery.innerHTML = prodottiFiltrati.map((p, index) => {
+                // I primi 4 quadri (prima riga) caricano subito, gli altri dopo (lazy)
+                const loadingStrategy = index < 4 ? '' : 'loading="lazy"';
+                
+                return `
                 <a href="prodotto.html?id=${p.id}" class="product-card">
-                    <img src="${p.immagine}" alt="${p.titolo}">
+                    <img src="${p.immagine}" alt="${p.titolo} - Quadro Bauhaus Moodhaus" ${loadingStrategy}>
                     <h3>${p.titolo}</h3>
                     <p>€ ${p.prezzo}</p>
                 </a>
-            `).join('');
+                `;
+            }).join('');
         } else {
-            gallery.innerHTML = "<p style='grid-column: 1/-1; text-align:center;'>Nessun prodotto trovato nella collezione Bauhaus.</p>";
+            gallery.innerHTML = "<p style='grid-column: 1/-1; text-align:center;'>Collezione in arrivo.</p>";
         }
-
     } catch (error) {
-        console.error("Errore nel caricamento della collezione:", error);
-        gallery.innerHTML = "<p style='grid-column: 1/-1; text-align:center;'>Errore tecnico nel caricamento dei dati.</p>";
+        console.error("Errore:", error);
     }
 }
-
-// Avvia la funzione al caricamento della pagina
 window.onload = caricaCollezioneBauhaus;
 </script>
+
 
 
 
