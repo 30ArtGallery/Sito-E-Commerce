@@ -316,6 +316,7 @@ async function caricaProdotto() {
             document.title = prodotto.seo_title;
             document.getElementById('titolo-prodotto').innerText = prodotto.titolo;
             document.getElementById('prezzo-prodotto').innerText = "€ " + prodotto.prezzo;
+            document.getElementById('id-prodotto').innerText = prodotto.id;
             document.getElementById('descrizione-prodotto').innerText = prodotto.descrizione;
             document.getElementById('immagine-prodotto').src = prodotto.immagine;
             document.getElementById('misura-prodotto').innerText = prodotto.misura;
