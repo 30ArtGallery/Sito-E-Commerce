@@ -308,9 +308,9 @@ async function caricaProdotto() {
     }
 
     try {
-        const response = await fetch('prodotti.json');
-        const prodotti = await response.json();
-        const prodotto = prodotti.find(p => p.id === productId);
+       const response = await fetch('prodotti.json?v=' + new Date().getTime());
+       const prodotti = await response.json();
+       const prodotto = prodotti.find(p => p.id === productId);
 
         if (prodotto) {
             document.title = prodotto.seo_title;
