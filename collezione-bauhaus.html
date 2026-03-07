@@ -361,91 +361,126 @@
   
 
 
+<!-- 1. STILI PER LA GRIGLIA A 4 COLONNE -->
 <style>
   .product-grid-4 {
     display: grid;
-    /* Forza 4 colonne su desktop */
+    /* Forza 4 colonne su desktop per le tue 10 file */
     grid-template-columns: repeat(4, 1fr); 
-    gap: 30px 20px;
+    gap: 40px 20px;
     margin: 40px auto;
     max-width: 1400px;
     padding: 0 20px;
   }
+
   .product-card {
     text-align: center;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s;
+    display: block;
   }
-  .product-card:hover { transform: translateY(-5px); }
+
+  .product-card:hover { 
+    transform: translateY(-5px);
+    opacity: 0.8;
+  }
   
   .product-card img {
     width: 100%;
-    aspect-ratio: 1/1; /* Mantiene le immagini quadrate e ordinate */
+    aspect-ratio: 1/1; /* Mantiene le immagini perfettamente quadrate */
     object-fit: cover;
-    background: var(--sand-soft);
+    background: #f4f1ea; /* var(--sand-soft) */
     margin-bottom: 15px;
+    display: block;
   }
   
   .product-card h3 {
-    font-size: 0.85rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-weight: 400;
+  }
+
+  .product-card p {
+    font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 5px;
+    color: #999;
   }
 
   /* Tablet: 2 colonne */
   @media (max-width: 1024px) {
     .product-grid-4 { grid-template-columns: repeat(2, 1fr); }
   }
-  /* Mobile: 2 colonne (più eleganti della colonna singola per i quadri) */
+  
+  /* Mobile: 2 colonne per non allungare troppo la pagina */
   @media (max-width: 600px) {
     .product-grid-4 { 
       grid-template-columns: repeat(2, 1fr); 
-      gap: 15px 10px;
+      gap: 20px 10px;
     }
+    .product-card h3 { font-size: 0.9rem; }
   }
 </style>
 
+<!-- 2. TITOLO E CONTENITORE (Fondamentale per lo script) -->
+<div style="text-align: center; padding: 80px 0 30px;">
+  <h2 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #333;">
+    collezione bauhaus
+  </h2>
+</div>
 
+<!-- Questo è l'ID che lo script cercherà per inserire i quadri -->
+<div id="gallery-bauhaus" class="product-grid-4">
+    <!-- I prodotti appariranno qui magicamente -->
+</div>
 
-
-
-  
-
-
+<!-- 3. SCRIPT DI CARICAMENTO DINAMICO -->
 <script>
 async function caricaCollezioneBauhaus() {
     const gallery = document.getElementById('gallery-bauhaus');
     
+    // Se il contenitore non esiste, esci per evitare errori
+    if (!gallery) return;
+
     try {
+        // Carica il JSON con sistema anti-cache
         const response = await fetch('prodotti.json?v=' + new Date().getTime());
+        if (!response.ok) throw new Error('File JSON non trovato');
+        
         const prodotti = await response.json();
 
+        // Filtra solo i prodotti della collezione "bauhaus"
         const prodottiFiltrati = prodotti.filter(p => p.collezione === "bauhaus");
 
         if (prodottiFiltrati.length > 0) {
             gallery.innerHTML = prodottiFiltrati.map((p, index) => {
-                // I primi 4 quadri (prima riga) caricano subito, gli altri dopo (lazy)
-                const loadingStrategy = index < 4 ? '' : 'loading="lazy"';
+                // SEO: Lazy loading solo dopo la prima riga (primi 4 prodotti)
+                const loadingAttr = index < 4 ? '' : 'loading="lazy"';
                 
                 return `
                 <a href="prodotto.html?id=${p.id}" class="product-card">
-                    <img src="${p.immagine}" alt="${p.titolo} - Quadro Bauhaus Moodhaus" ${loadingStrategy}>
+                    <img src="${p.immagine}" alt="${p.titolo} - Moodhaus" ${loadingAttr}>
                     <h3>${p.titolo}</h3>
                     <p>€ ${p.prezzo}</p>
                 </a>
                 `;
             }).join('');
         } else {
-            gallery.innerHTML = "<p style='grid-column: 1/-1; text-align:center;'>Collezione in arrivo.</p>";
+            gallery.innerHTML = "<p style='grid-column: 1/-1; text-align:center;'>Nessun prodotto trovato nella collezione Bauhaus.</p>";
         }
+
     } catch (error) {
-        console.error("Errore:", error);
+        console.error("Errore nel caricamento:", error);
+        gallery.innerHTML = "<p style='grid-column: 1/-1; text-align:center;'>Caricamento in corso o errore tecnico...</p>";
     }
 }
-window.onload = caricaCollezioneBauhaus;
+
+// Avvia la funzione al caricamento della pagina
+window.addEventListener('DOMContentLoaded', caricaCollezioneBauhaus);
 </script>
+
 
 
 
