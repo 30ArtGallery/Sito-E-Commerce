@@ -351,46 +351,68 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
 
 
 
-<main class="container" id="contenitore-prodotto">
-  <!-- BLOCCO SUPERIORE: Immagine e Info Rapide -->
+<!-- COPIA E SOSTITUISCI IL TUO <MAIN> CON QUESTO -->
+<main class="container" id="contenitore-prodotto" style="margin-top: 50px;">
   <div class="product-single-layout">
     
     <!-- SINISTRA: L'immagine del quadro -->
     <div class="product-single-media">
-      <img id="immagine-prodotto" src="" alt="Caricamento...">
+      <img id="immagine-prodotto" src="" alt="Caricamento..." style="width: 100%; height: auto; display: block;">
     </div>
 
     <!-- DESTRA: Dati dal JSON + Testi Statici -->
     <div class="product-single-info">
-      <h1 id="titolo-prodotto">Caricamento...</h1>
-      <p id="prezzo-prodotto"></p>
+      <h1 id="titolo-prodotto" style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; margin-bottom: 10px;">Caricamento...</h1>
+      <p id="prezzo-prodotto" style="font-size: 1.4rem; margin-bottom: 30px;"></p>
       
-      <ul class="product-specs">
-        <li>ID Prodotto: <span id="id-prodotto"></span></li>
-        <li>Misura: <span id="misura-prodotto"></span></li>
-        <li>Telaio: <span id="telaio-prodotto"></span></li>
+      <ul class="product-specs" style="list-style: none; padding: 0; border-top: 1px solid #eee; padding-top: 20px;">
+        <li style="margin-bottom: 12px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">ID Prodotto: <span id="id-prodotto" style="font-weight: 600;"></span></li>
+        <li style="margin-bottom: 12px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Misura: <span id="misura-prodotto" style="font-weight: 600;"></span></li>
+        <li style="margin-bottom: 12px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Telaio: <span id="telaio-prodotto" style="font-weight: 600;"></span></li>
         
-        <!-- TESTI STATICI (Sempre uguali) -->
-        <li>Materiale: Tela Canvas 250g Matt</li>
-        <li>Stampa: Inchiostri Ecologici</li>
-        <li>Produzione: 100% Artigianato Italiano</li>
-        <li>Pagamenti: Sicuri e Protetti</li>
-        <li style="color: #27ae60; margin-top: 15px;">✔ Spedizione gratuita in Italia</li>
+        <li style="margin-bottom: 12px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #666;">Materiale: <span>Tela Canvas 250g Matt</span></li>
+        <li style="margin-bottom: 12px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #666;">Stampa: <span>Inchiostri Ecologici</span></li>
+        <li style="margin-bottom: 12px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #666;">Produzione: <span>100% Artigianato Italiano</span></li>
+        <li style="color: #27ae60; margin-top: 15px; font-size: 0.8rem; font-weight: 600;">✔ Spedizione gratuita in Italia</li>
       </ul>
 
-      <button style="margin-top:20px; padding:15px; background:#000; color:#fff; border:none; cursor:pointer; text-transform:uppercase; letter-spacing:1px; font-size: 0.8rem;">
+      <!-- BOTTONE AGGIORNATO PER SNIPCART -->
+      <button id="btn-snipcart" 
+        class="snipcart-add-item"
+        data-item-id=""
+        data-item-name=""
+        data-item-price=""
+        data-item-url=""
+        data-item-image=""
+        style="margin-top:20px; width: 100%; padding:18px; background:#000; color:#fff; border:none; cursor:pointer; text-transform:uppercase; letter-spacing:1px; font-size: 0.8rem;">
         Aggiungi al carrello
       </button>
     </div>
   </div>
 
- <!-- BLOCCO INFERIORE: Descrizione Grande Sotto -->
-<div class="descrizione-estesa-container">
-   <h2>Dettagli</h2>
-   <div id="descrizione-prodotto"></div>
-</div>
+  <div class="descrizione-estesa-container" style="margin-top: 60px; border-top: 1px solid #eee; padding-top: 40px;">
+     <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300;">Dettagli</h2>
+     <div id="descrizione-prodotto" style="line-height: 1.8; color: #555;"></div>
+  </div>
 </main>
 
+<!-- AGGIUNGI QUESTO CSS NEL TUO TAG <STYLE> PER L'ALLINEAMENTO -->
+<style>
+  .product-single-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    align-items: flex-start;
+  }
+  .product-single-media { flex: 1 1 500px; }
+  .product-single-info { flex: 1 1 350px; }
+  
+  @media (max-width: 768px) {
+    .product-single-layout { flex-direction: column; }
+  }
+</style>
+
+<!-- LO SCRIPT AGGIORNATO (RIEMPIE ANCHE IL BOTTONE) -->
 <script>
 async function caricaProdotto() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -407,7 +429,8 @@ async function caricaProdotto() {
        const prodotto = prodotti.find(p => p.id === productId);
 
         if (prodotto) {
-            document.title = prodotto.seo_title;
+            // Riempie i testi
+            document.title = prodotto.seo_title || prodotto.titolo;
             document.getElementById('titolo-prodotto').innerText = prodotto.titolo;
             document.getElementById('prezzo-prodotto').innerText = "€ " + prodotto.prezzo;
             document.getElementById('id-prodotto').innerText = prodotto.id;
@@ -415,6 +438,15 @@ async function caricaProdotto() {
             document.getElementById('immagine-prodotto').src = prodotto.immagine;
             document.getElementById('misura-prodotto').innerText = prodotto.misura;
             document.getElementById('telaio-prodotto').innerText = prodotto.telaio;
+
+            // CONFIGURA IL BOTTONE PER SNIPCART
+            const btn = document.getElementById('btn-snipcart');
+            btn.setAttribute('data-item-id', prodotto.id);
+            btn.setAttribute('data-item-name', prodotto.titolo);
+            btn.setAttribute('data-item-price', prodotto.prezzo);
+            btn.setAttribute('data-item-image', prodotto.immagine);
+            btn.setAttribute('data-item-url', window.location.href); 
+            
         } else {
             document.getElementById('contenitore-prodotto').innerHTML = "<h1>Prodotto non presente in catalogo</h1>";
         }
