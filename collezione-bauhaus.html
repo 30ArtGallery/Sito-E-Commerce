@@ -193,6 +193,39 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
 
 
 
+<script>
+async function caricaCollezioneBauhaus() {
+    const gallery = document.getElementById('gallery-bauhaus'); // Assicurati che l'ID del div sia questo
+    
+    try {
+        // Carica il JSON con sistema anti-cache per vedere subito le modifiche
+        const response = await fetch('prodotti.json?v=' + new Date().getTime());
+        const prodotti = await response.json();
+
+        // FILTRO PROFESSIONALE: Prende solo i prodotti con campo collezione "bauhaus"
+        const prodottiFiltrati = prodotti.filter(p => p.collezione === "bauhaus");
+
+        if (prodottiFiltrati.length > 0) {
+            gallery.innerHTML = prodottiFiltrati.map(p => `
+                <a href="prodotto.html?id=${p.id}" class="product-card">
+                    <img src="${p.immagine}" alt="${p.titolo}">
+                    <h3>${p.titolo}</h3>
+                    <p>€ ${p.prezzo}</p>
+                </a>
+            `).join('');
+        } else {
+            gallery.innerHTML = "<p style='grid-column: 1/-1; text-align:center;'>Nessun prodotto trovato nella collezione Bauhaus.</p>";
+        }
+
+    } catch (error) {
+        console.error("Errore nel caricamento della collezione:", error);
+        gallery.innerHTML = "<p style='grid-column: 1/-1; text-align:center;'>Errore tecnico nel caricamento dei dati.</p>";
+    }
+}
+
+// Avvia la funzione al caricamento della pagina
+window.onload = caricaCollezioneBauhaus;
+</script>
 
 
 
