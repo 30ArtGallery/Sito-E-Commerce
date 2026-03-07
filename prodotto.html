@@ -193,53 +193,43 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
 
 
 
+<main class="container">
+  <div id="gallery" class="product-grid">
+    <!-- I prodotti verranno caricati qui automaticamente -->
+  </div>
+</main>
+
+<script>
+async function caricaGalleria() {
+    const gallery = document.getElementById('gallery');
+    
+    try {
+        const response = await fetch('prodotti.json');
+        const prodotti = await response.json();
+
+        gallery.innerHTML = prodotti.map(p => `
+            <a href="prodotto.html?id=${p.id}" class="product-card">
+                <img src="${p.immagine}" alt="${p.titolo}">
+                <h3>${p.titolo}</h3>
+                <p>€ ${p.prezzo}</p>
+            </a>
+        `).join('');
+
+    } catch (error) {
+        console.error("Errore caricamento prodotti:", error);
+        gallery.innerHTML = "<p>Caricamento prodotti fallito.</p>";
+    }
+}
+
+// Esegue la funzione all'avvio
+window.onload = caricaGalleria;
+</script>
 
 
   
 
-  <script>
-  async function caricaProdotto() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const productId = urlParams.get('id');
 
-      if (!productId) {
-          document.getElementById('contenitore-prodotto').innerHTML = "<h1>Prodotto non specificato</h1>";
-          return;
-      }
-
-      try {
-          const response = await fetch('prodotti.json');
-          const prodotti = await response.json();
-          const prodotto = prodotti.find(p => p.id === productId);
-
-          if (prodotto) {
-              // Aggiorna SEO
-              document.title = prodotto.seo_title;
-              const metaDesc = document.querySelector('meta[name="description"]');
-              if(metaDesc) metaDesc.setAttribute("content", prodotto.seo_desc);
-              
-              // Inietta dati
-              document.getElementById('titolo-prodotto').innerText = prodotto.titolo;
-              document.getElementById('prezzo-prodotto').innerText = "€ " + prodotto.prezzo;
-              document.getElementById('descrizione-prodotto').innerText = prodotto.descrizione;
-              document.getElementById('immagine-prodotto').src = prodotto.immagine;
-              document.getElementById('immagine-prodotto').alt = prodotto.titolo;
-              document.getElementById('misura-prodotto').innerText = prodotto.misura;
-              document.getElementById('telaio-prodotto').innerText = prodotto.telaio;
-          } else {
-              document.getElementById('contenitore-prodotto').innerHTML = "<h1>Prodotto non trovato nel catalogo</h1>";
-          }
-      } catch (error) {
-          console.error("Errore nel caricamento:", error);
-          document.getElementById('contenitore-prodotto').innerHTML = "<h1>Errore di caricamento dati</h1>";
-      }
-  }
-
-  window.onload = caricaProdotto;
-  </script>
-
-
-
+  
 
   
     
