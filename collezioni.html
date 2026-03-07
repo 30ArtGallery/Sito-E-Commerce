@@ -192,40 +192,99 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
   
 
   
-<main>
-  <div class="container" style="max-width: 1100px; padding: 80px 20px;">
+<style>
+  .collections-main { padding: 60px 0; }
+  .collections-header { text-align: center; margin-bottom: 60px; }
+  .collections-header h1 { font-family: "Times New Roman", serif; font-size: 2.2rem; text-transform: lowercase; font-weight: 400; }
+  
+  .category-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Due grandi box affiancati */
+    gap: 30px;
+  }
+
+  .category-card {
+    position: relative;
+    height: 450px;
+    overflow: hidden;
+    background-color: var(--sand-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+  }
+
+  .category-card img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+    filter: brightness(0.8); /* Scurisce l'immagine per far leggere il testo */
+  }
+
+  .category-card:hover img { transform: scale(1.05); filter: brightness(0.6); }
+
+  .category-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+  }
+
+  .category-content h2 {
+    font-family: "Times New Roman", serif;
+    font-size: 2rem;
+    text-transform: lowercase;
+    margin-bottom: 15px;
+  }
+
+  .btn-discover {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid white;
+    padding: 10px 20px;
+    display: inline-block;
+    transition: all 0.3s;
+  }
+
+  .category-card:hover .btn-discover { background: white; color: black; }
+
+  @media (max-width: 768px) {
+    .category-grid { grid-template-columns: 1fr; }
+    .category-card { height: 350px; }
+  }
+</style>
+
+<main class="container collections-main">
+  <div class="collections-header">
+    <h1>le nostre collezioni</h1>
+  </div>
+
+  <div class="category-grid">
     
-    <header style="border:none; padding-bottom: 70px; text-align: center;">
-      <h2 style="font-family: 'Times New Roman', Times, serif; font-size: 1.8rem; font-weight: 500; margin-bottom: 15px; color: var(--text-main); text-transform: uppercase; letter-spacing: 2px;">Le Collezioni Moodhaus®</h2>
-      <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 4px; color: #999; font-weight: 600;">Un viaggio attraverso i movimenti che hanno definito l'estetica moderna</p>
-    </header>
+    <!-- BOX COLLEZIONE BAUHAUS -->
+    <a href="collezione-bauhaus.html" class="category-card">
+      <img src="https://www.moodhaus.it" alt="Collezione Bauhaus">
+      <div class="category-content">
+        <h2>stampe bauhaus</h2>
+        <span class="btn-discover">scopri la collezione</span>
+      </div>
+    </a>
 
-    <!-- PILASTRO 1: GEOMETRIA -->
-    <section style="margin-bottom: 90px;">
-      <h3 style="font-family: 'Times New Roman', Times, serif; font-size: 1.5rem; margin-bottom: 25px; font-weight: 500; color: #000; text-align: center;">L'Eredità del Design: Razionalismo e Geometria</h3>
-      <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 2; color: #444; font-size: 1rem; margin: 0 auto; max-width: 900px; text-align: justify; hyphens: auto;">
-        La nostra prima area di ricerca si concentra sull'ordine matematico e sulla purezza delle forme che hanno caratterizzato il secolo scorso. Stiamo curando una selezione di <strong>stampe su tela</strong> ispirate al rigore geometrico, dove ogni linea e ogni colore primario sono studiati per dialogare con l'architettura degli spazi moderni. Questi <strong>quadri moderni</strong> non sono semplici decorazioni, ma dichiarazioni di stile per chi ricerca nelle <strong>decorazioni murali</strong> un senso di equilibrio, logica e armonia visiva, portando l'essenza delle avanguardie storiche direttamente sulle pareti del tuo living o del tuo ufficio creativo con la qualità superiore del <strong>Made in Italy</strong>.
-      </p>
-    </section>
-
-    <!-- PILASTRO 2: MINIMALISMO -->
-    <section style="margin-bottom: 90px;">
-      <h3 style="font-family: 'Times New Roman', Times, serif; font-size: 1.5rem; margin-bottom: 25px; font-weight: 500; color: #000; text-align: center;">Minimalismo Contemporaneo e Silenzio Visivo</h3>
-      <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 2; color: #444; font-size: 1rem; margin: 0 auto; max-width: 900px; text-align: justify; hyphens: auto;">
-        La filosofia del "meno è meglio" guida la nostra seconda direttrice estetica, dedicata al minimalismo più radicale e alla <strong>line art</strong> sofisticata. In questa collezione in divenire, la <strong>stampa canvas</strong> diventa il supporto ideale per esplorare il contrasto tra il bianco puro e il nero profondo, creando <strong>quadri per arredamento</strong> capaci di arredare con discrezione e raffinatezza. Le nostre future <strong>stampe su tela online</strong> celebrano la sottrazione e la pulizia formale, offrendo soluzioni d'arredo per ambienti che necessitano di luminosità, respiro e una bellezza eterea che non sbiadisce mai, garantendo un <strong>arredamento d'interni</strong> di altissimo livello qualitativo e stilistico.
-      </p>
-    </section>
-
-    <!-- PILASTRO 3: ASTRATTISMO -->
-    <section style="margin-bottom: 90px;">
-      <h3 style="font-family: 'Times New Roman', Times, serif; font-size: 1.5rem; margin-bottom: 25px; font-weight: 500; color: #000; text-align: center;">Sperimentazione Astratta e Profondità Cromatica</h3>
-      <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 2; color: #444; font-size: 1rem; margin: 0 auto; max-width: 900px; text-align: justify; hyphens: auto;">
-        L'ultima frontiera del catalogo Moodhaus riguarda l'esplorazione del colore e della materia attraverso l'astrazione pura. Stiamo selezionando opere che sfruttano appieno la texture naturale del nostro <strong>Matt Canvas da 250g</strong> per restituire vibrazioni cromatiche intense e sfumature Ultra-HD. Questi <strong>quadri d'autore</strong> sono pensati per diventare il cuore pulsante della casa, capaci di emozionare e trasformare ogni ambiente in una galleria privata. La nostra missione è offrire <strong>stampe canvas fine-art</strong> che uniscano la ricerca artistica contemporanea con l'eccellenza dei materiali ecosostenibili, creando un connubio perfetto tra estetica d'avanguardia e <strong>sicurezza ambientale</strong> per ogni membro della tua famiglia.
-      </p>
-    </section>
+    <!-- BOX COLLEZIONE MINIMAL (Esempio per il futuro) -->
+    <a href="collezione-minimal.html" class="category-card">
+      <img src="https://www.moodhaus.it" alt="Collezione Minimal">
+      <div class="category-content">
+        <h2>minimalismo astratto</h2>
+        <span class="btn-discover">scopri la collezione</span>
+      </div>
+    </a>
 
   </div>
 </main>
+
 
 
   
