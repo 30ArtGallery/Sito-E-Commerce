@@ -192,6 +192,59 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
   
 
 
+<!-- 1. AGGIUNGI QUESTO CSS PER LE 3 COLONNE (dentro il tag <style> o qui sotto) -->
+<style>
+  .product-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 20px;
+    margin: 60px auto;
+    max-width: 1400px;
+    padding: 0 20px;
+  }
+  .product-card {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s;
+  }
+  .product-card:hover { opacity: 0.7; }
+  .product-card img {
+    width: 100%;
+    height: auto;
+    background: var(--sand-soft);
+    margin-bottom: 15px;
+  }
+  .product-card h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+  @media (max-width: 900px) {
+    .product-grid-3 { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .product-grid-3 { grid-template-columns: 1fr; }
+  }
+</style>
+
+<!-- 2. AGGIUNGI QUESTO CONTENITORE (L'ID cercato dallo script) -->
+<main class="container">
+  <div style="text-align: center; padding: 60px 0 20px;">
+    <h2 style="font-family: 'Times New Roman', serif; font-size: 2rem; text-transform: lowercase;">stampe bauhaus</h2>
+  </div>
+  
+  <div id="gallery-bauhaus" class="product-grid-3">
+      <!-- Qui lo script caricherà i prodotti -->
+  </div>
+</main>
+
+
+
+
+  
+
 
 <script>
 async function caricaCollezioneBauhaus() {
