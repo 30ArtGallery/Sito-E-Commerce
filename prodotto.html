@@ -269,58 +269,40 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
 <main class="container" id="contenitore-prodotto">
   <div class="product-single-layout">
     
-    <!-- SINISTRA: L'immagine del quadro -->
+    <!-- SINISTRA: Immagine -->
     <div class="product-single-media">
       <img id="immagine-prodotto" src="" alt="Caricamento...">
     </div>
 
-    <!-- DESTRA: Titolo, Prezzo e Dettagli -->
+    <!-- DESTRA: Dati dal JSON + Testi Statici -->
     <div class="product-single-info">
-      <h1 id="titolo-prodotto">Caricamento...</h1>
+      <h1 id="titolo-prodotto"></h1>
       <p id="prezzo-prodotto"></p>
       
       <ul class="product-specs">
         <li>Misura: <span id="misura-prodotto"></span></li>
         <li>Telaio: <span id="telaio-prodotto"></span></li>
+        <!-- TESTI STATICI (Sempre uguali per tutti) -->
+        <li style="color: #27ae60;">✔ Spedizione gratuita in Italia</li>
+        <li>Materiale: Tela Canvas 250g Matt</li>
+        <li>Stampa: Inchiostri Ecologici Certificati</li>
+        <li>Produzione: 100% Artigianato Italiano</li>
       </ul>
-
-      <!-- Descrizione subito sotto ai dati -->
-      <div id="descrizione-prodotto"></div>
+      
+      <!-- Puoi aggiungere qui un pulsante statico se vuoi -->
+      <button style="margin-top:20px; padding:15px; background:#000; color:#fff; border:none; cursor:pointer; text-transform:uppercase; letter-spacing:1px;">
+        Acquista ora
+      </button>
     </div>
+  </div>
 
+  <!-- DESCRIZIONE DINAMICA (SOTTO L'IMMAGINE) -->
+  <div class="descrizione-estesa-container">
+     <h2 style="font-family: 'Times New Roman', serif; margin-bottom: 20px;">Descrizione dell'Opera</h2>
+     <div id="descrizione-prodotto"></div>
   </div>
 </main>
 
-<script>
-async function caricaProdotto() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get('id');
-
-    if (!productId) {
-        document.getElementById('contenitore-prodotto').innerHTML = "<h1>Prodotto non trovato</h1>";
-        return;
-    }
-
-    try {
-        const response = await fetch('prodotti.json');
-        const prodotti = await response.json();
-        const prodotto = prodotti.find(p => p.id === productId);
-
-        if (prodotto) {
-            document.title = prodotto.seo_title;
-            document.getElementById('titolo-prodotto').innerText = prodotto.titolo;
-            document.getElementById('prezzo-prodotto').innerText = "€ " + prodotto.prezzo;
-            document.getElementById('descrizione-prodotto').innerText = prodotto.descrizione;
-            document.getElementById('immagine-prodotto').src = prodotto.immagine;
-            document.getElementById('misura-prodotto').innerText = prodotto.misura;
-            document.getElementById('telaio-prodotto').innerText = prodotto.telaio;
-        }
-    } catch (e) {
-        console.error("Errore caricamento:", e);
-    }
-}
-window.onload = caricaProdotto;
-</script>
 
 
 
