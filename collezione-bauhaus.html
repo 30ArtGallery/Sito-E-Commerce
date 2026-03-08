@@ -448,30 +448,27 @@ layout: null
 
 
 
-<!-- 2. TITOLO E CONTENITORE STATICO (Niente JavaScript) -->
-<div style="text-align: center; padding: 80px 0 30px;">
-  <h2 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #333;">
-    collezione bauhaus
-  </h2>
+<!-- GRIGLIA PRODOTTI DINAMICA -->
+<div class="product-row">
+  {% for prodotto in site.prodotti %}
+    {% if prodotto.collezione == "bauhaus" %}
+      <div class="product-item">
+        <!-- Il link si crea da solo usando il permalink del file .md -->
+        <a href="{{ site.baseurl }}{{ prodotto.url }}">
+          <div class="product-img-box">
+             <!-- Prende l'immagine dal file .md -->
+             <img src="{{ prodotto.immagine }}" alt="{{ prodotto.title }}">
+          </div>
+          <!-- Prende il titolo dal file .md -->
+          <h3>{{ prodotto.title }}</h3>
+          <!-- Prende il prezzo dal file .md -->
+          <p>€ {{ prodotto.prezzo }}</p>
+        </a>
+      </div>
+    {% endif %}
+  {% endfor %}
 </div>
 
-<!-- Griglia che si riempie durante il build di GitHub -->
-<div class="product-row">
-    {% for prodotto in site.prodotti %}
-        {% if prodotto.collezione == "bauhaus" %}
-            <div class="product-item">
-                <!-- Il link ora punta al permalink unico che hai creato -->
-                <a href="{{ site.baseurl }}{{ prodotto.url }}">
-                    <div class="product-img-box">
-                        <img src="{{ prodotto.immagine }}" alt="{{ prodotto.title }} - 30ArtGallery">
-                    </div>
-                    <h3>{{ prodotto.title }}</h3>
-                    <p>€ {{ prodotto.prezzo }}</p>
-                </a>
-            </div>
-        {% endif %}
-    {% endfor %}
-</div>
 
 
 
