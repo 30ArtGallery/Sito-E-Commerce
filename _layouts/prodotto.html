@@ -3,8 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO STATICA -->
     <title>{{ page.seo_title }}</title>
     <meta name="description" content="{{ page.seo_description }}">
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.permalink }}">
+
+    <!-- OPEN GRAPH (WhatsApp/Social) -->
+    <meta property="og:title" content="{{ page.seo_title }}">
+    <meta property="og:description" content="{{ page.seo_description }}">
+    <meta property="og:image" content="{{ page.immagine }}">
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.permalink }}">
+    <meta property="og:type" content="product">
+
+    <!-- JSON-LD SCHEMA (Google Product) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "{{ page.title }}",
+      "image": "{{ page.immagine }}",
+      "description": "{{ page.seo_description }}",
+      "sku": "{{ page.sku }}",
+      "offers": {
+        "@type": "Offer",
+        "url": "{{ site.url }}{{ site.baseurl }}{{ page.permalink }}",
+        "priceCurrency": "EUR",
+        "price": "{{ page.prezzo | replace: '€', '' | replace: ' ', '' }}",
+        "availability": "https://schema.orgInStock"
+      }
+    }
+    </script>
+
     <style>
         body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1a1a1a; }
         .product-container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
@@ -13,40 +43,41 @@
         .product-image { flex: 1.4; min-width: 320px; }
         .product-image img { width: 100%; height: auto; border-radius: 2px; display: block; }
         
-        /* COLONNA DESTRA ABBASSATA */
-        .product-info { 
-            flex: 1; 
-            min-width: 320px; 
-            margin-top: 50px; 
-        }
+        .product-info { flex: 1; min-width: 320px; margin-top: 50px; }
         
         h1 { font-size: 26px; margin: 0 0 10px 0; font-weight: 500; }
         .price { font-size: 24px; margin-bottom: 30px; font-weight: 400; }
         
-        .specs { list-style: none; padding: 20px 0; margin: 0; border-top: 1px solid #eee; }
+        .specs { list-style: none; padding: 20px 0; margin: 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
         .specs li { margin-bottom: 12px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #666; }
         .specs strong { color: #000; margin-right: 5px; }
 
-        /* CORREZIONE FONT PER UNIFORMARE ALLA LISTA SPECS */
-        .trust-list { margin: 30px 0; padding: 25px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
-        .trust-list p { 
-            font-size: 13px; /* Portato a 13px come le specs */
-            margin: 12px 0; 
-            color: #666; /* Portato a grigio come le specs */
+        /* CORREZIONE TASTO: larghezza contenuta e spaziatura superiore */
+        .buy-button { 
+            background: #000; 
+            color: #fff; 
+            border: none; 
+            padding: 18px 40px; 
+            font-size: 14px; 
+            font-weight: 600; 
+            cursor: pointer; 
             text-transform: uppercase; 
-            letter-spacing: 1px; /* Uniformato a 1px */
+            letter-spacing: 2px; 
+            margin-top: 30px;
+            display: inline-block; 
+            width: auto; /* Non più largo quanto tutta la colonna */
         }
-        
-        .buy-button { background: #000; color: #fff; border: none; padding: 20px; width: 100%; font-size: 14px; font-weight: 600; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; }
         .buy-button:hover { background: #333; }
 
-        .product-description { margin-top: 80px; padding-top: 40px; border-top: 1px solid #eee; }
+        /* DESCRIZIONE: larghezza limitata per leggibilità */
+        .product-description { margin-top: 80px; padding-top: 40px; border-top: 1px solid #eee; max-width: 800px; }
         .product-description h2 { font-size: 18px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 30px; }
         .content { color: #333; font-size: 16px; line-height: 1.8; white-space: pre-line; }
 
         @media (max-width: 768px) { 
             .product-info { margin-top: 0; } 
-            .product-main { gap: 30px; } 
+            .product-main { gap: 30px; }
+            .buy-button { width: 100%; } /* Su mobile torna largo per facilità di clic */
         }
     </style>
 </head>
@@ -67,11 +98,11 @@
                     <li><strong>Misura:</strong> {{ page.misura }}</li>
                     <li><strong>Telaio:</strong> {{ page.telaio }}</li>
                     <li><strong>Cod:</strong> {{ page.sku }}</li>
-                    <li><strong>Telaio</strong> {{ page.quadro }}</li>
-                    <li><strong>Produzione</strong> {{ page.produzione }}</li>
-                    <li><strong>Pagamenti</strong> {{ page.pagamenti }}</li>
-                    <li><strong>Spedizione</strong> {{ page.spedizione }}</li>
-                </div>
+                    <li><strong>Telaio:</strong> {{ page.quadro }}</li>
+                    <li><strong>Produzione:</strong> {{ page.produzione }}</li>
+                    <li><strong>Pagamenti:</strong> {{ page.pagamenti }}</li>
+                    <li><strong>Spedizione:</strong> {{ page.spedizione }}</li>
+                </ul>
 
                 <button class="buy-button">Acquista Ora</button>
             </div>
