@@ -1,18 +1,50 @@
 ---
 layout: default
 ---
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{ page.title }}</title> <!-- SEO Statica -->
-    <meta name="description" content="{{ page.descrizione }}">
-</head>
-<body>
-    <h1>{{ page.title }}</h1>
-    <img src="{{ page.immagine }}" alt="{{ page.title }}">
-    <p>Prezzo: {{ page.prezzo }}</p>
-    <div class="descrizione">
-        {{ content }} <!-- Qui finirà il testo descrittivo -->
+<div class="product-container">
+    <div class="product-main">
+        <!-- COLONNA SINISTRA: FOTO -->
+        <div class="product-image">
+            <img src="{{ page.immagine }}" alt="{{ page.title }}">
+        </div>
+
+        <!-- COLONNA DESTRA: INFO BREVI -->
+        <div class="product-info-short">
+            <h1>{{ page.title }}</h1>
+            <p class="price">{{ page.prezzo }}</p>
+            
+            <ul class="specs">
+                <li><strong>Collezione:</strong> {{ page.collezione }}</li>
+                <li><strong>Misura:</strong> {{ page.misura }}</li>
+                <li><strong>Telaio:</strong> {{ page.telaio }}</li>
+                <li><strong>ID Prodotto:</strong> {{ page.id }}</li>
+            </ul>
+
+            <button class="buy-button">Aggiungi al Carrello</button>
+        </div>
     </div>
-</body>
-</html>
+
+    <!-- SOTTO: DESCRIZIONE GRANDE -->
+    <div class="product-description">
+        <h2>Descrizione Prodotto</h2>
+        <div class="content">
+            {{ content }}
+        </div>
+    </div>
+</div>
+
+<style>
+    .product-container { max-width: 1200px; margin: 0 auto; padding: 20px; font-family: sans-serif; }
+    .product-main { display: flex; gap: 40px; flex-wrap: wrap; }
+    .product-image { flex: 1; min-width: 300px; }
+    .product-image img { width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    .product-info-short { flex: 1; min-width: 300px; }
+    
+    .price { font-size: 24px; color: #e44d26; font-weight: bold; margin: 20px 0; }
+    .specs { list-style: none; padding: 0; line-height: 2; border-top: 1px solid #eee; padding-top: 20px; }
+    .buy-button { background: #333; color: white; border: none; padding: 15px 30px; font-size: 18px; cursor: pointer; border-radius: 5px; width: 100%; margin-top: 20px; }
+    .buy-button:hover { background: #000; }
+
+    .product-description { margin-top: 60px; border-top: 2px solid #eee; padding-top: 40px; line-height: 1.6; }
+    .product-description h2 { margin-bottom: 20px; }
+</style>
