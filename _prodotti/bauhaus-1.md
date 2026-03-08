@@ -6,10 +6,10 @@ title: "Stampa su Tela Canvas Moderna Stile Bauhaus"
 prezzo: "49.00€"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
-quadro intelaiato
-spedizione gratuita
-pagamenti sicuri
-produzione made in italy
+quadro: intelaiato
+spedizione: gratuita
+pagamenti: sicuri e protetti
+produzione: made in italy
 immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-0001.webp"
 seo_title: "Stampa su Tela Bauhaus Quadro Minimalista - moodhaus"
 seo_description: "Acquista la stampa su tela Astrazione Minimalista Nera. Qualità fine-art Made in Italy. Spedizione gratuita."
