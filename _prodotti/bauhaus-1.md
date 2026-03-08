@@ -1,9 +1,9 @@
 ---
-permalink: stampa-su-tela-canvas-moderna-stile-bauhaus
 layout: prodotto
 sku: "bauhaus-0001"
 collezione: "bauhaus"
 title: "Stampa su Tela Canvas Moderna Stile Bauhaus"
+permalink: stampa-su-tela-canvas-moderna-stile-bauhaus
 prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
