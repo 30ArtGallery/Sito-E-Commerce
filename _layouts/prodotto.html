@@ -34,8 +34,17 @@
                 <li><strong>Collezione:</strong> {{ page.collezione }}</li>
                 <li><strong>Misura:</strong> {{ page.misura }}</li>
                 <li><strong>Telaio:</strong> {{ page.telaio }}</li>
+                <!-- SKU richiama il valore sku inserito nel file .md -->
                 <li><strong>Codice:</strong> {{ page.sku }}</li>
             </ul>
+
+            <!-- NUOVI DETTAGLI PULITI -->
+            <div class="trust-list">
+                <p>Quadro intelaiato e pronto da appendere</p>
+                <p>Spedizione gratuita in tutta Italia</p>
+                <p>Pagamenti sicuri e protetti</p>
+                <p>Produzione artigianale Made in Italy</p>
+            </div>
 
             <button class="buy-button">Acquista Ora</button>
         </div>
@@ -61,6 +70,10 @@
     .price { font-size: 28px; font-weight: 600; color: #000; margin: 25px 0; }
     .specs { list-style: none; padding: 0; margin: 30px 0; border-top: 1px solid #eaeaea; padding-top: 20px; }
     .specs li { margin-bottom: 12px; font-size: 15px; color: #444; }
+
+    /* STILE DETTAGLI PULITI */
+    .trust-list { margin-bottom: 30px; }
+    .trust-list p { font-size: 13px; color: #666; margin: 8px 0; text-transform: uppercase; letter-spacing: 0.5px; }
     
     .buy-button { background: #000; color: #fff; border: none; padding: 20px; width: 100%; font-size: 14px; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
     .buy-button:hover { background: #333; }
