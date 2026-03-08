@@ -17,7 +17,7 @@
         .product-info { 
             flex: 1; 
             min-width: 320px; 
-            margin-top: 50px; /* Regola questo valore per abbassare la colonna */
+            margin-top: 50px; 
         }
         
         h1 { font-size: 26px; margin: 0 0 10px 0; font-weight: 500; }
@@ -27,8 +27,15 @@
         .specs li { margin-bottom: 12px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #666; }
         .specs strong { color: #000; margin-right: 5px; }
 
+        /* CORREZIONE FONT PER UNIFORMARE ALLA LISTA SPECS */
         .trust-list { margin: 30px 0; padding: 25px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
-        .trust-list p { font-size: 12px; margin: 12px 0; color: #888; text-transform: uppercase; letter-spacing: 1.5px; }
+        .trust-list p { 
+            font-size: 13px; /* Portato a 13px come le specs */
+            margin: 12px 0; 
+            color: #666; /* Portato a grigio come le specs */
+            text-transform: uppercase; 
+            letter-spacing: 1px; /* Uniformato a 1px */
+        }
         
         .buy-button { background: #000; color: #fff; border: none; padding: 20px; width: 100%; font-size: 14px; font-weight: 600; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; }
         .buy-button:hover { background: #333; }
@@ -38,7 +45,7 @@
         .content { color: #333; font-size: 16px; line-height: 1.8; white-space: pre-line; }
 
         @media (max-width: 768px) { 
-            .product-info { margin-top: 0; } /* Su mobile torna in alto per non lasciare buchi */
+            .product-info { margin-top: 0; } 
             .product-main { gap: 30px; } 
         }
     </style>
