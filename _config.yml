@@ -1,0 +1,6 @@
+title: Il Mio eCommerce
+baseurl: "" 
+collections:
+  prodotti:
+    output: true
+    permalink: /prodotti/:path/
