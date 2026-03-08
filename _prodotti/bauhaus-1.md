@@ -1,4 +1,5 @@
 ---
+permalink: stampa-su-tela-canvas-moderna-stile-bauhaus
 layout: prodotto
 sku: "bauhaus-0001"
 collezione: "bauhaus"
