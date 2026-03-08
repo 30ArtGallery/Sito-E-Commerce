@@ -3,85 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- TITOLO NELLA BARRA DEL BROWSER E GOOGLE -->
     <title>{{ page.seo_title }}</title>
-    
-    <!-- DESCRIZIONE SEO -->
     <meta name="description" content="{{ page.seo_description }}">
+    <style>
+        body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1a1a1a; }
+        .product-container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+        .product-main { display: flex; gap: 60px; align-items: flex-start; flex-wrap: wrap; }
+        
+        .product-image { flex: 1.4; min-width: 320px; }
+        .product-image img { width: 100%; height: auto; border-radius: 2px; display: block; }
+        
+        /* COLONNA DESTRA ABBASSATA */
+        .product-info { 
+            flex: 1; 
+            min-width: 320px; 
+            margin-top: 50px; /* Regola questo valore per abbassare la colonna */
+        }
+        
+        h1 { font-size: 26px; margin: 0 0 10px 0; font-weight: 500; }
+        .price { font-size: 24px; margin-bottom: 30px; font-weight: 400; }
+        
+        .specs { list-style: none; padding: 20px 0; margin: 0; border-top: 1px solid #eee; }
+        .specs li { margin-bottom: 12px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #666; }
+        .specs strong { color: #000; margin-right: 5px; }
 
-    <!-- Anteprima Social/WhatsApp -->
-    <meta property="og:title" content="{{ page.seo_title }}">
-    <meta property="og:description" content="{{ page.seo_description }}">
-    <meta property="og:image" content="{{ page.immagine }}">
+        .trust-list { margin: 30px 0; padding: 25px 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+        .trust-list p { font-size: 12px; margin: 12px 0; color: #888; text-transform: uppercase; letter-spacing: 1.5px; }
+        
+        .buy-button { background: #000; color: #fff; border: none; padding: 20px; width: 100%; font-size: 14px; font-weight: 600; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; }
+        .buy-button:hover { background: #333; }
+
+        .product-description { margin-top: 80px; padding-top: 40px; border-top: 1px solid #eee; }
+        .product-description h2 { font-size: 18px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 30px; }
+        .content { color: #333; font-size: 16px; line-height: 1.8; white-space: pre-line; }
+
+        @media (max-width: 768px) { 
+            .product-info { margin-top: 0; } /* Su mobile torna in alto per non lasciare buchi */
+            .product-main { gap: 30px; } 
+        }
+    </style>
 </head>
 <body>
 
-<div class="product-container">
-    <div class="product-main">
-        
-        <!-- FOTO A SINISTRA -->
-        <div class="product-image">
-            <img src="{{ page.immagine }}" alt="{{ page.title }}">
-        </div>
-
-        <!-- INFO A DESTRA -->
-        <div class="product-info-short">
-            <h1>{{ page.title }}</h1>
-            <p class="price">{{ page.prezzo }}</p>
-            
-            <ul class="specs">
-                <li><strong>Collezione:</strong> {{ page.collezione }}</li>
-                <li><strong>Misura:</strong> {{ page.misura }}</li>
-                <li><strong>Telaio:</strong> {{ page.telaio }}</li>
-                <!-- SKU richiama il valore sku inserito nel file .md -->
-                <li><strong>Codice:</strong> {{ page.sku }}</li>
-            </ul>
-
-            <!-- NUOVI DETTAGLI PULITI -->
-            <div class="trust-list">
-                <p>Quadro intelaiato e pronto da appendere</p>
-                <p>Spedizione gratuita in tutta Italia</p>
-                <p>Pagamenti sicuri e protetti</p>
-                <p>Produzione artigianale Made in Italy</p>
+    <div class="product-container">
+        <div class="product-main">
+            <div class="product-image">
+                <img src="{{ page.immagine }}" alt="{{ page.title }}">
             </div>
 
-            <button class="buy-button">Acquista Ora</button>
+            <div class="product-info">
+                <h1>{{ page.title }}</h1>
+                <p class="price">€ {{ page.prezzo }}</p>
+                
+                <ul class="specs">
+                    <li><strong>Collezione:</strong> {{ page.collezione }}</li>
+                    <li><strong>Misura:</strong> {{ page.misura }}</li>
+                    <li><strong>Telaio:</strong> {{ page.telaio }}</li>
+                    <li><strong>Codice:</strong> {{ page.sku }}</li>
+                </ul>
+
+                <div class="trust-list">
+                    <p>Quadro intelaiato e pronto da appendere</p>
+                    <p>Spedizione gratuita in tutta Italia</p>
+                    <p>Pagamenti sicuri e protetti</p>
+                    <p>Produzione artigianale Made in Italy</p>
+                </div>
+
+                <button class="buy-button">Acquista Ora</button>
+            </div>
+        </div>
+
+        <div class="product-description">
+            <h2>Dettagli e Materiali</h2>
+            <div class="content">{{ content }}</div>
         </div>
     </div>
-
-    <!-- DESCRIZIONE GRANDE SOTTO -->
-    <div class="product-description">
-        <h2>Dettagli del prodotto</h2>
-        <div class="content">
-            {{ content }}
-        </div>
-    </div>
-</div>
-
-<style>
-    .product-container { max-width: 1100px; margin: 40px auto; padding: 0 20px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-    .product-main { display: flex; gap: 60px; align-items: flex-start; flex-wrap: wrap; }
-    .product-image { flex: 1.4; min-width: 300px; }
-    .product-image img { width: 100%; border-radius: 2px; }
-    .product-info-short { flex: 1; min-width: 300px; }
-    
-    h1 { font-size: 26px; line-height: 1.2; margin-top: 0; color: #111; letter-spacing: -0.5px; }
-    .price { font-size: 28px; font-weight: 600; color: #000; margin: 25px 0; }
-    .specs { list-style: none; padding: 0; margin: 30px 0; border-top: 1px solid #eaeaea; padding-top: 20px; }
-    .specs li { margin-bottom: 12px; font-size: 15px; color: #444; }
-
-    /* STILE DETTAGLI PULITI */
-    .trust-list { margin-bottom: 30px; }
-    .trust-list p { font-size: 13px; color: #666; margin: 8px 0; text-transform: uppercase; letter-spacing: 0.5px; }
-    
-    .buy-button { background: #000; color: #fff; border: none; padding: 20px; width: 100%; font-size: 14px; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
-    .buy-button:hover { background: #333; }
-
-    .product-description { margin-top: 70px; padding-top: 40px; border-top: 1px solid #eaeaea; }
-    .product-description h2 { font-size: 20px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; }
-    .content { line-height: 1.7; color: #333; font-size: 16px; white-space: pre-line; }
-</style>
 
 </body>
 </html>
