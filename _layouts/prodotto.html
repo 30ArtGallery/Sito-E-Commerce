@@ -80,6 +80,16 @@
 
         @media (max-width: 768px) { .product-info { margin-top: 0; } .product-main { gap: 30px; } .buy-button { width: 100%; } .main-nav { gap: 15px; } }
     </style>
+
+
+
+<!-- Copia e incolla questo dentro il tag <head> -->
+<link rel="preconnect" href="https://app.snipcart.com">
+<link rel="preconnect" href="https://connect.snipcart.com">
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.css" />
+
+
+    
 </head>
 <body>
 
@@ -93,6 +103,15 @@
             </nav>
             <button class="snipcart-checkout">Bag (<span class="snipcart-items-count">0</span>)</button>
         </div>
+
+
+ <!-- Icona Carrello che apre Snipcart -->
+<button class="snipcart-checkout" style="background:none; border:none; cursor:pointer; font-family:inherit; font-size:0.8rem; letter-spacing:1px; text-transform:uppercase; float:right; margin-right:20px;">
+  Bag (<span class="snipcart-items-count">0</span>)
+</button>
+
+
+        
     </header>
 
     <div class="product-container">
@@ -133,9 +152,10 @@
         <p class="copy">© 2026 moodhaus — tutti i diritti riservati</p>
     </footer>
 
-    <!-- SNIPCART SCRIPT (Sostituisci 'IL_TUO_CODICE' con la tua API Key) -->
-    <script async src="https://cdn.snipcart.com"></script>
-    <div id="snipcart" data-config-modal-style="side" data-api-key="IL_TUO_CODICE" hidden></div>
+    <div hidden id="snipcart" 
+     data-api-key="YTZkYmZlYmUtMDk3NS00YzBlLWFhMTAtMzM3YWI5ZmZjNGRkNjM5MDg0OTQxMTEzMTg5Mjc5" 
+     data-config-modal-style="side">
+</div>
 
 </body>
 </html>
