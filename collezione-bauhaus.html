@@ -7,114 +7,505 @@ layout: null
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- URL Canonico Dinamico -->
-  <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+  <link rel="canonical" href="https://www.moodhaus.it/collezione-bauhaus.html" />
 
-  <title>Quadri Bauhaus e Stampe su Tela Astratte - 30ArtGallery</title>
-  <meta name="description" content="Esplora la collezione d'arte 30ArtGallery. Dai quadri in stile Bauhaus alle stampe minimaliste e astratte." />
+  <!-- SEO TITLES & DESCRIPTION (Livello Advanced) -->
+  <title>Quadri Bauhaus e Stampe su Tela Astratte - moodhaus.it</title>
 
-  <!-- OPEN GRAPH Dinamico -->
-  <meta property="og:title" content="Quadri Bauhaus e Stampe su Tela Astratte" />
-  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+  <meta name="description" content="Esplora la collezione d'arte Moodhaus. Dai quadri in stile Bauhaus alle stampe minimaliste e astratte. Trova lo stile perfetto per le tue pareti." />
+  <meta name="keywords" content="quadri bauhaus, stampe bauhaus, quadri geometrici, poster bauhaus tela, arredamento bauhaus, moodhaus bauhaus" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
 
-  <!-- FONT ELEGANTI -->
+  <!-- OPEN GRAPH (Potenza Social) -->
+
+  <meta property="og:locale" content="it_IT" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Quadri Bauhaus e Stampe su Tela Astratte - moodhaus.it" />
+  <meta property="og:description" content="L'eccellenza delle stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
+  <meta property="og:url" content="https://www.moodhaus.it/collezione-bauhaus.html" />
+  <meta property="og:site_name" content="Moodhaus" />
+  <meta property="og:image" content="https://www.moodhaus.it/wp-content/uploads/2024/09/Logo.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Moodhaus | Quadri Moderni su Tela" />
+
+  <!-- SCHEMA.ORG MARKUP JSON-LD (Potenza Semantica) -->
+  <script type="application/ld+json">
+    [{
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Moodhaus",
+        "url": "https://www.moodhaus.it/collezione-bauhaus.html",
+        "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.moodhaus.it/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Moodhaus",
+        "url": "https://www.moodhaus.it",
+        "logo": "https://www.moodhaus.it/wp-content/uploads/2024/09/Logo.jpg",
+        "sameAs": [
+        "https://www.facebook.com/moodhaus",
+        "https://www.instagram.com/moodhaus"
+        ]
+      },
+    {
+     "@type": "Product",
+     "name": "Collezione Quadri Bauhaus",
+     "description": "Serie di quadri moderni e stampe su tela in stile Bauhaus.",
+     "brand": { "@type": "Brand", "name": "Moodhaus" },
+     "offers": {
+     "@type": "AggregateOffer",
+     "lowPrice": "49.00",
+     "priceCurrency": "EUR",
+     "availability": "https://schema.org/InStock"
+  }
+},
+
+      {
+        "@context": "https://schema.org",
+          "@type": "ItemList",
+          "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Stampe Bauhaus",
+          "url": "https://www.moodhaus.it/collezione-bauhaus.html"
+        }]
+      }
+    ]
+  </script>
+
+  <!-- FONT ELEGANTI (Cormorant Garamond) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond" rel="stylesheet">
   
   <style>
-    :root { --sand-bg: #fdfcf9; --sand-soft: #f4f1ea; --text-main: #2c2c2c; --white: #ffffff; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--text-main); background: var(--white); -webkit-font-smoothing: antialiased; margin: 0; }
-    .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
-    a { text-decoration: none; color: inherit; }
-    header { padding: 30px 0; background: white; border-bottom: 1px solid #f0f0f0; text-align: center; }
-    .logo { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 300; letter-spacing: -1px; margin-bottom: 20px; display: block; }
-    .main-nav { display: flex; justify-content: center; gap: 35px; }
-    .main-nav a { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #555; }
+    :root {
+      --sand-bg: #fdfcf9;
+      --sand-soft: #f4f1ea;
+      --text-main: #2c2c2c;
+      --white: #ffffff;
+    }
 
-    /* GRIGLIA PRODOTTI DINAMICA */
-    .product-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 50px; }
-    .product-item { text-align: center; margin-bottom: 40px; transition: opacity 0.3s; }
-    .product-item:hover { opacity: 0.8; }
-    .product-img-box { width: 100%; aspect-ratio: 1/1; overflow: hidden; background: var(--sand-soft); margin-bottom: 15px; }
-    .product-img-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .product-item h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; margin-bottom: 5px; font-weight: 400; }
-    .product-item p { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #1a1a1a; font-weight: 600; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text-main);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
 
-    /* SEZIONE USP */
-    .usp-section { margin-top: 80px; padding: 60px 0; border-top: 1px solid #f0f0f0; text-align: center; }
-    .usp-grid { display: flex; justify-content: space-around; max-width: 1200px; margin: 0 auto; }
-    .usp-item h4 { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
-    .usp-item p { font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: #666; font-style: italic; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    footer { padding: 40px 0; text-align: center; border-top: 1px solid #f0f0f0; font-size: 0.6rem; letter-spacing: 2px; color: #999; text-transform: uppercase; }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      padding: 30px 0;
+      background: white;
+      border-bottom: 1px solid #f0f0f0;
+      text-align: center;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 300; /* <--- Questo lo rende magro ed elegante */
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+      display: block;
+}
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+    }
+
+    .main-nav a {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #555;
+    }
+
+    .hero-mockup-main {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      line-height: 0;
+    }
+
+    .hero-mockup-main img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-width: 100%;
+    }
+
+    .mockup-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 5px;
+      background:var(--white);
+    }
+
+    .mockup-box {
+      aspect-ratio: auto;
+      overflow: hidden;
+      background: var(--sand-soft);
+    }
+
+    .mockup-box img {
+      width:100%;
+      height: auto;
+      display: block;
+      transition: transform 1s ease;
+    }
+
+    .mockup-box:hover img {
+      transform: scale(1.05);
+    }
+    
+     footer {
+      padding: 40px 0;
+      text-align: center;
+      border-top: 1px solid var(--sand-soft);
+      margin-top: 40px;
+    }
+
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 300; /* <--- Sottile anche nel footer */
+      margin-bottom: 10px;
+      display: block;
+}
+
+    .copy {
+      font-size: 0.6rem;
+      letter-spacing: 2px;
+      color: #999;
+      text-transform: uppercase;
+    }
 
     @media (max-width: 768px) {
-      .product-row { grid-template-columns: repeat(2, 1fr); }
-      .usp-grid { flex-direction: column; gap: 40px; }
-      .main-nav { gap: 15px; font-size: 0.6rem; }
+      .mockup-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .main-nav {
+        gap: 15px;
+        font-size: 0.6rem;
+        flex-wrap: wrap;
+      }
+      }
+      
+    /* Griglia dei Best Seller */
+    .product-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      /* 4 colonne uguali */
+      gap: 20px;
+      /* Spazio tra i prodotti */
+    }
+
+    .product-item {
+      text-align: center;
+    }
+
+    .product-img-box {
+      width: 100%;
+      aspect-ratio: 1/1;
+      /* Forza le foto ad avere tutte la stessa proporzione */
+      overflow: hidden;
+      background: var(--sand-soft);
+      margin-bottom: 15px;
+    }
+
+    .product-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* Taglia l'immagine per riempire il box senza distorcerla */
+      display: block;
+    }
+
+    .product-item h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+
+    .product-item p {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #999;
+    }
+
+    /* Fix per Mobile: 2 colonne invece di 4 */
+    @media (max-width: 768px) {
+      .product-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* --- SEZIONE USP (3 VANTAGGI) --- */
+    .usp-section {
+      margin-top: 100px;
+      padding-bottom: 40px;
+      border-bottom: none;
+      /* Linea sottile di separazione */
+      text-align: center;
+    }
+
+    .usp-grid {
+      display: flex;
+      justify-content: space-between;
+      /* Spazia i 3 elementi in modo uniforme */
+      align-items: flex-start;
+      max-width: 1500px;
+      /* Centra il blocco rispetto al container */
+      margin: 0 auto;
+    }
+
+    .usp-item {
+      flex: 1;
+      padding: 0 20px;
+    }
+
+    .usp-item h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .usp-item p {
+      font-family: 'Cormorant Garamond', serif;
+      /* Font elegante per la descrizione */
+      font-size: 0.95rem;
+      color: #666;
+      font-style: italic;
+    }
+
+    /* Adattamento Mobile: in colonna per non affollare lo schermo */
+    @media (max-width: 768px) {
+      .usp-grid {
+        flex-direction: column;
+        gap: 35px;
+      }
+
+      /* Forza gli articoli in fondo in colonna singola e riduci i testi */
+      .seo-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        padding: 0 10px;
+      }
+
+      .seo-title {
+        font-size: 0.95rem !important;
+        /* Titolo discreto */
+        text-align: center;
+      }
+
+      .seo-text {
+        font-size: 0.75rem !important;
+        /* Testo più corto alla vista */
+        line-height: 1.5;
+        text-align: center;
+      }
     }
   </style>
+
+
+
+  <!-- Copia e incolla questo dentro il tag <head> -->
+<link rel="preconnect" href="https://app.snipcart.com">
+<link rel="preconnect" href="https://connect.snipcart.com">
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.css" />
+
+
+  
 </head>
 
 <body>
 
   <header>
     <div class="container">
-      <a href="{{ site.baseurl }}/" class="logo">30ArtGallery</a>
-      <nav class="main-nav">
-        <a href="{{ site.baseurl }}/collezione-bauhaus.html">Bauhaus</a>
-        <a href="{{ site.baseurl }}/collezione-astratte.html">Astratte</a>
-        <a href="{{ site.baseurl }}/materiali.html">Materiali</a>
+      <!-- H1 nel logo è perfetto solo per la Home (index) -->
+      <h1 class="logo">
+        <a href="index.html" title="Moodhaus Home Page">moodhaus</a>
+      </h1>
+      <nav class="main-nav" aria-label="Menu principale">
+        <a href="collezioni.html" title="Scopri le nostre collezioni">Collezioni</a>
+        <a href="stampe-su-tela.html" title="Stampe su tela e quadri moderni">Stampe su tela</a>
+        <a href="materiali.html" title="Qualità e materiali d'autore">Materiali</a>
       </nav>
     </div>
-  </header>
 
-  <div class="container">
-    <!-- TITOLO COLLEZIONE -->
-    <div style="text-align: center; padding: 60px 0 20px;">
-        <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; text-transform: uppercase; letter-spacing: 3px;">Collezione Bauhaus</h2>
-    </div>
 
-    <!-- GRIGLIA PRODOTTI DINAMICA -->
-    <div class="product-row">
-      {% for prodotto in site.prodotti %}
+<!-- Icona Carrello che apre Snipcart -->
+<button class="snipcart-checkout" style="background:none; border:none; cursor:pointer; font-family:inherit; font-size:0.8rem; letter-spacing:1px; text-transform:uppercase; float:right; margin-right:20px;">
+  Bag (<span class="snipcart-items-count">0</span>)
+</button>
+    
+</header>
+
+
+
+  
+
+
+<!-- 1. STILI PER LA GRIGLIA A 4 COLONNE -->
+<style>
+  .product-grid-4 {
+    display: grid;
+    /* Forza 4 colonne su desktop per le tue 10 file */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 40px 20px;
+    margin: 40px auto;
+    max-width: 1400px;
+    padding: 0 20px;
+  }
+
+  .product-card {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, opacity 0.3s;
+    display: block;
+  }
+
+  .product-card:hover { 
+    transform: translateY(-5px);
+    opacity: 0.8;
+  }
+  
+  .product-card img {
+    width: 100%;
+    aspect-ratio: 1/1; /* Mantiene le immagini perfettamente quadrate */
+    object-fit: cover;
+    background: #f4f1ea; /* var(--sand-soft) */
+    margin-bottom: 15px;
+    display: block;
+  }
+  
+  .product-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-weight: 400;
+  }
+
+  .product-card p {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #999;
+  }
+
+  /* Tablet: 2 colonne */
+  @media (max-width: 1024px) {
+    .product-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  }
+  
+  /* Mobile: 2 colonne per non allungare troppo la pagina */
+  @media (max-width: 600px) {
+    .product-grid-4 { 
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 20px 10px;
+    }
+    .product-card h3 { font-size: 0.9rem; }
+  }
+</style>
+
+
+
+
+
+<!-- 2. TITOLO E CONTENITORE STATICO (Niente JavaScript) -->
+<div style="text-align: center; padding: 80px 0 30px;">
+  <h2 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #333;">
+    collezione bauhaus
+  </h2>
+</div>
+
+<!-- Griglia che si riempie durante il build di GitHub -->
+<div class="product-row">
+    {% for prodotto in site.prodotti %}
         {% if prodotto.collezione == "bauhaus" %}
-          <div class="product-item">
-            <a href="{{ site.baseurl }}{{ prodotto.url }}">
-              <div class="product-img-box">
-                <img src="{{ prodotto.immagine }}" alt="{{ prodotto.title }}">
-              </div>
-              <h3>{{ prodotto.title }}</h3>
-              <p>€ {{ prodotto.prezzo }}</p>
-            </a>
-          </div>
+            <div class="product-item">
+                <!-- Il link ora punta al permalink unico che hai creato -->
+                <a href="{{ site.baseurl }}{{ prodotto.url }}">
+                    <div class="product-img-box">
+                        <img src="{{ prodotto.immagine }}" alt="{{ prodotto.title }} - 30ArtGallery">
+                    </div>
+                    <h3>{{ prodotto.title }}</h3>
+                    <p>€ {{ prodotto.prezzo }}</p>
+                </a>
+            </div>
         {% endif %}
-      {% endfor %}
-    </div>
-  </div>
+    {% endfor %}
+</div>
 
-  <section class="usp-section">
-    <div class="usp-grid">
-      <div class="usp-item">
-        <h4>Spedizione Gratuita</h4>
-        <p>In tutta Italia, sempre.</p>
-      </div>
-      <div class="usp-item">
-        <h4>Made in Italy</h4>
-        <p>Artigianato d'eccellenza.</p>
-      </div>
-      <div class="usp-item">
-        <h4>Pronto da appendere</h4>
-        <p>Telaio in legno incluso.</p>
-      </div>
-    </div>
-  </section>
+
+
+
+  
+    
 
   <footer>
-    <div class="logo" style="font-size: 1.5rem;">30ArtGallery</div>
-    <div class="copy">© 2026 30ArtGallery - Tutti i diritti riservati</div>
+    <div class="container">
+      <span class="footer-logo">moodhaus</span>
+      <p class="copy">&copy;
+
+        2026 Studio Moodhaus — Eccellenza nelle stampe su tela</p>
+    </div>
   </footer>
 
+
+
+
+
+
+<!-- MOTORE SNIPCART CON LA TUA CHIAVE -->
+<script async src="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.js"></script>
+
+<div hidden id="snipcart" 
+     data-api-key="YTZkYmZlYmUtMDk3NS00YzBlLWFhMTAtMzM3YWI5ZmZjNGRkNjM5MDg0OTQxMTEzMTg5Mjc5" 
+     data-config-modal-style="side">
+</div>
+
+
+
+
+  
+
 </body>
+
 </html>
