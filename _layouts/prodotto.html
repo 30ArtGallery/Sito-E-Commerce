@@ -1,14 +1,16 @@
----
-layout: default
----
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <!-- DATI SEO INVISIBILI (Per Google) -->
-    <title>{{ page.seo_title }}</title>
-    <meta name="description" content="{{ page.seo_description }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Open Graph (Per Social/WhatsApp) -->
+    <!-- TITOLO NELLA BARRA DEL BROWSER E GOOGLE -->
+    <title>{{ page.seo_title }}</title>
+    
+    <!-- DESCRIZIONE SEO -->
+    <meta name="description" content="{{ page.seo_description }}">
+
+    <!-- Anteprima Social/WhatsApp -->
     <meta property="og:title" content="{{ page.seo_title }}">
     <meta property="og:description" content="{{ page.seo_description }}">
     <meta property="og:image" content="{{ page.immagine }}">
@@ -17,57 +19,55 @@ layout: default
 
 <div class="product-container">
     <div class="product-main">
-        <!-- COLONNA SINISTRA: FOTO -->
+        
+        <!-- FOTO A SINISTRA -->
         <div class="product-image">
             <img src="{{ page.immagine }}" alt="{{ page.title }}">
         </div>
 
-        <!-- COLONNA DESTRA: INFO BREVI -->
+        <!-- INFO A DESTRA -->
         <div class="product-info-short">
             <h1>{{ page.title }}</h1>
-            <p class="price">€ {{ page.prezzo }}</p>
+            <p class="price">{{ page.prezzo }}</p>
             
             <ul class="specs">
                 <li><strong>Collezione:</strong> {{ page.collezione }}</li>
                 <li><strong>Misura:</strong> {{ page.misura }}</li>
                 <li><strong>Telaio:</strong> {{ page.telaio }}</li>
-                <!-- QUI COMPARE SOLO IL VALORE DELL'ID -->
-                <li><strong>Codice Prodotto:</strong> {{ page.id }}</li>
+                <li><strong>Codice:</strong> {{ page.id }}</li>
             </ul>
 
             <button class="buy-button">Acquista Ora</button>
         </div>
     </div>
 
-    <!-- SOTTO: DESCRIZIONE GRANDE -->
+    <!-- DESCRIZIONE GRANDE SOTTO -->
     <div class="product-description">
-        <h2>Descrizione Prodotto</h2>
+        <h2>Dettagli del prodotto</h2>
         <div class="content">
-            <!-- Qui viene stampato tutto il testo che scrivi sotto i trattini nel .md -->
             {{ content }}
         </div>
     </div>
 </div>
 
 <style>
-    /* CSS per impaginazione */
-    .product-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; font-family: 'Helvetica', Arial, sans-serif; }
-    .product-main { display: flex; gap: 50px; align-items: flex-start; flex-wrap: wrap; }
-    .product-image { flex: 1.5; min-width: 300px; }
-    .product-image img { width: 100%; border-radius: 4px; }
+    .product-container { max-width: 1100px; margin: 40px auto; padding: 0 20px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    .product-main { display: flex; gap: 60px; align-items: flex-start; flex-wrap: wrap; }
+    .product-image { flex: 1.4; min-width: 300px; }
+    .product-image img { width: 100%; border-radius: 2px; }
     .product-info-short { flex: 1; min-width: 300px; }
     
-    h1 { font-size: 28px; margin-top: 0; color: #333; }
-    .price { font-size: 32px; font-weight: bold; color: #000; margin: 20px 0; }
-    .specs { list-style: none; padding: 0; margin: 30px 0; border-top: 1px solid #eee; padding-top: 20px; }
-    .specs li { margin-bottom: 10px; font-size: 16px; color: #555; }
+    h1 { font-size: 26px; line-height: 1.2; margin-top: 0; color: #111; letter-spacing: -0.5px; }
+    .price { font-size: 28px; font-weight: 600; color: #000; margin: 25px 0; }
+    .specs { list-style: none; padding: 0; margin: 30px 0; border-top: 1px solid #eaeaea; padding-top: 20px; }
+    .specs li { margin-bottom: 12px; font-size: 15px; color: #444; }
     
-    .buy-button { background: #000; color: #fff; border: none; padding: 18px; width: 100%; font-size: 16px; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
-    .buy-button:hover { opacity: 0.8; }
+    .buy-button { background: #000; color: #fff; border: none; padding: 20px; width: 100%; font-size: 14px; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; transition: 0.3s; }
+    .buy-button:hover { background: #333; }
 
-    .product-description { margin-top: 80px; padding-top: 40px; border-top: 1px solid #eee; }
-    .product-description h2 { font-size: 22px; margin-bottom: 20px; }
-    .content { line-height: 1.8; color: #444; font-size: 17px; }
+    .product-description { margin-top: 70px; padding-top: 40px; border-top: 1px solid #eaeaea; }
+    .product-description h2 { font-size: 20px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; }
+    .content { line-height: 1.7; color: #333; font-size: 16px; white-space: pre-line; }
 </style>
 
 </body>
