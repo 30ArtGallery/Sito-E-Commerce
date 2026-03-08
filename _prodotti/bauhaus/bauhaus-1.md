@@ -1,7 +1,7 @@
 ---
 layout: prodotto
 sku: "bauhaus-0001"
-categoria: "bauhaus"
+collezione: "bauhaus"
 title: "Stampa su Tela Canvas Moderna Stile Bauhaus"
 permalink: /prodotti/bauhaus/stampa-su-tela-canvas-moderna-stile-bauhaus/
 prezzo: "49.00"
