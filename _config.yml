@@ -1,5 +1,10 @@
 title: Il Mio eCommerce
-baseurl: "/Sito-E-Commerce" # Aggiungi il nome della tua cartella qui
+url: "https://30artgallery.github.io" # Fondamentale per i link della sitemap
+baseurl: "/Sito-E-Commerce"
+
+plugins:
+  - jekyll-sitemap
+
 collections:
   prodotti:
     output: true
