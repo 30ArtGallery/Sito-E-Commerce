@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="it-IT">
 
@@ -441,66 +444,34 @@
   }
 </style>
 
-<!-- 2. TITOLO E CONTENITORE (Fondamentale per lo script) -->
+
+
+
+
+<!-- 2. TITOLO E CONTENITORE STATICO (Niente JavaScript) -->
 <div style="text-align: center; padding: 80px 0 30px;">
   <h2 style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #333;">
     collezione bauhaus
   </h2>
 </div>
 
-<!-- Questo è l'ID che lo script cercherà per inserire i quadri -->
-<div id="gallery-bauhaus" class="product-grid-4">
-    <!-- I prodotti appariranno qui magicamente -->
-</div>
-
-<!-- 3. SCRIPT DI CARICAMENTO DINAMICO -->
-<script>
-async function caricaCollezioneBauhaus() {
-    const gallery = document.getElementById('gallery-bauhaus');
-    
-    // Se il contenitore non esiste, esci per evitare errori
-    if (!gallery) return;
-
-    try {
-        // Carica il JSON con sistema anti-cache
-        const response = await fetch('prodotti.json?v=' + new Date().getTime());
-        if (!response.ok) throw new Error('File JSON non trovato');
-        
-        const prodotti = await response.json();
-
-        // Filtra solo i prodotti della collezione "bauhaus"
-        const prodottiFiltrati = prodotti.filter(p => p.collezione === "bauhaus");
-
-        if (prodottiFiltrati.length > 0) {
-            gallery.innerHTML = prodottiFiltrati.map((p, index) => {
-                // SEO: Lazy loading solo dopo la prima riga (primi 4 prodotti)
-                const loadingAttr = index < 4 ? '' : 'loading="lazy"';
-                
-                return `
-                <a href="prodotto.html?id=${p.id}" class="product-card">
-                    <img src="${p.immagine}" alt="${p.titolo} - Moodhaus" ${loadingAttr}>
-                    <h3>${p.titolo}</h3>
-                    <p>€ ${p.prezzo}</p>
+<!-- Griglia che si riempie durante il build di GitHub -->
+<div class="product-row">
+    {% for prodotto in site.prodotti %}
+        {% if prodotto.collezione == "bauhaus" %}
+            <div class="product-item">
+                <!-- Il link ora punta al permalink unico che hai creato -->
+                <a href="{{ site.baseurl }}{{ prodotto.url }}">
+                    <div class="product-img-box">
+                        <img src="{{ prodotto.immagine }}" alt="{{ prodotto.title }} - 30ArtGallery">
+                    </div>
+                    <h3>{{ prodotto.title }}</h3>
+                    <p>€ {{ prodotto.prezzo }}</p>
                 </a>
-                `;
-            }).join('');
-        } else {
-            gallery.innerHTML = "<p style='grid-column: 1/-1; text-align:center;'>Nessun prodotto trovato nella collezione Bauhaus.</p>";
-        }
-
-    } catch (error) {
-        console.error("Errore nel caricamento:", error);
-        gallery.innerHTML = "<p style='grid-column: 1/-1; text-align:center;'>Caricamento in corso o errore tecnico...</p>";
-    }
-}
-
-// Avvia la funzione al caricamento della pagina
-window.addEventListener('DOMContentLoaded', caricaCollezioneBauhaus);
-</script>
-
-
-
-
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
 
 
 
