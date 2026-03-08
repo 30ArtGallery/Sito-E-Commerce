@@ -3,7 +3,7 @@ layout: prodotto
 sku: "bauhaus-0001"
 collezione: "bauhaus"
 title: "Stampa su Tela Canvas Moderna Stile Bauhaus"
-prezzo: "49.00€"
+prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
