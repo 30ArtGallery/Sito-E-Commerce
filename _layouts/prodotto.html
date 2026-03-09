@@ -18,21 +18,28 @@
 
     <!-- JSON-LD SCHEMA -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "{{ page.title }}",
-      "image": "{{ page.immagine }}",
-      "description": "{{ page.seo_description }}",
-      "sku": "{{ page.sku }}",
-      "offers": {
-        "@type": "Offer",
-        "url": "{{ site.url }}{{ site.baseurl }}{{ page.permalink }}",
-        "priceCurrency": "EUR",
-        "price": "{{ page.prezzo | replace: '€', '' | replace: ' ', '' }}",
-        "availability": "https://schema.org/InStock"
-      }
-    }
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "{{ page.title }}",
+  "image": "{{ page.immagine }}",
+  "description": "{{ page.seo_description }}",
+  "sku": "{{ page.sku }}",
+  "brand": { 
+    "@type": "Brand", 
+    "name": "Moodhaus" 
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "{{ site.url }}{{ site.baseurl }}{{ page.permalink }}",
+    "priceCurrency": "EUR",
+    "price": "49.00",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition",
+    "areaServed": "IT"
+  }
+}
+
     </script>
 
     <!-- FONT E STILI -->
