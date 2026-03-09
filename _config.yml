@@ -1,6 +1,6 @@
 title: Il Mio eCommerce
-url: "https://30artgallery.github.io" # Fondamentale per i link della sitemap
-baseurl: "/Sito-E-Commerce"
+url: "https://www.moodhaus.it"
+baseurl: ""
 
 plugins:
   - jekyll-sitemap
