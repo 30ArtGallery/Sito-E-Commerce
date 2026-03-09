@@ -1,7 +1,7 @@
 ---
 layout: prodotto
 sku: "Bauhaus 1109"
-collezione: "arancio"
+collezione: "bauhaus"
 title: "Set monotono colore terracotta quadro Bauhaus"
 permalink: /prodotto/set-monotono-colore-terracotta-quadro-bauhaus/
 prezzo: "29.00"
