@@ -3,6 +3,7 @@ layout: prodotto
 sku: "bauhaus-0001"
 collezione: "bauhaus"
 title: "Decorazione murale ispirata al bauhaus moderna e dinamica"
+permalink: /prodotto/decorazione-murale-ispirata-al-bauhaus-moderna-e-dinamica/
 prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
