@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://moodhaus.github.io
+Sitemap: https://30artgallery.github.io/Sito-E-Commerce/sitemap.xml
