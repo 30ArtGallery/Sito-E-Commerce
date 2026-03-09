@@ -1,7 +1,7 @@
 ---
 layout: prodotto
 sku: "Bauhaus 1109"
-collezione: "arancio"
+collezione: "bauhaus"
 title: "Set monotono colore terracotta quadro Bauhaus"
 permalink: /prodotto/set-monotono-colore-terracotta-quadro-bauhaus/
 prezzo: "49.00"
@@ -13,7 +13,7 @@ pagamenti: sicuri e protetti
 produzione: made in italy
 immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-1109.jpg"
 seo_title: "Set monotono colore terracotta quadro Bauhaus - moodhaus.it"
-seo_description: "Acquista la stampa su tela Set monotono colore terracotta quadro Bauhaus, un'opera d'arte moderna della collezione arancio per arredare con stile."
+seo_description: "Acquista la stampa su tela Set monotono colore terracotta quadro Bauhaus, un'opera d'arte moderna della collezione bauhaus per arredare con stile."
 ---
 Set monotono colore terracotta quadro Bauhaus : Eleganza Geometrica per Ogni Spazio
 
