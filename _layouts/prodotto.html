@@ -90,8 +90,7 @@
 
         @media (max-width: 768px) { .product-info { margin-top: 0; } .product-main { gap: 30px; } .buy-button { width: 100%; } .main-nav { gap: 15px; } }
     </style>
-
-
+    
 
 <!-- Copia e incolla questo dentro il tag <head> -->
 <link rel="preconnect" href="https://app.snipcart.com">
@@ -99,7 +98,6 @@
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.css" />
 
 
-    
 </head>
 <body>
 
@@ -121,20 +119,16 @@
     </svg>
     <!-- Il numerino dei prodotti -->
     <span class="snipcart-items-count cart-badge">0</span>
+         
 </button>
-
-                
             </nav>
         </div>
-
-
         
     </header>
-
     <div class="product-container">
         <div class="product-main">
             <div class="product-image">
-                <img src="{{ page.immagine }}" alt="{{ page.title }}">
+                <img src="{{ page.immagine }}" alt="Stampa su tela {{ page.title }} - Collezione {{ page.collezione | capitalize }}">
             </div>
             <div class="product-info">
                 <h1>{{ page.title }}</h1>
@@ -167,12 +161,6 @@
 
 
 
-
-
-
-
-
-
     <footer>
     <div class="container">
       <span class="footer-logo">moodhaus</span>
@@ -181,10 +169,6 @@
         2026 Studio Moodhaus — Eccellenza nelle stampe su tela</p>
     </div>
   </footer>
-
-
-
-
 
 
 <!-- MOTORE SNIPCART CON LA TUA CHIAVE -->
@@ -196,12 +180,6 @@
 </div>
 
 
-
-
-
-
-
-  
 
 </body>
 
