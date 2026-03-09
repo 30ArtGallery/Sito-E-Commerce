@@ -4,7 +4,7 @@ sku: "Bauhaus 1109"
 collezione: "arancio"
 title: "Set monotono colore terracotta quadro Bauhaus"
 permalink: /prodotto/set-monotono-colore-terracotta-quadro-bauhaus/
-prezzo: "29.00"
+prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
