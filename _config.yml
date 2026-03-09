@@ -6,6 +6,6 @@ plugins:
   - jekyll-sitemap
 
 collections:
-  prodotto:
+  prodotti:
     output: true
-    permalink: /prodotto/:path/
+    permalink: /prodotti/:path/
