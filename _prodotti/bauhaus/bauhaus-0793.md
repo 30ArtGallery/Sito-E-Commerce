@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-0793.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-0793.jpg"
 seo_title: "Quadri stilizzati in Bauhaus per decorazioni audaci e fresche - moodhaus.it"
 seo_description: "Acquista la stampa su tela Quadri stilizzati in Bauhaus per decorazioni audaci e fresche, un'opera d'arte moderna della collezione bauhaus."
 ---

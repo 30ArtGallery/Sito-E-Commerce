@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-0729.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-0729.jpg"
 seo_title: "Stampe Bauhaus eleganti per un design senza tempo - moodhaus.it"
 seo_description: "Acquista la stampa su tela Stampe Bauhaus eleganti per un design senza tempo, un'opera d'arte moderna della collezione bauhaus."
 ---
