@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-0867.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-0867.jpg"
 seo_title: "Quadri d’arte Bauhaus per spazi dal design innovativo - moodhaus.it"
 seo_description: "Acquista la stampa su tela Quadri d’arte Bauhaus per spazi dal design innovativo, un'opera d'arte moderna della collezione bauhaus."
 ---
