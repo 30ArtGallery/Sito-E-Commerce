@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-1063.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-1063.jpg"
 seo_title: "Figure colorate su tela Bauhaus quadri e posters - moodhaus.it"
 seo_description: "Acquista la stampa su tela Figure colorate su tela Bauhaus quadri e posters, un'opera d'arte moderna della collezione bauhaus."
 ---
