@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-1020.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-1020.jpg"
 seo_title: "Casa moderna arte Bauhaus come soluzione di arredo - moodhaus.it"
 seo_description: "Acquista la stampa su tela Casa moderna arte Bauhaus come soluzione di arredo, un'opera d'arte moderna della collezione bauhaus."
 ---

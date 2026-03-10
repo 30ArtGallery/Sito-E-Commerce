@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-1014.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-1014.jpg"
 seo_title: "Arredamento casa fai da te con Bauhaus moderni - moodhaus.it"
 seo_description: "Acquista la stampa su tela Arredamento casa fai da te con Bauhaus moderni, un'opera d'arte moderna della collezione bauhaus."
 ---
