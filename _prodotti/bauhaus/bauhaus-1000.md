@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2025/01/Bauhaus-1000.jpg"
+immagine: "https://img.moodhaus.it/2025/01/Bauhaus-1000.jpg"
 seo_title: "Quadri eleganti Bauhaus per spazi ed uffici tecnici - moodhaus.it"
 seo_description: "Acquista la stampa su tela Quadri eleganti Bauhaus per spazi ed uffici tecnici, un'opera d'arte moderna della collezione bauhaus."
 ---

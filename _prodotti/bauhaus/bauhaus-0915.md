@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-0915.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-0915.jpg"
 seo_title: "Quadri famosi in Bauhaus per collezioni originali - moodhaus.it"
 seo_description: "Acquista la stampa su tela Quadri famosi in Bauhaus per collezioni originali, un'opera d'arte moderna della collezione bauhaus."
 ---

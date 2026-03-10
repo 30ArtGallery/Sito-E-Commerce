@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-0905.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-0905.jpg"
 seo_title: "Stampe su tela Bauhaus quadri per studio medico - moodhaus.it"
 seo_description: "Acquista la stampa su tela Stampe su tela Bauhaus quadri per studio medico, un'opera d'arte moderna della collezione bauhaus."
 ---
