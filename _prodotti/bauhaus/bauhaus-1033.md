@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-1033.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-1033.jpg"
 seo_title: "Atmosfera calda con le stampe su tela Bauhaus - moodhaus.it"
 seo_description: "Acquista la stampa su tela Atmosfera calda con le stampe su tela Bauhaus, un'opera d'arte moderna della collezione bauhaus."
 ---
