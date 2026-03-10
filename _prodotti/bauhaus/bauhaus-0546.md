@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-0546.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-0546.jpg"
 seo_title: "Grafiche di design storico Bauhaus quadri e stampe - moodhaus.it"
 seo_description: "Acquista la stampa su tela Grafiche di design storico Bauhaus quadri e stampe, un'opera d'arte moderna della collezione bauhaus."
 ---
