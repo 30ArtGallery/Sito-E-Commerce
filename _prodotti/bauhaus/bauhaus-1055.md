@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-1055.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-1055.jpg"
 seo_title: "Studio moderno di progettazione Bauhaus ispirazione arte - moodhaus.it"
 seo_description: "Acquista la stampa su tela Studio moderno di progettazione Bauhaus ispirazione arte, un'opera d'arte moderna della collezione bauhaus."
 ---
