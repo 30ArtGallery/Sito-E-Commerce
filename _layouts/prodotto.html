@@ -81,14 +81,49 @@
 
         .product-description { margin-top: 80px; padding-top: 40px; border-top: 1px solid #eee; max-width: 800px; }
         .product-description h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 30px; }
-        .content { color: #333; font-size: 16px; line-height: 1.8; white-space: pre-line; }
+        .content { color: #333; font-size: 16px; line-height: 1.8; white-space: pre-line; 
 
-        /* FOOTER */
-        footer { padding: 40px 0; text-align: center; border-top: 1px solid var(--sand-soft); margin-top: 40px; }
-        .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; margin-bottom: 10px; display: block; }
-        .copy { font-size: 0.6rem; letter-spacing: 2px; color: #999; text-transform: uppercase; }
 
-        @media (max-width: 768px) { .product-info { margin-top: 0; } .product-main { gap: 30px; } .buy-button { width: 100%; } .main-nav { gap: 15px; } }
+
+ footer { 
+    padding: 100px 0 60px 0; 
+    text-align: center; /* Centra tutto il contenuto del footer */
+    border-top: 1px solid var(--sand-soft); 
+    margin-top: 80px; 
+    background: #ffffff;
+}
+
+    
+.footer-col h4 {
+    font-size: 0.7rem; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.footer-col p {
+    margin-bottom: 12px;
+}
+
+.footer-col a {
+    text-decoration: none; 
+    color: #888; 
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.footer-col a:hover {
+    color: #000 !important;
+}
+
+
+    .footer-col a:hover {
+        color: #000 !important;
+    }
+
+        
+        
     </style>
     
 
@@ -161,14 +196,35 @@
 
 
 
-    <footer>
-    <div class="container">
-      <span class="footer-logo">moodhaus</span>
-      <p class="copy">&copy;
+<footer>
+    <div class="product-container">
+        <!-- Parte alta con Link CENTRATI -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 80px; text-align: center;">
+            <div class="footer-col">
+                <h4>Assistenza</h4>
+                <p><a href="/contatti.html">Contatti</a></p>
+                <p><a href="/spedizioni.html">Spedizioni</a></p>
+                <p><a href="/resi.html">Resi</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <p><a href="/materiali.html">Materiali</a></p>
+                <p><a href="/collezioni.html">Collezioni</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Social</h4>
+                <p><a href="#">Instagram</a></p>
+                <p><a href="#">Pinterest</a></p>
+            </div>
+        </div>
 
-        2026 Studio Moodhaus — Eccellenza nelle stampe su tela</p>
+        <!-- Tua parte originale (Logo e Copyright) -->
+        <div style="border-top: 1px solid #f0f0f0; padding-top: 50px;">
+            <span class="footer-logo">moodhaus</span>
+            <p class="copy">&copy; 2026 Studio Moodhaus — Eccellenza nelle stampe su tela</p>
+        </div>
     </div>
-  </footer>
+</footer>
 
 
 <!-- MOTORE SNIPCART CON LA TUA CHIAVE -->
