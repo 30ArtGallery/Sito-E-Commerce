@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-0486.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-0486.jpg"
 seo_title: "Tela d’arte geometrica Bauhaus originale stampa - moodhaus.it"
 seo_description: "Acquista la stampa su tela Tela d’arte geometrica Bauhaus originale stampa, un'opera d'arte moderna della collezione bauhaus."
 ---

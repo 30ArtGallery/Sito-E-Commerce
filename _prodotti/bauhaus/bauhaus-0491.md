@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-0491.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-0491.jpg"
 seo_title: "Bauhaus leggero per un look fresco e delicato - moodhaus.it"
 seo_description: "Acquista la stampa su tela Bauhaus leggero per un look fresco e delicato, un'opera d'arte moderna della collezione bauhaus."
 ---
