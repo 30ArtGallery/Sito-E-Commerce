@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-0155.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-0155.jpg"
 seo_title: "Aggiungi personalità con quadro Bauhaus design - moodhaus.it"
 seo_description: "Acquista la stampa su tela Aggiungi personalità con quadro Bauhaus design, un'opera d'arte moderna della collezione bauhaus."
 ---

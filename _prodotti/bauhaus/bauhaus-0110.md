@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-0110.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-0110.jpg"
 seo_title: "Tela geometrica su misura Bauhaus con forme e colori minimalisti - moodhaus.it"
 seo_description: "Acquista la stampa su tela Tela geometrica su misura Bauhaus con forme e colori minimalisti, un'opera d'arte moderna della collezione bauhaus."
 ---

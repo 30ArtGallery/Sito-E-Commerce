@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-0103.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-0103.jpg"
 seo_title: "Decorazione murale su tela Bauhaus con colori intensi - moodhaus.it"
 seo_description: "Acquista la stampa su tela Decorazione murale su tela Bauhaus con colori intensi, un'opera d'arte moderna della collezione bauhaus."
 ---
