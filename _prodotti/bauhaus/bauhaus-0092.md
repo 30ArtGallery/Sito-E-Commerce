@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-0092.png"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-0092.png"
 seo_title: "Stampa artistica su tela Bauhaus per arredo in stile minimal - moodhaus.it"
 seo_description: "Acquista la stampa su tela Stampa artistica su tela Bauhaus per arredo in stile minimal, un'opera d'arte moderna della collezione bauhaus."
 ---

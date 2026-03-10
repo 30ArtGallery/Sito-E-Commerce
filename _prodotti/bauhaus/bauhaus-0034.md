@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-0034.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-0034.jpg"
 seo_title: "Quadro geometrico Bauhaus con forme astratte colorate - moodhaus.it"
 seo_description: "Acquista la stampa su tela Quadro geometrico Bauhaus con forme astratte colorate, un'opera d'arte moderna della collezione bauhaus."
 ---

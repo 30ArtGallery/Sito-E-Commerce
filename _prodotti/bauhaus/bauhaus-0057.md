@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-0057.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-0057.jpg"
 seo_title: "Tela moderna Bauhaus con linee e forme astratte colorate - moodhaus.it"
 seo_description: "Acquista la stampa su tela Tela moderna Bauhaus con linee e forme astratte colorate, un'opera d'arte moderna della collezione bauhaus."
 ---
