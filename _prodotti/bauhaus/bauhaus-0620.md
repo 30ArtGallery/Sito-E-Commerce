@@ -8,7 +8,7 @@ prezzo: "49.00"
 misura: "90 x 60 cm"
 telaio: "Galleria h 3 cm"
 quadro: intelaiato
-immagine: "https://www.moodhaus.it/wp-content/uploads/2024/09/Bauhaus-0620.jpg"
+immagine: "https://img.moodhaus.it/2024/09/Bauhaus-0620.jpg"
 seo_title: "Stampe artistiche Bauhaus perfette per ogni spazio - moodhaus.it"
 seo_description: "Acquista la stampa su tela Stampe artistiche Bauhaus perfette per ogni spazio, un'opera d'arte moderna della collezione bauhaus."
 ---
