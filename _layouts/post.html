@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<!-- 1. META TAG SEO & GEO (Invisibili all'utente, fondamentali per Google) -->
+<head>
+    <title>{{ page.title }} - moodhaus.it</title>
+    <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    
+      <!-- Geo-Targeting: Local SEO Salerno -->
+    <meta name="geo.region" content="IT-SA" />
+    <meta name="geo.placename" content="Salerno" />
+    <meta name="geo.position" content="40.6779;14.7658" />
+    <meta name="ICBM" content="40.6779, 14.7658" />
+
+
+    <!-- Open Graph per Social (FB/IG/WA) -->
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:type" content="article">
+</head>
+
+<!-- 2. DATI STRUTTURATI JSON-LD (Schema.org per Google Rich Snippets) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ page.title | escape }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+  "author": {
+    "@type": "Organization",
+    "name": "Moodhaus",
+    "url": "https://www.moodhaus.it",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Avellino",
+      "addressRegion": "AV",
+      "addressCountry": "IT"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Moodhaus",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.moodhaus.it"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  }
+}
+</script>
+
+<!-- 3. CONTENUTO DELL'ARTICOLO (Senza Header/Footer grafici) -->
+<article class="post-content" itemscope itemtype="https://schema.org">
+  <!-- Il titolo h1 è necessario per la SEO, lo lascio qui dentro -->
+  <h1 itemprop="name headline">{{ page.title }}</h1>
+  
+  <div itemprop="articleBody">
+    {{ content }}
+  </div>
+</article>
