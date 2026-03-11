@@ -8,3 +8,4 @@ plugins:
 collections:
   prodotti:
     output: true
+    permalink: /prodotti/:path/
