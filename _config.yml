@@ -1,11 +1,3 @@
-title: Il Mio eCommerce
-url: "https://www.moodhaus.it"
-baseurl: ""
-
-plugins:
-  - jekyll-sitemap
-
 collections:
   prodotti:
     output: true
-    permalink: /prodotti/:path/
