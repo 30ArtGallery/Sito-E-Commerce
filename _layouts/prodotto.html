@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -169,28 +171,12 @@
     
 <body>
 
-    <header>
-        <div class="container">
-            <a href="{{ site.baseurl }}/" class="logo">moodhaus</a>
-            <nav class="main-nav">
-                <a href="{{ site.baseurl }}/collezioni.html">Collezioni</a>
-                <a href="{{ site.baseurl }}/stampe-su-tela.html">Stampe su tela</a>
-                <a href="{{ site.baseurl }}/materiali.html">Materiali</a>
 
 
-     <button class="snipcart-checkout cart-nav-item" aria-label="Carrello" style="background: none; border: none; padding: 0; cursor: pointer; display: flex; align-items: center; gap: 6px;">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <path d="M16 10a4 4 0 0 1-8 0"></path>
-    </svg>
-    <span class="snipcart-items-count cart-badge" style="font-size: 1.2rem; font-weight: normal; line-height: 1;">0</span>
-</button>
-                
-            </nav>
-        </div>
-        
-    </header>
+{% include header.html %}
+
+
+    
     <div class="product-container">
         <div class="product-main">
             <div class="product-image">
@@ -227,33 +213,7 @@
 
 
 
-<footer>
-    <div class="container"> <!-- Questa classe nella Index è impostata a 1400px -->
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Assistenza</h4>
-                <p><a href="{{ site.baseurl }}/contatti.html">Contatti</a></p>
-                <p><a href="{{ site.baseurl }}/spedizioni.html">Spedizioni</a></p>
-                <p><a href="{{ site.baseurl }}/resi.html">Resi</a></p>
-            </div>
-            <div class="footer-col">
-                <h4>Info</h4>
-                <p><a href="{{ site.baseurl }}/materiali.html">Materiali</a></p>
-                <p><a href="{{ site.baseurl }}/collezioni.html">Collezioni</a></p>
-            </div>
-            <div class="footer-col">
-                <h4>Social</h4>
-                <p><a href="#">Instagram</a></p>
-                <p><a href="#">Pinterest</a></p>
-            </div>
-        </div>
-
-        <div style="border-top: 1px solid #f0f0f0; padding-top: 50px;">
-            <span class="footer-logo">moodhaus</span>
-            <p class="copy">&copy; 2026 Studio Moodhaus — Eccellenza nelle stampe su tela</p>
-        </div>
-    </div>
-</footer>
+{% include footer.html %}
 
 
 
