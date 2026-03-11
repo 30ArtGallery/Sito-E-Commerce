@@ -156,14 +156,48 @@
 
 
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZNYSKXPB7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!-- Banner Cookie & Blocco Google Analytics 4 -->
+<div id="cookie-banner" style="display:none; position: fixed; bottom: 20px; left: 20px; right: 20px; background: #fff; border: 1px solid #eee; padding: 20px; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.05); max-width: 400px; border-radius: 2px;">
+    <p style="font-size: 0.8rem; color: #666; margin-bottom: 15px; line-height: 1.5; font-family: sans-serif;">
+        Utilizziamo i cookie per analizzare il traffico e migliorare <strong>moodhaus.it</strong>. <a href="/privacy.html" style="color: #000; text-decoration: underline;">Privacy Policy</a>.
+    </p>
+    <button onclick="acceptCookies()" style="background: #000; color: #fff; border: none; padding: 12px 25px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; width: 100%; transition: 0.3s;">Accetta</button>
+</div>
 
-  gtag('config', 'G-9ZNYSKXPB7');
+<script>
+    // Il tuo ID Google Analytics
+    const GA_ID = 'G-9ZNYSKXPB7';
+
+    // Funzione che carica effettivamente Analytics
+    function loadGA() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com' + GA_ID;
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+        console.log('Analytics caricato con successo.');
+    }
+
+    // Funzione attivata al clic sul tasto "Accetta"
+    function acceptCookies() {
+        localStorage.setItem('cookieConsent', 'true');
+        document.getElementById('cookie-banner').style.display = 'none';
+        loadGA();
+    }
+
+    // Controllo se l'utente ha già dato il consenso in precedenza
+    if (localStorage.getItem('cookieConsent') === 'true') {
+        loadGA();
+    } else {
+        // Se non c'è consenso, mostra il banner dopo 1 secondo
+        setTimeout(function() {
+            document.getElementById('cookie-banner').style.display = 'block';
+        }, 1000);
+    }
 </script>
 
 
@@ -173,7 +207,35 @@
 
 
 
-{% include header.html %}
+ <header>
+    <div class="container">
+      <!-- H1 nel logo è perfetto solo per la Home (index) -->
+      <h1 class="logo">
+        <a href="https://www.moodhaus.it" title="Moodhaus Home Page">moodhaus</a>
+      </h1>
+      <nav class="main-nav" aria-label="Menu principale">
+        <a href="collezioni.html" title="Scopri le nostre collezioni">Collezioni</a>
+        <a href="stampe-su-tela.html" title="Stampe su tela e quadri moderni">Stampe su tela</a>
+        <a href="materiali.html" title="Qualità e materiali d'autore">Materiali</a>
+
+
+
+   <button class="snipcart-checkout cart-nav-item" aria-label="Carrello" style="background: none; border: none; padding: 0; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <path d="M16 10a4 4 0 0 1-8 0"></path>
+    </svg>
+    <span class="snipcart-items-count cart-badge" style="font-size: 1.2rem; font-weight: normal; line-height: 1;">0</span>
+</button>
+
+
+
+        
+      </nav>
+    </div>
+    
+</header>
 
 
     
@@ -213,7 +275,37 @@
 
 
 
-{% include footer.html %}
+<footer>
+    <div class="product-container">
+        <!-- Parte alta con Link CENTRATI -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 80px; text-align: center;">
+            <div class="footer-col">
+                <h4>Assistenza</h4>
+                <p><a href="/contatti.html">Contatti</a></p>
+                <p><a href="/spedizioni.html">Spedizioni</a></p>
+                <p><a href="/resi.html">Resi</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Info</h4>
+                <p><a href="/materiali.html">Materiali</a></p>
+                <p><a href="/collezioni.html">Collezioni</a></p>
+                <p><a href="/blog.html">Blog</a></p>
+                <p><a href="/privacy.html">Privacy Policy</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>Social</h4>
+                <p><a href="#">Instagram</a></p>
+                <p><a href="#">Pinterest</a></p>
+            </div>
+        </div>
+
+        <!-- Tua parte originale (Logo e Copyright) -->
+        <div style="border-top: 1px solid #f0f0f0; padding-top: 50px;">
+            <span class="footer-logo">moodhaus</span>
+            <p class="copy">&copy; 2026 Studio Moodhaus — Eccellenza nelle stampe su tela</p>
+        </div>
+    </div>
+</footer>
 
 
 
