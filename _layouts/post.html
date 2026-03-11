@@ -1,77 +1,117 @@
 ---
-layout: default
 ---
-<!-- 1. META TAG SEO & GEO (Invisibili all'utente, fondamentali per Google) -->
+<!DOCTYPE html>
+<html lang="it">
 <head>
-    <title>{{ page.title }} - moodhaus.it</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="https://img.moodhaus.it/2024/09/Logo.jpg">
+    
+    <!-- SEO DINAMICA PER ARTICOLI -->
+    <title>{{ page.title }} | moodhaus.it</title>
     <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     
-      <!-- Geo-Targeting: Local SEO Salerno -->
+    <!-- Geo-Targeting Salerno -->
     <meta name="geo.region" content="IT-SA" />
     <meta name="geo.placename" content="Salerno" />
     <meta name="geo.position" content="40.6779;14.7658" />
     <meta name="ICBM" content="40.6779, 14.7658" />
 
-
-    <!-- Open Graph per Social (FB/IG/WA) -->
+    <!-- OPEN GRAPH -->
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:type" content="article">
+
+    <!-- JSON-LD SCHEMA BLOG -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "{{ page.title }}",
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "author": {
+        "@type": "Organization",
+        "name": "Moodhaus",
+        "url": "https://www.moodhaus.it"
+      },
+      "description": "{{ page.excerpt | strip_html | truncate: 160 }}"
+    }
+    </script>
+
+    <!-- FONT E STILI (Copiati dal tuo layout prodotti) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.css" />
+
+    <style>
+        :root { --sand-bg: #fdfcf9; --sand-soft: #f4f1ea; --text-main: #2c2c2c; --white: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--text-main); background: var(--white); -webkit-font-smoothing: antialiased; }
+        
+        header { padding: 30px 0; background: white; border-bottom: 1px solid #f0f0f0; text-align: center; position: relative; }
+        .logo { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 300; letter-spacing: -1px; margin-bottom: 20px; display: block; text-decoration: none; color: inherit; }
+        .main-nav { display: flex; justify-content: center; gap: 35px; align-items: center; }
+        .main-nav a { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #555; text-decoration: none; }
+        
+        /* Layout Articolo Blog */
+        .blog-container { max-width: 800px; margin: 60px auto; padding: 0 20px; }
+        .blog-header { text-align: center; margin-bottom: 50px; }
+        .blog-header h1 { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 400; margin-bottom: 15px; }
+        .blog-date { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #999; }
+        
+        .blog-content { font-size: 18px; line-height: 1.8; color: #333; }
+        .blog-content p { margin-bottom: 25px; }
+        .blog-content img { width: 100%; height: auto; margin: 30px 0; border-radius: 2px; }
+
+        footer { padding: 100px 0 60px 0; text-align: center; border-top: 1px solid var(--sand-soft); margin-top: 80px; background: #ffffff; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 60px; margin-bottom: 80px; }
+        .footer-col h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; color: #000; }
+        .footer-col p { margin-bottom: 15px; }
+        .footer-col a { font-size: 13px; color: #888; transition: 0.3s; text-decoration: none; }
+        .footer-col a:hover { color: #000 !important; }
+        .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; margin-bottom: 10px; display: block; }
+        .copy { font-size: 0.6rem; letter-spacing: 2px; color: #999; text-transform: uppercase; }
+    </style>
 </head>
 
-<!-- 2. DATI STRUTTURATI JSON-LD (Schema.org per Google Rich Snippets) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "{{ page.title | escape }}",
-  "datePublished": "{{ page.date | date_to_xmlschema }}",
-  "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
-  "author": {
-    "@type": "Organization",
-    "name": "Moodhaus",
-    "url": "https://www.moodhaus.it",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Avellino",
-      "addressRegion": "AV",
-      "addressCountry": "IT"
-    }
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Moodhaus",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.moodhaus.it"
-    }
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ site.url }}{{ page.url }}"
-  }
-}
-</script>
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">moodhaus</a>
+            <nav class="main-nav">
+                <a href="/collezioni.html">Collezioni</a>
+                <a href="/stampe-su-tela.html">Stampe su tela</a>
+                <a href="/materiali.html">Materiali</a>
+                
+                <!-- Il tuo carrello personalizzato -->
+                <button class="snipcart-checkout cart-nav-item" aria-label="Carrello" style="background: none; border: none; padding: 0; cursor: pointer; display: flex; align-items: center; gap: 6px;">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="snipcart-items-count cart-badge" style="font-size: 1.2rem; font-weight: normal; line-height: 1;">0</span>
+                </button>
+            </nav>
+        </div>
+    </header>
 
-<!-- 3. CONTENUTO DELL'ARTICOLO (Senza Header/Footer grafici) -->
-<article class="post-content" itemscope itemtype="https://schema.org">
-  <!-- Il titolo h1 è necessario per la SEO, lo lascio qui dentro -->
-  <h1 itemprop="name headline">{{ page.title }}</h1>
-  
-  <div itemprop="articleBody">
-    {{ content }}
-  </div>
-</article>
+    <div class="blog-container">
+        <header class="blog-header">
+            <div class="blog-date">{{ page.date | date: "%d . %m . %Y" }}</div>
+            <h1>{{ page.title }}</h1>
+        </header>
 
+        <div class="blog-content">
+            {{ content }}
+        </div>
+    </div>
 
-
-
-<footer>
-    <div class="product-container">
-        <!-- Parte alta con Link CENTRATI -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 80px; text-align: center;">
+    <footer>
+        <div class="footer-grid">
             <div class="footer-col">
                 <h4>Assistenza</h4>
                 <p><a href="/contatti.html">Contatti</a></p>
@@ -89,34 +129,12 @@ layout: default
                 <p><a href="#">Pinterest</a></p>
             </div>
         </div>
+        <span class="footer-logo">moodhaus</span>
+        <p class="copy">&copy; 2026 Studio Moodhaus — Eccellenza nelle stampe su tela</p>
+    </footer>
 
-        <!-- Tua parte originale (Logo e Copyright) -->
-        <div style="border-top: 1px solid #f0f0f0; padding-top: 50px;">
-            <span class="footer-logo">moodhaus</span>
-            <p class="copy">&copy; 2026 Studio Moodhaus — Eccellenza nelle stampe su tela</p>
-        </div>
-    </div>
-</footer>
-
-
-
-
-
-
-
-
-<!-- MOTORE SNIPCART CON LA TUA CHIAVE -->
-<script async src="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.js"></script>
-
-<div hidden id="snipcart" 
-     data-api-key="ZDg0NTc2NGYtNmI0Ny00OTBhLTgzYjUtYTk1NDMxODMzNjA5NjM5MDg0OTQxMTEzMTg5Mjc5" 
-     data-config-modal-style="side">
-</div>
-
-
-
-  
-
+    <!-- SNIPCART ENGINE -->
+    <script async src="https://cdn.snipcart.com"></script>
+    <div hidden id="snipcart" data-api-key="ZDg0NTc2NGYtNmI0Ny00OTBhLTgzYjUtYTk1NDMxODMzNjA5NjM5MDg0OTQxMTEzMTg5Mjc5" data-config-modal-style="side"></div>
 </body>
-
 </html>
