@@ -162,41 +162,9 @@
     <button onclick="acceptCookies()" style="background: #000; color: #fff; border: none; padding: 12px 25px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; width: 100%; transition: 0.3s;">Accetta</button>
 </div>
 
-<script>
-    // Il tuo ID Google Analytics
-    const GA_ID = 'G-9ZNYSKXPB7';
 
-    // Funzione che carica effettivamente Analytics
-    function loadGA() {
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = 'https://www.googletagmanager.com' + GA_ID;
-        document.head.appendChild(script);
 
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', GA_ID);
-        console.log('Analytics caricato con successo.');
-    }
-
-    // Funzione attivata al clic sul tasto "Accetta"
-    function acceptCookies() {
-        localStorage.setItem('cookieConsent', 'true');
-        document.getElementById('cookie-banner').style.display = 'none';
-        loadGA();
-    }
-
-    // Controllo se l'utente ha già dato il consenso in precedenza
-    if (localStorage.getItem('cookieConsent') === 'true') {
-        loadGA();
-    } else {
-        // Se non c'è consenso, mostra il banner dopo 1 secondo
-        setTimeout(function() {
-            document.getElementById('cookie-banner').style.display = 'block';
-        }, 1000);
-    }
-</script>
+    
 
 
 
