@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Il Titolo del tuo Articolo"
-date: 2024-05-20
+title: "Quadri Astratti Bauhaus Stampati su Tela"
+date: 2026-03-11
+permalink: /quadri-astratti-bauhaus-stampati-su-tela/ 
 ---
-Qui incolli il testo dell'articolo che hai recuperato dal vecchio WordPress...
