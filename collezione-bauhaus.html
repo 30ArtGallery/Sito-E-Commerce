@@ -373,6 +373,53 @@ layout: null
         text-align: center;
       }
     }
+
+
+
+
+
+
+
+#backToTop {
+    position: fixed;    /* Lo tiene fisso sullo schermo */
+    bottom: 30px;       /* Distanza dal fondo */
+    right: 30px;        /* Distanza da destra */
+    z-index: 9999;      /* Lo tiene sopra a tutte le immagini */
+    background: #000;   /* Nero come il tuo stile */
+    color: #fff;        /* Testo bianco */
+    border: none;
+    padding: 12px 18px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 2px; /* Angoli netti ed eleganti */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+#backToTop:hover {
+    background: #333;
+    transform: translateY(-3px); /* Effetto al passaggio del mouse */
+}
+
+/* Su mobile lo spostiamo un po' per non coprire il carrello */
+@media (max-width: 768px) {
+    #backToTop {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 15px;
+    }
+}
+
+
+
+
+
+
+
+
+    
   </style>
 
 
@@ -628,6 +675,12 @@ layout: null
 
 
 
+
+<button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" id="backToTop" title="Torna su">
+    TOP ↑
+</button>
+
+  
   
 
 </body>
