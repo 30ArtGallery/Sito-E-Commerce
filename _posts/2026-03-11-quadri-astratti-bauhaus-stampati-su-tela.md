@@ -2,7 +2,9 @@
 layout: post
 title: "Quadri Astratti Bauhaus Stampati su Tela"
 date: 2026-03-11
-permalink: /quadri-astratti-bauhaus-stampati-su-tela/ 
+permalink: /quadri-astratti-bauhaus-stampati-su-tela/
+seo_title: "Quadri astratti originali con grafiche iconiche - moodhaus.it"
+seo_description: "Scopri i quadri astratti Moodhaus: stampe su tela con grafiche iconiche e design d'autore. Trasforma il tuo arredamento con opere uniche fatte in Italia, perfette per ogni ambiente moderno."
 ---
 Quadri Astratti Bauhaus Stampati su Tela: Un’Esplosione di Colore e Forma
 
