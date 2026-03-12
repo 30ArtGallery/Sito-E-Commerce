@@ -3,9 +3,11 @@ layout: post
 title: "Cosa si intende per stile Bauhaus"
 date: 2026-03-11
 permalink: /cosa-si-intende-per-stile-bauhaus/
+seo_title: "Stampe su tela moderne guida allo stile Bauhaus - moodhaus.it"
+seo_description: "Scopri le origini e la filosofia dello stile Bauhaus. Una guida su come il minimalismo e la geometria influenzano l'arredamento e le stampe su tela oggi."
 ---
 Lo Stile Bauhaus è una delle correnti artistiche e progettuali più influenti del XX secolo. Nato in Germania all’inizio del 1900, il movimento ha cambiato radicalmente la percezione dell’arte, del design e dell’architettura, fondendo estetica e funzionalità in un nuovo linguaggio visivo. Ma cosa si intende esattamente per Stile Bauhaus e come si esprime in ambito contemporaneo, ad esempio attraverso le stampe su tela di immagini Bauhaus?
-Le origini e la filosofia del Bauhaus
+##Le origini e la filosofia del Bauhaus
 
 Il Bauhaus nacque nel 1919, grazie al visionario architetto Walter Gropius, che fondò l’omonima scuola di arte e design a Weimar. Il suo obiettivo era quello di superare le separazioni tradizionali tra le varie discipline artistiche, integrando pittura, scultura, architettura, grafica e design in un’unica visione coerente. La filosofia alla base del Bauhaus puntava a un design che fosse tanto funzionale quanto esteticamente gradevole, eliminando ornamenti superflui e prediligendo forme semplici e lineari.
 
