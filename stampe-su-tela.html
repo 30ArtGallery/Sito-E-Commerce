@@ -175,14 +175,14 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
       transform: scale(1.05);
     }
     
-     footer { 
-    padding: 100px 0 60px 0; 
-    text-align: center; /* Centra tutto il contenuto del footer */
+   footer { 
+    padding: 40px 0; /* Altezza fissa e sottile sopra e sotto */
+    text-align: center; 
     border-top: 1px solid var(--sand-soft); 
-    margin-top: 80px; 
+    margin-top: 60px; /* Distanza fissa dal contenuto sopra */
     background: #ffffff;
+    height: auto; /* Impedisce espansioni anomale */
 }
-
     
 .footer-col h4 {
     font-size: 0.7rem; 
@@ -213,6 +213,7 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
     }
 
 
+    
     .footer-logo {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.8rem;
@@ -371,17 +372,49 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
 
   
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZNYSKXPB7"></script>
+<!-- Banner Cookie & Blocco Google Analytics 4 -->
+<div id="cookie-banner" style="display:none; position: fixed; bottom: 20px; left: 20px; right: 20px; background: #fff; border: 1px solid #eee; padding: 20px; z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.05); max-width: 400px; border-radius: 2px;">
+    <p style="font-size: 0.8rem; color: #666; margin-bottom: 15px; line-height: 1.5; font-family: sans-serif;">
+        Utilizziamo i cookie per analizzare il traffico e migliorare <strong>moodhaus.it</strong>. <a href="/privacy.html" style="color: #000; text-decoration: underline;">Privacy Policy</a>.
+    </p>
+    <button onclick="acceptCookies()" style="background: #000; color: #fff; border: none; padding: 12px 25px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; width: 100%; transition: 0.3s;">Accetta</button>
+</div>
+
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    // Il tuo ID Google Analytics
+    const GA_ID = 'G-9ZNYSKXPB7';
 
-  gtag('config', 'G-9ZNYSKXPB7');
+    // Funzione che carica effettivamente Analytics
+    function loadGA() {
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-9ZNYSKXPB7";
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+        console.log('Analytics caricato con successo.');
+    }
+
+    // Funzione attivata al clic sul tasto "Accetta"
+    function acceptCookies() {
+        localStorage.setItem('cookieConsent', 'true');
+        document.getElementById('cookie-banner').style.display = 'none';
+        loadGA();
+    }
+
+    // Controllo se l'utente ha già dato il consenso in precedenza
+    if (localStorage.getItem('cookieConsent') === 'true') {
+        loadGA();
+    } else {
+        // Se non c'è consenso, mostra il banner dopo 1 secondo
+        setTimeout(function() {
+            document.getElementById('cookie-banner').style.display = 'block';
+        }, 1000);
+    }
 </script>
-
-
 
 
   
@@ -435,7 +468,7 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
     <!-- SEZIONE 1: AMPLIATA -->
     <section style="margin-bottom: 90px;">
       <h3 style="font-family: 'Times New Roman', Times, serif; font-size: 1.5rem; margin-bottom: 25px; font-weight: 500; color: #000; text-align: center;">L'Eccellenza della Stampa Canvas Fine-Art Contemporanea</h3>
-      <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 2; color: #444; font-size: 1rem; margin: 0 auto; max-width: 900px; text-align: justify; hyphens: auto;">
+      <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 2; color: #444; font-size: 1rem; margin: 0 auto; max-width: 1200px; text-align: justify; hyphens: auto;">
         Scegliere le nostre <strong>stampe su tela</strong> significa abbracciare un nuovo concetto evoluto di decorazione d'interni, dove l'innovazione della tecnologia digitale si fonde armoniosamente con la nobile tradizione della pittura classica su telaio. Ogni <strong>quadro moderno</strong> firmato Moodhaus viene realizzato attraverso un processo di calibrazione cromatica millimetrica, trasferendo opere d'autore su un supporto tessile di altissima qualità che restituisce calore, trama e profondità visiva ad ogni singola immagine. Questa specifica tipologia di <strong>stampa canvas</strong> è stata progettata per un pubblico esigente che non si accontenta di un comune poster o di una riproduzione industriale, ma ricerca un oggetto d'arredo iconico capace di dialogare con lo spazio architettonico circostante attraverso la sua texture naturale e la sua imponente struttura tridimensionale, garantendo un impatto estetico tipico delle più prestigiose esposizioni museali d'arte contemporanea internazionale.
       </p>
     </section>
@@ -443,7 +476,7 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
     <!-- SEZIONE 2: AMPLIATA -->
     <section style="margin-bottom: 90px;">
       <h3 style="font-family: 'Times New Roman', Times, serif; font-size: 1.5rem; margin-bottom: 25px; font-weight: 500; color: #000; text-align: center;">Quadri Moderni per un Interior Design Sofisticato</h3>
-      <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 2; color: #444; font-size: 1rem; margin: 0 auto; max-width: 900px; text-align: justify; hyphens: auto;">
+      <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 2; color: #444; font-size: 1rem; margin: 0 auto; max-width: 1200px; text-align: justify; hyphens: auto;">
         Le <strong>stampe su tela online</strong> offerte dal catalogo esclusivo Moodhaus sono meticolosamente progettate per integrarsi con naturalezza in ogni contesto abitativo, dal living minimalista di ispirazione nordica allo studio professionale più ricercato e moderno. La straordinaria versatilità della <strong>stampa su tela canvas</strong> permette di arredare con audacia grandi pareti attraverso composizioni scenografiche di ampio respiro o di valorizzare piccoli angoli di passaggio con dettagli di puro design visivo. Grazie alla cura artigianale impiegata in fase di montaggio e tensionamento, i nostri <strong>quadri per arredamento</strong> diventano veri e propri punti focali magnetici all'interno di ogni stanza, elevando sensibilmente la percezione del lusso domestico. L'utilizzo di materiali nobili e tecniche di riproduzione fine-art all'avanguardia rispetta fedelmente l'integrità cromatica e la visione creativa originale dell'artista, portando l'autenticità e l'eccellenza del <strong>Made in Italy</strong> direttamente all'interno delle tue mura domestiche.
       </p>
     </section>
@@ -451,7 +484,7 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
     <!-- SEZIONE 3: AMPLIATA -->
     <section style="margin-bottom: 90px;">
       <h3 style="font-family: 'Times New Roman', Times, serif; font-size: 1.5rem; margin-bottom: 25px; font-weight: 500; color: #000; text-align: center;">Qualità Certificata e Longevità delle Decorazioni Murali</h3>
-      <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 2; color: #444; font-size: 1rem; margin: 0 auto; max-width: 900px; text-align: justify; hyphens: auto;">
+      <p style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 2; color: #444; font-size: 1rem; margin: 0 auto; max-width: 1200px; text-align: justify; hyphens: auto;">
         Investire in una <strong>stampa su tela moderna</strong> Moodhaus significa prediligere un complemento d'arredo di valore superiore, destinato a mantenere inalterata la sua brillantezza originale e la sua integrità strutturale per molti decenni. Utilizziamo esclusivamente inchiostri ecologici certificati che penetrano profondamente nelle fibre della tela canvas, rendendo il <strong>quadro moderno</strong> eccezionalmente resistente alla luce solare diretta e alle variazioni di umidità ambientale. Ogni <strong>stampa canvas fine-art</strong> viene sottoposta a rigorosi protocolli di controllo qualità prima della spedizione, assicurando che la tensione della tela sul robusto telaio in legno massello sia sempre impeccabile e priva di imperfezioni. Questa attenzione meticolosa al dettaglio tecnico e costruttivo trasforma ogni tuo acquisto in una garanzia di durata eterna, offrendo <strong>decorazioni murali</strong> che non sono solo esteticamente appaganti, ma costruite per emozionare giorno dopo giorno, anno dopo anno, coniugando la bellezza visiva con la massima <strong>sicurezza ambientale</strong> per la tua famiglia e la tua casa.
       </p>
     </section>
@@ -477,6 +510,8 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
                 <h4>Info</h4>
                 <p><a href="/materiali.html">Materiali</a></p>
                 <p><a href="/collezioni.html">Collezioni</a></p>
+                <p><a href="/blog.html">Blog</a></p>
+                <p><a href="/privacy.html">Privacy Policy</a></p>
             </div>
             <div class="footer-col">
                 <h4>Social</h4>
@@ -488,10 +523,13 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
         <!-- Tua parte originale (Logo e Copyright) -->
         <div style="border-top: 1px solid #f0f0f0; padding-top: 50px;">
             <span class="footer-logo">moodhaus</span>
-            <p class="copy">&copy; 2026 Studio Moodhaus — Eccellenza nelle stampe su tela</p>
+            <p class="copy">&copy; 2026 - Studio Moodhaus</p>
         </div>
     </div>
 </footer>
+
+
+
 
 
 
@@ -504,6 +542,7 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
      data-api-key="ZDg0NTc2NGYtNmI0Ny00OTBhLTgzYjUtYTk1NDMxODMzNjA5NjM5MDg0OTQxMTEzMTg5Mjc5" 
      data-config-modal-style="side">
 </div>
+
 
 
   
