@@ -175,14 +175,14 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
       transform: scale(1.05);
     }
     
-     footer { 
-    padding: 100px 0 60px 0; 
-    text-align: center; /* Centra tutto il contenuto del footer */
+ footer { 
+    padding: 40px 0; /* Altezza fissa e sottile sopra e sotto */
+    text-align: center; 
     border-top: 1px solid var(--sand-soft); 
-    margin-top: 80px; 
+    margin-top: 60px; /* Distanza fissa dal contenuto sopra */
     background: #ffffff;
+    height: auto; /* Impedisce espansioni anomale */
 }
-
     
 .footer-col h4 {
     font-size: 0.7rem; 
@@ -213,6 +213,7 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
     }
 
 
+    
     .footer-logo {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.8rem;
@@ -388,7 +389,7 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
     function loadGA() {
         var script = document.createElement('script');
         script.async = true;
-        script.src = 'https://www.googletagmanager.com' + GA_ID;
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-9ZNYSKXPB7";
         document.head.appendChild(script);
 
         window.dataLayer = window.dataLayer || [];
@@ -415,7 +416,6 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
         }, 1000);
     }
 </script>
-
 
 
 
@@ -510,10 +510,13 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
         <!-- Tua parte originale (Logo e Copyright) -->
         <div style="border-top: 1px solid #f0f0f0; padding-top: 50px;">
             <span class="footer-logo">moodhaus</span>
-            <p class="copy">&copy; 2026 Studio Moodhaus — Eccellenza nelle stampe su tela</p>
+            <p class="copy">&copy; 2026 - Studio Moodhaus</p>
         </div>
     </div>
 </footer>
+
+
+
 
 
 
@@ -526,6 +529,7 @@ stampe su tela per un arredamento unico e moderno. Scopri la collezione." />
      data-api-key="ZDg0NTc2NGYtNmI0Ny00OTBhLTgzYjUtYTk1NDMxODMzNjA5NjM5MDg0OTQxMTEzMTg5Mjc5" 
      data-config-modal-style="side">
 </div>
+
 
 
   
