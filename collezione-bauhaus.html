@@ -559,7 +559,8 @@ layout: null
         <a href="{{ site.baseurl }}{{ prodotto.url }}">
           <div class="product-img-box">
              <!-- Prende l'immagine dal file .md -->
-             <img src="{{ prodotto.immagine }}" alt="{{ prodotto.title }}">
+             <img src="{{ prodotto.immagine }}" alt="{{ prodotto.title }}" loading="lazy">
+
           </div>
           <!-- Prende il titolo dal file .md -->
           <h3>{{ prodotto.title }}</h3>
