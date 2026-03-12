@@ -45,41 +45,298 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.4.1/default/snipcart.css" />
 
-    <style>
-        :root { --sand-bg: #fdfcf9; --sand-soft: #f4f1ea; --text-main: #2c2c2c; --white: #ffffff; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--text-main); background: var(--white); -webkit-font-smoothing: antialiased; }
-        
-       
+    
 
-        header { padding: 30px 0; background: white; border-bottom: 1px solid #f0f0f0; text-align: center; position: relative; }
-        .logo { font-family: 'Cormorant Garamond', serif; font-size: 2.6rem; font-weight: 300; letter-spacing: -1px; margin-bottom: 15px; display: block; text-decoration: none; color: inherit; }
-        .main-nav { display: flex; justify-content: center; gap: 35px; align-items: center; }
-        .main-nav a { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #555; text-decoration: none; }
+      <style>
+    :root {
+      --sand-bg: #fdfcf9;
+      --sand-soft: #f4f1ea;
+      --text-main: #2c2c2c;
+      --white: #ffffff;
+    }
 
-        
-        /* Layout Elenco Blog */
-        .blog-container { max-width: 1200px; margin: 80px auto; padding: 0 20px; }
-        .blog-intro { text-align: center; margin-bottom: 80px; }
-        .blog-intro h1 { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; margin-bottom: 10px; }
-        
-        /* Griglia Articoli */
-        .post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px; }
-        .post-card { text-align: center; }
-        .post-card a { text-decoration: none; color: inherit; }
-        .post-card h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin: 20px 0 10px; font-weight: 400; }
-        .post-card .date { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; color: #999; }
-        .post-card .excerpt { font-size: 0.9rem; color: #666; line-height: 1.6; margin-top: 15px; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text-main);
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
 
-        footer { padding: 100px 0 60px 0; text-align: center; border-top: 1px solid var(--sand-soft); margin-top: 80px; background: #ffffff; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 60px; margin-bottom: 80px; }
-        .footer-col h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; color: #000; }
-        .footer-col p { margin-bottom: 15px; }
-        .footer-col a { font-size: 13px; color: #888; transition: 0.3s; text-decoration: none; }
-        .footer-col a:hover { color: #000 !important; }
-        .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; margin-bottom: 10px; display: block; }
-        .copy { font-size: 0.6rem; letter-spacing: 2px; color: #999; text-transform: uppercase; }
-    </style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      padding: 30px 0;
+      background: white;
+      border-bottom: 1px solid #f0f0f0;
+      text-align: center;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 300; /* <--- Questo lo rende magro ed elegante */
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+      display: block;
+}
+
+    .main-nav {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+    }
+
+    .main-nav a {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #555;
+    }
+
+    .hero-mockup-main {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      line-height: 0;
+    }
+
+    .hero-mockup-main img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-width: 100%;
+    }
+
+    .mockup-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 5px;
+      background:var(--white);
+    }
+
+    .mockup-box {
+      aspect-ratio: auto;
+      overflow: hidden;
+      background: var(--sand-soft);
+    }
+
+    .mockup-box img {
+      width:100%;
+      height: auto;
+      display: block;
+      transition: transform 1s ease;
+    }
+
+    .mockup-box:hover img {
+      transform: scale(1.05);
+    }
+    
+    footer { 
+    padding: 40px 0; /* Altezza fissa e sottile sopra e sotto */
+    text-align: center; 
+    border-top: 1px solid var(--sand-soft); 
+    margin-top: 60px; /* Distanza fissa dal contenuto sopra */
+    background: #ffffff;
+    height: auto; /* Impedisce espansioni anomale */
+}
+    
+.footer-col h4 {
+    font-size: 0.7rem; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.footer-col p {
+    margin-bottom: 12px;
+}
+
+.footer-col a {
+    text-decoration: none; 
+    color: #888; 
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.footer-col a:hover {
+    color: #000 !important;
+}
+
+
+    .footer-col a:hover {
+        color: #000 !important;
+    }
+
+
+    
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 300; /* <--- Sottile anche nel footer */
+      margin-bottom: 10px;
+      display: block;
+}
+
+    .copy {
+      font-size: 0.6rem;
+      letter-spacing: 2px;
+      color: #999;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+      .mockup-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .main-nav {
+        gap: 15px;
+        font-size: 0.6rem;
+        flex-wrap: wrap;
+      }
+      }
+      
+    /* Griglia dei Best Seller */
+    .product-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      /* 4 colonne uguali */
+      gap: 20px;
+      /* Spazio tra i prodotti */
+    }
+
+    .product-item {
+      text-align: center;
+    }
+
+    .product-img-box {
+      width: 100%;
+      aspect-ratio: 1/1;
+      /* Forza le foto ad avere tutte la stessa proporzione */
+      overflow: hidden;
+      background: var(--sand-soft);
+      margin-bottom: 15px;
+    }
+
+    .product-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* Taglia l'immagine per riempire il box senza distorcerla */
+      display: block;
+    }
+
+    .product-item h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+    }
+
+    .product-item p {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #999;
+    }
+
+    /* Fix per Mobile: 2 colonne invece di 4 */
+    @media (max-width: 768px) {
+      .product-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* --- SEZIONE USP (3 VANTAGGI) --- */
+    .usp-section {
+      margin-top: 100px;
+      padding-bottom: 40px;
+      border-bottom: none;
+      /* Linea sottile di separazione */
+      text-align: center;
+    }
+
+    .usp-grid {
+      display: flex;
+      justify-content: space-between;
+      /* Spazia i 3 elementi in modo uniforme */
+      align-items: flex-start;
+      max-width: 1500px;
+      /* Centra il blocco rispetto al container */
+      margin: 0 auto;
+    }
+
+    .usp-item {
+      flex: 1;
+      padding: 0 20px;
+    }
+
+    .usp-item h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .usp-item p {
+      font-family: 'Cormorant Garamond', serif;
+      /* Font elegante per la descrizione */
+      font-size: 0.95rem;
+      color: #666;
+      font-style: italic;
+    }
+
+    /* Adattamento Mobile: in colonna per non affollare lo schermo */
+    @media (max-width: 768px) {
+      .usp-grid {
+        flex-direction: column;
+        gap: 35px;
+      }
+
+      /* Forza gli articoli in fondo in colonna singola e riduci i testi */
+      .seo-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        padding: 0 10px;
+      }
+
+      .seo-title {
+        font-size: 0.95rem !important;
+        /* Titolo discreto */
+        text-align: center;
+      }
+
+      .seo-text {
+        font-size: 0.75rem !important;
+        /* Testo più corto alla vista */
+        line-height: 1.5;
+        text-align: center;
+      }
+    }
+  </style>
+
+
+
+    
 </head>
 
 
