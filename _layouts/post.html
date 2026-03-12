@@ -8,9 +8,11 @@
     <link rel="icon" type="image/jpeg" href="https://img.moodhaus.it/2024/09/Logo.jpg">
     
     <!-- SEO DINAMICA PER ARTICOLI -->
-    <title>{{ page.title }} - moodhaus.it</title>
-    <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 }}">
+    <title>{% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }} - moodhaus.it{% endif %}</title>
+    <meta name="description" content="{% if page.seo_description %}{{ page.seo_description }}{% else %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}{% if page.image %}{{ page.image }}{% else %}/assets/img/og-default.jpg{% endif %}">
+
     
     <!-- Geo-Targeting Salerno -->
     <meta name="geo.region" content="IT-SA" />
