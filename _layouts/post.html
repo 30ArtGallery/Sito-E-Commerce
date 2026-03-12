@@ -65,15 +65,54 @@
         .blog-content { font-size: 18px; line-height: 1.8; color: #333; }
         .blog-content p { margin-bottom: 25px; }
         .blog-content img { width: 100%; height: auto; margin: 30px 0; border-radius: 2px; }
+        
 
-        footer { padding: 100px 0 60px 0; text-align: center; border-top: 1px solid var(--sand-soft); margin-top: 80px; background: #ffffff; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 60px; margin-bottom: 80px; }
-        .footer-col h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 25px; color: #000; }
-        .footer-col p { margin-bottom: 15px; }
-        .footer-col a { font-size: 13px; color: #888; transition: 0.3s; text-decoration: none; }
-        .footer-col a:hover { color: #000 !important; }
-        .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; margin-bottom: 10px; display: block; }
-        .copy { font-size: 0.6rem; letter-spacing: 2px; color: #999; text-transform: uppercase; }
+        footer { 
+    padding: 40px 0; /* Altezza fissa e sottile sopra e sotto */
+    text-align: center; 
+    border-top: 1px solid var(--sand-soft); 
+    margin-top: 60px; /* Distanza fissa dal contenuto sopra */
+    background: #ffffff;
+    height: auto; /* Impedisce espansioni anomale */
+}
+    
+.footer-col h4 {
+    font-size: 0.7rem; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.footer-col p {
+    margin-bottom: 12px;
+}
+
+.footer-col a {
+    text-decoration: none; 
+    color: #888; 
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.footer-col a:hover {
+    color: #000 !important;
+}
+
+
+    .footer-col a:hover {
+        color: #000 !important;
+    }
+
+
+    
+    .footer-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 300; /* <--- Sottile anche nel footer */
+      margin-bottom: 10px;
+      display: block;
+}
     </style>
 </head>
 
