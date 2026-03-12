@@ -117,27 +117,52 @@
     .blog-content img { width: 100%; height: auto; margin: 20px 0; }
 
     /* --- IL TUO FOOTER PERSONALIZZATO --- */
-    footer { 
-      padding: 40px 0; 
-      text-align: center; 
-      border-top: 1px solid var(--sand-soft); 
-      margin-top: 60px; 
-      background: #ffffff;
-      height: auto; 
-    }
+     footer { 
+    padding: 40px 0; /* Altezza fissa e sottile sopra e sotto */
+    text-align: center; 
+    border-top: 1px solid var(--sand-soft); 
+    margin-top: 60px; /* Distanza fissa dal contenuto sopra */
+    background: #ffffff;
+    height: auto; /* Impedisce espansioni anomale */
+}
     
-    .footer-col h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; color: #000; }
-    .footer-col p { margin-bottom: 12px; }
-    .footer-col a { text-decoration: none; color: #888; font-size: 13px; transition: 0.3s; }
-    .footer-col a:hover { color: #000 !important; }
+.footer-col h4 {
+    font-size: 0.7rem; 
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.footer-col p {
+    margin-bottom: 12px;
+}
+
+.footer-col a {
+    text-decoration: none; 
+    color: #888; 
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.footer-col a:hover {
+    color: #000 !important;
+}
+
+
+    .footer-col a:hover {
+        color: #000 !important;
+    }
+
+
     
     .footer-logo {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.8rem;
-      font-weight: 300;
+      font-weight: 300; /* <--- Sottile anche nel footer */
       margin-bottom: 10px;
       display: block;
-    }
+}
 
     .copy { font-size: 0.6rem; letter-spacing: 2px; color: #999; text-transform: uppercase; }
 
@@ -256,8 +281,10 @@
         </div>
     </div>
 
-    <footer>
-        <div class="footer-grid">
+<footer>
+    <div class="product-container">
+        <!-- Parte alta con Link CENTRATI -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 80px; text-align: center;">
             <div class="footer-col">
                 <h4>Assistenza</h4>
                 <p><a href="/contatti.html">Contatti</a></p>
@@ -277,9 +304,14 @@
                 <p><a href="#">Pinterest</a></p>
             </div>
         </div>
-        <span class="footer-logo">moodhaus</span>
-        <p class="copy">&copy; 2026 - Studio Moodhaus</p>
-    </footer>
+
+        <!-- Tua parte originale (Logo e Copyright) -->
+        <div style="border-top: 1px solid #f0f0f0; padding-top: 50px;">
+            <span class="footer-logo">moodhaus</span>
+            <p class="copy">&copy; 2026 - Studio Moodhaus</p>
+        </div>
+    </div>
+</footer>
 
 
 
