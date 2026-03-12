@@ -2,7 +2,9 @@
 layout: post
 title: "Il Bauhaus e le stampe su tela l'arte che rivoluzionò il design"
 date: 2026-03-11
-permalink: /il-bauhaus-e-le-stampe-su-tela-larte-che-rivoluziono-il-design/ 
+permalink: /il-bauhaus-e-le-stampe-su-tela-larte-che-rivoluziono-il-design/
+seo_title: "Come cambiare arredamento e stile con le tele moderne - moodhaus.it"
+seo_description: "Trasforma la tua casa con le tele moderne: scopri come scegliere i quadri giusti per ogni ambiente, dal soggiorno alla camera da letto. Consigli di stile e design firmati Moodhaus per un arredo unico."
 ---
 Il movimento Bauhaus, fondato nel 1919 da Walter Gropius, ha rappresentato una delle scuole più innovative nella storia dell’arte e del design. La sua influenza si estende a molti ambiti, dall’architettura alla pittura, dal design industriale all’arte visiva. Le stampe su tela Bauhaus sono una delle modalità più affascinanti per portare l’estetica di questo movimento nelle case moderne.
 
