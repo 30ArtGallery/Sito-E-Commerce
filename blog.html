@@ -261,26 +261,38 @@
 </header>
 
     
-    <div class="blog-container">
-    <div class="blog-intro">
-        <h1>Journal</h1>
+    <!-- Inserisci questo subito dopo la chiusura di </header> -->
+
+<div class="blog-container">
+    <!-- TITOLO JOURNAL GRANDE E CENTRATO -->
+    <div class="blog-intro" style="text-align: center; margin-bottom: 80px;">
+        <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 4rem; font-weight: 300; margin-bottom: 10px;">Journal</h1>
         <p style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; color: #bbb;">Design, Stile e Visione</p>
     </div>
 
-    <!-- QUESTO È IL CICLO CHE CARICA GLI ARTICOLI -->
-    <div class="post-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px;">
+    <!-- GRIGLIA ARTICOLI A DUE COLONNE -->
+    <div class="post-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px 60px;">
         {% for post in site.posts %}
         <article class="post-card" style="text-align: center;">
-            <a href="{{ post.url | relative_url }}">
+            <a href="{{ post.url | relative_url }}" style="text-decoration: none; color: inherit;">
                 <div class="date" style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; color: #999;">{{ post.date | date: "%d . %m . %Y" }}</div>
-                <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; margin: 20px 0 10px; font-weight: 400;">{{ post.title }}</h2>
-                <p class="excerpt" style="font-size: 0.9rem; color: #666; line-height: 1.6; margin-top: 15px;">{{ post.excerpt | strip_html | truncate: 140 }}</p>
-                <div style="margin-top: 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid #eee; display: inline-block; padding-bottom: 5px;">Leggi l'articolo</div>
+                <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; margin: 25px 0 15px; font-weight: 400; line-height: 1.2;">{{ post.title }}</h2>
+                <p class="excerpt" style="font-size: 0.95rem; color: #666; line-height: 1.8; margin-top: 15px; max-width: 400px; margin-left: auto; margin-right: auto;">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+                <div style="margin-top: 30px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid #000; display: inline-block; padding-bottom: 5px; color: #000;">Leggi l'articolo</div>
             </a>
         </article>
         {% endfor %}
     </div>
 </div>
+
+<!-- MEDIA QUERY PER MOBILE (Forza 1 colonna su cellulare) -->
+<style>
+    @media (max-width: 768px) {
+        .blog-intro h1 { font-size: 3rem !important; }
+        .post-grid { grid-template-columns: 1fr !important; gap: 60px !important; }
+    }
+</style>
+
 
 
 <footer>
