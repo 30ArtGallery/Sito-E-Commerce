@@ -3,17 +3,17 @@ name: Google Indexing
 on:
   push:
     branches:
-      - main  # <--- Scrivi 'master' se il tuo branch si chiama così
+      - main  # Assicurati che il tuo branch si chiami main (o master)
 
 jobs:
   index:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Send URLs to Google
-        uses: dgeibi/google-indexing-api-action@v1
+        uses: duc-it/google-indexing-api-action@v1.1.0
         with:
           key: ${{ secrets.INDEXING_SERVICE_ACCOUNT_JSON }}
           sitemap_url: 'https://www.moodhaus.it/sitemap.xml'
