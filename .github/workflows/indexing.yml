@@ -2,7 +2,7 @@ name: Google Indexing
 
 on:
   push:
-    branches: [ main ] # Cambia in master se necessario
+    branches: [ main ] 
 
 jobs:
   index:
@@ -31,27 +31,24 @@ jobs:
           from google.auth.transport.requests import Request
           import xml.etree.ElementTree as ET
 
-          # Carica chiavi e sitemap
           key_dict = json.loads(os.environ['GOOGLE_JSON_KEY'])
           sitemap_url = os.environ['SITEMAP_URL']
           
-          # Ottieni token OAuth2
-          scopes = ['https://www.googleapis.com']
+          scopes = ['https://www.googleapis.com/auth/indexing']
           creds = service_account.Credentials.from_service_account_info(key_dict, scopes=scopes)
           creds.refresh(Request())
           token = creds.token
 
-          # Estrai URL dalla sitemap
           r = requests.get(sitemap_url)
           root = ET.fromstring(r.content)
-          urls = [child[0].text for child in root if len(child) > 0]
+          ns = {'ns': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+          urls = [loc.text for loc in root.findall('.//ns:loc', ns)]
 
-          # Invia a Google (max 100 per test o secondo quota)
-          endpoint = "https://indexing.googleapis.com"
+          endpoint = "https://indexing.googleapis.com/v3/urlNotifications:publish"
           headers = {'Content-Type': 'application/json', 'Authorization': f'Bearer {token}'}
 
-          for url in urls[:200]: # Limite 200 al giorno
+          for url in urls[:200]: 
               data = json.dumps({"url": url, "type": "URL_UPDATED"})
               response = requests.post(endpoint, data=data, headers=headers)
-              print(f"Inviato: {url} - Risultato: {response.status_code}")
+              print(f"Inviato: {url} - Stato: {response.status_code}")
         shell: python
