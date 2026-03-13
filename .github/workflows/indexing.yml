@@ -2,8 +2,7 @@ name: Google Indexing
 
 on:
   push:
-    branches:
-      - main  # Assicurati che il tuo branch si chiami main (o master)
+    branches: [ main ] # Cambia in master se necessario
 
 jobs:
   index:
@@ -12,8 +11,47 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Send URLs to Google
-        uses: duc-it/google-indexing-api-action@v1.1.0
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          key: ${{ secrets.INDEXING_SERVICE_ACCOUNT_JSON }}
-          sitemap_url: 'https://www.moodhaus.it/sitemap.xml'
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install google-auth requests
+
+      - name: Run Indexing Script
+        env:
+          GOOGLE_JSON_KEY: ${{ secrets.INDEXING_SERVICE_ACCOUNT_JSON }}
+          SITEMAP_URL: 'https://www.moodhaus.it'
+        run: |
+          import os
+          import json
+          import requests
+          from google.oauth2 import service_account
+          from google.auth.transport.requests import Request
+          import xml.etree.ElementTree as ET
+
+          # Carica chiavi e sitemap
+          key_dict = json.loads(os.environ['GOOGLE_JSON_KEY'])
+          sitemap_url = os.environ['SITEMAP_URL']
+          
+          # Ottieni token OAuth2
+          scopes = ['https://www.googleapis.com']
+          creds = service_account.Credentials.from_service_account_info(key_dict, scopes=scopes)
+          creds.refresh(Request())
+          token = creds.token
+
+          # Estrai URL dalla sitemap
+          r = requests.get(sitemap_url)
+          root = ET.fromstring(r.content)
+          urls = [child[0].text for child in root if len(child) > 0]
+
+          # Invia a Google (max 100 per test o secondo quota)
+          endpoint = "https://indexing.googleapis.com"
+          headers = {'Content-Type': 'application/json', 'Authorization': f'Bearer {token}'}
+
+          for url in urls[:200]: # Limite 200 al giorno
+              data = json.dumps({"url": url, "type": "URL_UPDATED"})
+              response = requests.post(endpoint, data=data, headers=headers)
+              print(f"Inviato: {url} - Risultato: {response.status_code}")
+        shell: python
