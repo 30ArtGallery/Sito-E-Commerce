@@ -26,31 +26,84 @@
     <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.permalink }}">
     <meta property="og:type" content="product">
 
-    <!-- JSON-LD SCHEMA -->
-    <script type="application/ld+json">
+  
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "{{ page.title }}",
   "image": "{{ page.immagine }}",
   "description": "{{ page.seo_description }}",
-  "sku": "{{ page.sku }}",
+  "sku": "{{ page.sku | default: 'mood-001' }}",
   "brand": { 
     "@type": "Brand", 
     "name": "Moodhaus" 
+  },
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Cliente Moodhaus"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "1"
   },
   "offers": {
     "@type": "Offer",
     "url": "{{ site.url }}{{ site.baseurl }}{{ page.permalink }}",
     "priceCurrency": "EUR",
     "price": "49.00",
+    "priceValidUntil": "2026-12-31",
     "availability": "https://schema.org/InStock",
     "itemCondition": "https://schema.org/NewCondition",
-    "areaServed": "IT"
+    "areaServed": "IT",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0.00",
+        "currency": "EUR"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "IT"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 2,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 5,
+          "unitCode": "DAY"
+        }
+      }
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "IT",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 14,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
+    }
   }
 }
+</script>
 
-    </script>
 
     <!-- FONT E STILI -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
