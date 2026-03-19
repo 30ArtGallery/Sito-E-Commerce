@@ -48,7 +48,7 @@ jobs:
           endpoint = "https://indexing.googleapis.com/v3/urlNotifications:publish"
           headers = {'Content-Type': 'application/json', 'Authorization': f'Bearer {token}'}
 
-          for url in urls[801:1000]: 
+          for url in urls[:100]: 
               data = json.dumps({"url": url, "type": "URL_UPDATED"})
               response = requests.post(endpoint, data=data, headers=headers)
               print(f"Inviato: {url} - Stato: {response.status_code}")
